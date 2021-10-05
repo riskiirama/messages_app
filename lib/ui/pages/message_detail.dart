@@ -28,9 +28,8 @@ class MessageDetailPage extends StatelessWidget {
               Text(
                 'Messages and calls are end-to-end encrypted. No one\noutside of this chat, can have access to your\nconversation. Tap to learn more.',
                 textAlign: TextAlign.center,
-                style: primaryText.copyWith(
+                style: textBold.copyWith(
                   fontSize: 9,
-                  fontWeight: medium,
                 ),
               ),
             ],
@@ -121,8 +120,7 @@ class MessageDetailPage extends StatelessWidget {
           child: Center(
             child: Text(
               'Today',
-              style: primaryText.copyWith(
-                fontWeight: semiBold,
+              style: textBold.copyWith(
                 fontSize: 12,
               ),
             ),
@@ -152,7 +150,7 @@ class MessageDetailPage extends StatelessWidget {
             child: Center(
               child: Text(
                 'Hello Kunle, are you going to\nthe Burna Boy Live Concert?',
-                style: primaryText.copyWith(
+                style: textBold.copyWith(
                   color: backgroundWhite,
                 ),
               ),
@@ -165,7 +163,7 @@ class MessageDetailPage extends StatelessWidget {
             children: [
               Text(
                 '12:32',
-                style: primaryText.copyWith(fontSize: 10),
+                style: textBold.copyWith(fontSize: 10),
               ),
               SizedBox(
                 width: 5,
@@ -209,16 +207,14 @@ class MessageDetailPage extends StatelessWidget {
               children: [
                 Text(
                   'Anthony Oguns',
-                  style: primaryText.copyWith(
-                    fontWeight: semiBold,
+                  style: textBold.copyWith(
                     fontSize: 14,
                   ),
                 ),
                 SizedBox(height: 2),
                 Text(
                   'Online',
-                  style: primaryText.copyWith(
-                    fontWeight: regular,
+                  style: textBold.copyWith(
                     fontSize: 12,
                   ),
                 ),

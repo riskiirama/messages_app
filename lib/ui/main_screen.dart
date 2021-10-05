@@ -22,6 +22,14 @@ class _MainScreenState extends State<MainScreen> {
         notchMargin: 12,
         clipBehavior: Clip.antiAlias,
         child: BottomNavigationBar(
+          selectedLabelStyle: textSemiBold.copyWith(
+            fontSize: 9,
+            fontWeight: FontWeight.w600,
+          ),
+          unselectedLabelStyle: textSemiBold.copyWith(
+            fontSize: 9,
+            fontWeight: FontWeight.w600,
+          ),
           selectedItemColor: darkBlueColor,
           backgroundColor: Color(0xFFFFFFFF),
           type: BottomNavigationBarType.fixed,

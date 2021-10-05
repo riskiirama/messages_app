@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:messages/theme.dart';
-import 'package:messages/ui/pages/message_detail.dart';
 import 'package:messages/widgets/chat_message.dart';
 
 class Message extends StatelessWidget {
@@ -12,65 +11,17 @@ class Message extends StatelessWidget {
           Container(
             margin: EdgeInsets.symmetric(horizontal: 18, vertical: 25),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => MessageDetailPage()),
-                    );
-                  },
-                  child: ChatMessage(
-                    'assets/image_photo.png',
-                    'Kunle Coker',
-                    'Hello Kunle, are you going to the\nBurna Boy Live Concert?',
-                    '15:21',
-                    notifikasi: false,
-                    vektor: true,
-                  ),
-                ),
-                Divider(
-                  thickness: 1,
-                ),
-                SizedBox(height: 12),
                 ChatMessage(
-                  'assets/image_photo2.png',
-                  'Benson Erabor',
-                  'Benson, will you be going to the\nAquaFest event this June?',
-                  '15:10',
-                  notifikasi: true,
-                  vektor: false,
+                  isCeklis: false,
+                  isJarak: false,
+                  isNotif: true,
                 ),
-                Divider(
-                  thickness: 1,
-                ),
-                SizedBox(height: 12),
                 ChatMessage(
-                  'assets/image_photo3.png',
-                  'Cynthia Chukwudiora',
-                  'Hello Cynthia\nAny chance we can go out soon?',
-                  '13:15',
-                  notifikasi: true,
-                  vektor: false,
+                  isCeklis: true,
+                  isJarak: true,
+                  isNotif: false,
                 ),
-                Divider(
-                  thickness: 1,
-                ),
-                SizedBox(height: 12),
-                ChatMessage(
-                  'assets/image_photo4.png',
-                  'Ernest Ihenacho',
-                  'Hello Ernest,I tried reaching you, it\'s\nabout the business idea',
-                  '11:19',
-                  notifikasi: false,
-                  vektor: true,
-                ),
-                Divider(
-                  thickness: 1,
-                ),
-                SizedBox(height: 12),
               ],
             ),
           ),
@@ -101,9 +52,9 @@ class Message extends StatelessWidget {
                   children: [
                     Text(
                       'Messages',
-                      style: primaryText.copyWith(
+                      style: textBold.copyWith(
                         fontSize: 34,
-                        fontWeight: bold,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                     Image.asset(
@@ -117,7 +68,10 @@ class Message extends StatelessWidget {
             backgroundColor: backgroundLinear,
             elevation: 0,
             bottom: TabBar(
-              labelStyle: primaryText.copyWith(fontWeight: semiBold),
+              labelStyle: textBold.copyWith(
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
               labelColor: primaryColor,
               indicatorColor: darkBlueColor,
               indicatorPadding: EdgeInsets.symmetric(

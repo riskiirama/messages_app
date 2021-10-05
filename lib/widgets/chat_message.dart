@@ -2,85 +2,116 @@ import 'package:flutter/material.dart';
 import 'package:messages/theme.dart';
 
 class ChatMessage extends StatelessWidget {
-  final String image;
-  final String text;
-  final String desc;
-  final String time;
-  final bool notifikasi;
-  final bool vektor;
+  final bool isCeklis;
+  final bool isJarak;
+  final bool isNotif;
 
-  ChatMessage(this.image, this.text, this.desc, this.time,
-      {required this.notifikasi, required this.vektor});
+  ChatMessage({
+    required this.isCeklis,
+    required this.isJarak,
+    required this.isNotif,
+  });
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       children: [
-        Container(
-          width: 61,
-          height: 61,
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            border: Border.all(color: backgroundWhite, width: 2),
-            image: DecorationImage(
-              image: AssetImage(
-                image,
-              ),
-            ),
-          ),
-        ),
-        SizedBox(width: 21),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
+        Row(
           children: [
-            Text(
-              text,
-              style: primaryText.copyWith(
-                fontSize: 15,
-                fontWeight: bold,
+            Image.asset(
+              'assets/image_photo.png',
+              width: 62,
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Kunle Coker',
+                    style: textBold.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      isCeklis
+                          ? Image.asset(
+                              'assets/icon_vektor.png',
+                              width: 19,
+                            )
+                          : SizedBox(),
+                      isJarak
+                          ? SizedBox(
+                              width: 7,
+                            )
+                          : SizedBox(),
+                      Expanded(
+                        child: Text(
+                          'Benson, will you be going to the AquaFest event this June?',
+                          style: textBold.copyWith(
+                            fontSize: 13,
+                          ),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
-            SizedBox(height: 7),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
+            SizedBox(
+              width: 27,
+            ),
+            Column(
               children: [
-                vektor
-                    ? Image.asset(
-                        'assets/icon_vektor.png',
-                        width: 20,
-                      )
-                    : SizedBox(
-                        width: 20,
-                      ),
-                SizedBox(
-                  width: 8,
-                ),
                 Text(
-                  desc,
-                  style: primaryText.copyWith(
-                    fontSize: 13,
-                    fontWeight: regular,
+                  '15:10',
+                  style: textBold.copyWith(
+                    fontSize: 12,
                   ),
                 ),
+                SizedBox(
+                  height: 16,
+                ),
+                isNotif
+                    ? Container(
+                        width: 25,
+                        height: 25,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: blueColor,
+                        ),
+                        child: Center(
+                          child: Text(
+                            '2',
+                            style: textBold.copyWith(
+                              fontSize: 10,
+                              color: backgroundWhite,
+                            ),
+                          ),
+                        ),
+                      )
+                    : SizedBox(),
               ],
-            ),
+            )
           ],
         ),
-        Spacer(),
-        Column(
-          children: [
-            Text(
-              time,
-            ),
-            SizedBox(height: 16),
-            notifikasi
-                ? Image.asset(
-                    'assets/icon_notif.png',
-                    width: 25,
-                  )
-                : SizedBox(),
-          ],
+        Padding(
+          padding: EdgeInsets.only(left: 80),
+          child: Divider(
+            thickness: 1,
+          ),
+        ),
+        SizedBox(
+          height: 12,
         ),
       ],
     );
