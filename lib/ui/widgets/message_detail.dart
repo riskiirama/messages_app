@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:messages/theme.dart';
-import 'package:messages/widgets/chat_bubble.dart';
-import 'package:messages/widgets/chat_bubble_reply.dart';
+part of 'widget.dart';
 
 class MessageDetailPage extends StatelessWidget {
   @override
@@ -9,7 +6,7 @@ class MessageDetailPage extends StatelessWidget {
     Widget header() {
       return Center(
         child: Container(
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 35),
           margin: EdgeInsets.only(top: 14),
           width: 295,
           height: 59,
@@ -209,6 +206,8 @@ class MessageDetailPage extends StatelessWidget {
                   'Anthony Oguns',
                   style: textBold.copyWith(
                     fontSize: 14,
+                    color: primaryColor,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
                 SizedBox(height: 2),
@@ -216,6 +215,7 @@ class MessageDetailPage extends StatelessWidget {
                   'Online',
                   style: textBold.copyWith(
                     fontSize: 12,
+                    color: primaryColor,
                   ),
                 ),
               ],

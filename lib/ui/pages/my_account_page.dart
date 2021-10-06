@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+part of 'pages.dart';
 
-class MyAccountScreen extends StatelessWidget {
+class MyAccountPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

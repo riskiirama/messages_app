@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:messages/theme.dart';
+part of 'widget.dart';
 
 class ChatMessage extends StatelessWidget {
   final bool isCeklis;
@@ -101,7 +100,8 @@ class ChatMessage extends StatelessWidget {
                       )
                     : SizedBox(),
               ],
-            )
+            ),
+            SizedBox(width: 10),
           ],
         ),
         Padding(

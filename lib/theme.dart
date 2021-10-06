@@ -9,6 +9,7 @@ Color blueColor = Color(0xff4272ED);
 Color darkBlueColor = Color(0xff00237B);
 Color greyColor = Color(0xffEFEFEF);
 Color darkGreyColor = Color(0xFF7A7878);
+Color grey = Color(0xff505050);
 
 TextStyle textBold = TextStyle(
   fontFamily: 'SF_Pro_700',

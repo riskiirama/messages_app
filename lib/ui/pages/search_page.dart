@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
+part of 'pages.dart';
 
-class HomeScreen extends StatelessWidget {
+class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Text(
-          'Home',
+          'Search',
         ),
       ),
     );

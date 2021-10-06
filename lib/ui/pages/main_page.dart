@@ -1,18 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:messages/theme.dart';
+part of 'pages.dart';
 
-import 'package:messages/ui/home_screen.dart';
-import 'package:messages/ui/message_screen.dart';
-import 'package:messages/ui/more_screen.dart';
-import 'package:messages/ui/my_account.dart';
-import 'package:messages/ui/search_screen.dart';
-
-class MainScreen extends StatefulWidget {
+class MainPage extends StatefulWidget {
   @override
-  _MainScreenState createState() => _MainScreenState();
+  _MainPageState createState() => _MainPageState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -135,17 +128,17 @@ class _MainScreenState extends State<MainScreen> {
     Widget body() {
       switch (currentIndex) {
         case 0:
-          return HomeScreen();
+          return HomePage();
         case 1:
-          return Message();
+          return MessagePage();
         case 2:
-          return SearchScreen();
+          return SearchPage();
         case 3:
-          return MyAccountScreen();
+          return MyAccountPage();
         case 4:
-          return MoreScreen();
+          return MorePage();
         default:
-          return HomeScreen();
+          return HomePage();
       }
     }
 
