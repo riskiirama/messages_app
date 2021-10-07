@@ -1,8 +1,6 @@
 part of 'pages.dart';
 
 class MessagePage extends StatelessWidget {
-  final isSearch = true;
-
   @override
   Widget build(BuildContext context) {
     Widget tabBarView() {
@@ -14,30 +12,11 @@ class MessagePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => MessageDetailPage()));
             },
             child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 18, vertical: 25),
-              child: ListView(
-                children: [
-                  ChatMessage(
-                    isCeklis: false,
-                    isJarak: false,
-                    isNotif: true,
-                  ),
-                  ChatMessage(
-                    isCeklis: false,
-                    isJarak: false,
-                    isNotif: true,
-                  ),
-                  ChatMessage(
-                    isCeklis: true,
-                    isJarak: true,
-                    isNotif: true,
-                  ),
-                  ChatMessage(
-                    isCeklis: false,
-                    isJarak: false,
-                    isNotif: true,
-                  ),
-                ],
+              margin: EdgeInsets.symmetric(vertical: 25),
+              child: ChatMessage(
+                isCeklis: false,
+                isJarak: true,
+                isNotif: true,
               ),
             ),
           ),
@@ -52,102 +31,69 @@ class MessagePage extends StatelessWidget {
               ),
             ],
           ),
-          Container(
-            margin: EdgeInsets.only(
-              left: 18,
-              right: 18,
-            ),
-            child: ListView(
-              children: [
-                SizedBox(height: 20),
-                Text(
-                  'Today',
-                  style: textBold.copyWith(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xff505050),
-                  ),
-                ),
-                SizedBox(height: 20),
-                NotifToday(),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    // Button accept
-                    Container(
-                      width: 159,
-                      height: 35,
-                      child: TextButton(
-                        style: TextButton.styleFrom(
-                          backgroundColor: darkBlueColor,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
+          ListView(
+            children: [
+              SizedBox(height: 20),
+              NotifToday(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Button accept
+                  Container(
+                    width: 159,
+                    height: 35,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: darkBlueColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        onPressed: () {},
-                        child: Text(
-                          'Accept',
-                          style: textBold.copyWith(
-                            fontSize: 13,
-                            color: backgroundWhite,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'Accept',
+                        style: textBold.copyWith(
+                          fontSize: 13,
+                          color: backgroundWhite,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
+                  ),
 
-                    SizedBox(
-                      width: 10,
-                    ),
+                  SizedBox(
+                    width: 10,
+                  ),
 
-                    // Button decline
-                    Container(
-                      width: 83,
-                      height: 35,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: darkBlueColor,
-                        ),
-                        borderRadius: BorderRadius.circular(10),
+                  // Button decline
+                  Container(
+                    width: 83,
+                    height: 35,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: darkBlueColor,
                       ),
-                      child: TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          'Decline',
-                          style: textBold.copyWith(
-                            fontSize: 13,
-                            color: grey,
-                            fontWeight: FontWeight.bold,
-                          ),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        'Decline',
+                        style: textBold.copyWith(
+                          fontSize: 13,
+                          color: grey,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
-                  ],
-                ),
-                SizedBox(height: 20),
-                Text(
-                  'Yesterday',
-                  style: textBold.copyWith(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xff505050),
                   ),
-                ),
-                SizedBox(height: 20),
-                NotifYesterday(),
-                SizedBox(height: 20),
-                Text(
-                  'Jul 10, 2021',
-                  style: textBold.copyWith(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xff505050),
-                  ),
-                ),
-                SizedBox(height: 20),
-                NotifDateTime(),
-              ],
-            ),
+                ],
+              ),
+              SizedBox(height: 20),
+              NotifYesterday(),
+              SizedBox(height: 20),
+              NotifDateTime(),
+            ],
           )
         ],
       );

@@ -301,9 +301,18 @@ class MorePage extends StatelessWidget {
                 'FAQs',
               ),
             ),
-            aboutButton(
-              'assets/icon_share.png',
-              'Refer a Friend',
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ReferFriend(),
+                    ));
+              },
+              child: aboutButton(
+                'assets/icon_share.png',
+                'Refer a Friend',
+              ),
             ),
             SizedBox(height: 24),
             Row(

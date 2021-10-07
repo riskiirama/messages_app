@@ -1,4 +1,4 @@
-part of 'widget.dart';
+part of '../../widget.dart';
 
 class GroupMessage extends StatelessWidget {
   final bool isNotif;
