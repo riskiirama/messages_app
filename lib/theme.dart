@@ -18,3 +18,8 @@ TextStyle textBold = TextStyle(
 TextStyle textSemiBold = TextStyle(
   fontFamily: 'SF_Pro_500',
 );
+
+double defaultWidth(BuildContext context) =>
+    deviceWidth(context) - 2 * defaultMargin;
+double deviceWidth(BuildContext context) => MediaQuery.of(context).size.width;
+double deviceHeight(BuildContext context) => MediaQuery.of(context).size.height;

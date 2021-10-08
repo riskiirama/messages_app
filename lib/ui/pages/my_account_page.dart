@@ -1,6 +1,11 @@
 part of 'pages.dart';
 
-class MyAccountPage extends StatelessWidget {
+class MyAccountPage extends StatefulWidget {
+  @override
+  _MyAccountPageState createState() => _MyAccountPageState();
+}
+
+class _MyAccountPageState extends State<MyAccountPage> {
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -138,64 +143,7 @@ class MyAccountPage extends StatelessWidget {
       );
     }
 
-    Widget favoriteAndEvents() {
-      return Container(
-        margin: EdgeInsets.only(top: 36),
-        child: Row(
-          children: [
-            Column(
-              children: [],
-            )
-          ],
-        ),
-      );
-    }
-
-    Widget defaultTab() {
-      return DefaultTabController(
-        length: 2,
-        child: TabBar(
-          tabs: [
-            Tab(
-              child: Column(
-                children: [
-                  Image.asset(
-                    'assets/icon_event.png',
-                    width: 22,
-                  ),
-                  SizedBox(height: 4),
-                  Text(
-                    'Favourites',
-                    style: textBold.copyWith(
-                      color: primaryColor,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Tab(
-              child: Column(
-                children: [
-                  Image.asset(
-                    'assets/icon_event.png',
-                    width: 22,
-                  ),
-                  SizedBox(height: 4),
-                  Text(
-                    'My Events',
-                    style: textBold.copyWith(
-                      color: primaryColor,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
-    Widget container() {
+    Widget content() {
       return Container(
         margin: EdgeInsets.only(top: 518),
         width: double.infinity,
@@ -206,10 +154,10 @@ class MyAccountPage extends StatelessWidget {
             top: Radius.circular(25),
           ),
         ),
-        child: Column(
+        child: Stack(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 15),
+              margin: EdgeInsets.only(top: 15, left: 190),
               width: 40,
               height: 4,
               decoration: BoxDecoration(
@@ -217,8 +165,191 @@ class MyAccountPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(5),
               ),
             ),
-            favoriteAndEvents(),
-            defaultTab(),
+            ContainedTabBarView(
+              tabBarProperties: TabBarProperties(
+                height: 100,
+                indicatorColor: Colors.transparent,
+              ),
+              tabs: [
+                Tab(
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/icon_event.png',
+                        width: 22,
+                      ),
+                      SizedBox(height: 4),
+                      Text(
+                        'Favourites',
+                        style: textBold.copyWith(
+                          color: primaryColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Tab(
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        'assets/icon_event.png',
+                        width: 22,
+                      ),
+                      SizedBox(height: 4),
+                      Text(
+                        'My Events',
+                        style: textBold.copyWith(
+                          color: primaryColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+              views: [
+                Container(
+                  color: Color(0xffA0A3BD),
+                  child: ContainedTabBarView(
+                    tabBarProperties: TabBarProperties(
+                      indicatorColor: Colors.transparent,
+                    ),
+                    tabs: [
+                      Container(
+                        width: 170,
+                        height: 35,
+                        color: darkBlueColor,
+                        child: Center(
+                          child: Text(
+                            'Events',
+                            style: textBold.copyWith(
+                              fontSize: 13,
+                              color: backgroundWhite,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 170,
+                        height: 35,
+                        color: Color(0xffEFEFEF),
+                        child: Center(
+                          child: Text(
+                            'Organizers',
+                            style: textBold.copyWith(
+                              fontSize: 13,
+                              color: grey,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                    views: [
+                      ListView(
+                        children: [
+                          PageEvent(),
+                        ],
+                      ),
+                      PageOrganizer(),
+                    ],
+                  ),
+                ),
+                Container(
+                  color: Color(0xffA0A3BD),
+                  child: ContainedTabBarView(
+                    tabBarProperties: TabBarProperties(
+                      indicatorColor: Colors.transparent,
+                    ),
+                    tabs: [
+                      Container(
+                        width: 115,
+                        height: 35,
+                        color: darkBlueColor,
+                        child: Center(
+                          child: Text(
+                            'Attending',
+                            style: textBold.copyWith(
+                              fontSize: 13,
+                              color: backgroundWhite,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 115,
+                        height: 35,
+                        color: Color(0xffEFEFEF),
+                        child: Center(
+                          child: Text(
+                            'Attended',
+                            style: textBold.copyWith(
+                              fontSize: 13,
+                              color: grey,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        width: 115,
+                        height: 35,
+                        color: Color(0xffEFEFEF),
+                        child: Center(
+                          child: Text(
+                            'Events I created',
+                            style: textBold.copyWith(
+                              fontSize: 13,
+                              color: grey,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                    views: [
+                      Stack(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(
+                              left: 16,
+                              right: 16,
+                            ),
+                            width: double.infinity,
+                            height: 35,
+                            decoration: BoxDecoration(
+                              color: backgroundWhite,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.search,
+                                  color: grey,
+                                ),
+                                SizedBox(
+                                  width: 13,
+                                ),
+                                Expanded(
+                                  child: TextFormField(
+                                    decoration: InputDecoration.collapsed(
+                                        hintText: 'Search'),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          PageAttending(),
+                        ],
+                      ),
+                      Text('data'),
+                      Text('data'),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ],
         ),
       );
@@ -232,7 +363,7 @@ class MyAccountPage extends StatelessWidget {
             header(),
             more(),
             profile(),
-            container(),
+            content(),
           ],
         ),
       ),

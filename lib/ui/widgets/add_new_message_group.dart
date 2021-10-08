@@ -264,10 +264,7 @@ class AddNewMessageGroup extends StatelessWidget {
               children: [
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return MessagePage();
-                    }));
+                    Navigator.pop(context);
                   },
                   child: Text(
                     'Go Back',
@@ -292,12 +289,20 @@ class AddNewMessageGroup extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Aurora Couture Admin',
-                        style: textBold.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: primaryColor,
-                          fontSize: 14,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return AddNewMessageInfoGroup();
+                          }));
+                        },
+                        child: Text(
+                          'Aurora Couture Admin',
+                          style: textBold.copyWith(
+                            fontWeight: FontWeight.bold,
+                            color: primaryColor,
+                            fontSize: 14,
+                          ),
                         ),
                       ),
                       Row(
