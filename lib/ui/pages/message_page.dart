@@ -16,14 +16,7 @@ class MessagePage extends StatelessWidget {
                 Divider(
                   thickness: 2,
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 25),
-                  child: ChatMessage(
-                    isCeklis: false,
-                    isJarak: false,
-                    isNotif: true,
-                  ),
-                ),
+                Slide(),
               ],
             ),
           ),
@@ -146,8 +139,8 @@ class MessagePage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // SEACRH
 
+                    // SEACRH
                     Container(
                       margin: EdgeInsets.only(top: 20),
                       padding: EdgeInsets.symmetric(

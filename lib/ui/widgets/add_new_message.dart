@@ -6,8 +6,6 @@ class AddNewMessagePage extends StatefulWidget {
 }
 
 class _AddNewMessagePageState extends State<AddNewMessagePage> {
-  void _incrementCounter() {}
-
   List<String> list = [
     'angel',
     'bubbles',
@@ -102,6 +100,83 @@ class _AddNewMessagePageState extends State<AddNewMessagePage> {
     Widget body() {
       return Column(
         children: [
+          Container(
+            margin: EdgeInsets.symmetric(
+              horizontal: 19,
+              vertical: 29,
+            ),
+            padding: EdgeInsets.symmetric(
+              horizontal: 16,
+            ),
+            width: double.infinity,
+            height: 40,
+            decoration: BoxDecoration(
+              color: Color(0xffEFEFEF),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.search,
+                  color: grey,
+                  size: 16,
+                ),
+                SizedBox(
+                  width: 13,
+                ),
+                Expanded(
+                  child: TextFormField(
+                    decoration: InputDecoration.collapsed(
+                      hintStyle: textBold.copyWith(
+                        fontSize: 12,
+                        color: grey,
+                      ),
+                      hintText: 'Search',
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(
+              left: 24,
+              right: 24,
+              bottom: 9,
+            ),
+            child: Row(
+              children: [
+                Stack(
+                  children: [
+                    Column(
+                      children: [
+                        Image.asset(
+                          'assets/image_photo2.png',
+                          width: 45,
+                        ),
+                        Text(
+                          'Mensa Rob',
+                          style: textBold.copyWith(
+                            fontSize: 11,
+                            color: primaryColor,
+                          ),
+                        )
+                      ],
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(
+                        left: 35,
+                      ),
+                      child: Icon(
+                        Icons.close,
+                        size: 20,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
           Expanded(
             child: AlphabetScrollView(
               list: list.map((e) => AlphaModel(e)).toList(),

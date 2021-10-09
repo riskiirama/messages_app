@@ -1,144 +1,125 @@
 part of 'widget.dart';
 
-class ChatMessage extends StatelessWidget {
-  final bool isNotif;
-  final bool isCeklis;
-  final bool isJarak;
-
-  const ChatMessage(
-      {Key? key,
-      required this.isNotif,
-      required this.isCeklis,
-      required this.isJarak})
-      : super(key: key);
+class Slide extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 4,
-      itemBuilder: (context, index) {
-        return Dismissible(
-          key: Key(index.toString()),
-          direction: DismissDirection.endToStart,
-          confirmDismiss: (direction) {
-            return showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
-                  title: Text('Confirm'),
-                  content: Text('Are you sure to delete this item?'),
-                  actions: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Text('No'),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text('Yes'),
-                    ),
-                  ],
-                );
-              },
+  _SlideState createState() => _SlideState();
+}
+
+class _SlideState extends State<Slide> {
+  List<Chat> items = List.of(Data.chats);
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        backgroundColor: backgroundLinear,
+        body: ListView.separated(
+          itemCount: items.length,
+          separatorBuilder: (context, index) => Padding(
+            padding: EdgeInsets.only(left: 100),
+            child: Divider(),
+          ),
+          itemBuilder: (context, index) {
+            final item = items[index];
+
+            return SlidableWidget(
+              child: buildListTile(item),
+              onDismissed: (action) =>
+                  dismissSlidableItem(context, index, action),
             );
           },
-          background: Container(
-            child: Image.asset(
-              'assets/icon_delete_chat.png',
-              width: 52,
-            ),
-            alignment: Alignment.centerRight,
-            padding: EdgeInsets.only(right: 18),
-          ),
-          child: Column(
-            children: [
-              ListTile(
-                title: Text(
-                  'Kunle Coker',
-                  style: textBold.copyWith(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                subtitle: Container(
-                  margin: EdgeInsets.only(top: 7),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      isCeklis
-                          ? Image.asset(
-                              'assets/icon_vektor.png',
-                              width: 19,
-                            )
-                          : SizedBox(),
-                      isJarak
-                          ? SizedBox(
-                              width: 7,
-                            )
-                          : SizedBox(),
-                      Expanded(
-                        child: Text(
-                          'Benson, will you be going to the AquaFest event this June?',
-                          style: textBold.copyWith(
-                            fontSize: 13,
-                          ),
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                leading: Image.asset(
-                  'assets/image_photo.png',
-                  width: 62,
-                ),
-                trailing: Column(
-                  children: [
-                    Text(
-                      '15:10',
-                      style: textBold.copyWith(
-                        fontSize: 12,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 16,
-                    ),
-                    isNotif
-                        ? Expanded(
-                            child: Container(
-                              alignment: Alignment.center,
-                              width: 30,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: blueColor,
-                              ),
-                              child: Text(
-                                '2',
-                                style: textBold.copyWith(
-                                  fontSize: 10,
-                                  color: backgroundWhite,
-                                ),
-                              ),
-                            ),
-                          )
-                        : SizedBox(),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(left: 80),
-                child: Divider(
-                  thickness: 1,
-                ),
-              ),
-              SizedBox(
-                height: 12,
-              ),
-            ],
-          ),
-        );
-      },
-    );
+        ),
+      );
+
+  void dismissSlidableItem(
+      BuildContext context, int index, SlidableAction action) {
+    setState(() {
+      items.removeAt(index);
+    });
+
+    switch (action) {
+      case SlidableAction.archive:
+        Utils.showSnackBar(context, 'Chat has been archived');
+        break;
+      case SlidableAction.share:
+        Utils.showSnackBar(context, 'Chat has been shared');
+        break;
+      case SlidableAction.more:
+        Utils.showSnackBar(context, 'Selected more');
+        break;
+      case SlidableAction.delete:
+        Utils.showSnackBar(context, 'Chat has been deleted');
+        break;
+    }
   }
+
+  Widget buildListTile(Chat item) => ListTile(
+        contentPadding: EdgeInsets.only(
+          left: 18,
+          top: 12,
+          right: 18,
+          bottom: 28,
+        ),
+        leading: CircleAvatar(
+          radius: 28,
+          backgroundImage: AssetImage(
+            item.urlAvatar,
+          ),
+        ),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    item.username,
+                    style: textBold.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Text(
+                  item.time,
+                  style: textBold.copyWith(
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 7),
+            Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    item.message,
+                    style: textBold.copyWith(
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 27,
+                ),
+                CircleAvatar(
+                  backgroundColor: blueColor,
+                  maxRadius: 15,
+                  child: Center(
+                    child: Text(
+                      '3',
+                      style: textBold.copyWith(
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
+        onTap: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return MessageDetailPage();
+          }));
+        },
+      );
 }
