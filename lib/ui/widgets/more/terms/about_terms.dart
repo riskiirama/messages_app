@@ -105,6 +105,7 @@ class AboutTerms extends StatelessWidget {
             header(),
             text(),
             SingleChildScrollView(
+              scrollDirection: Axis.vertical,
               padding: EdgeInsets.symmetric(horizontal: 22),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

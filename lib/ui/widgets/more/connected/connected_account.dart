@@ -196,10 +196,6 @@ class ConnectedAccount extends StatelessWidget {
         ),
         child: TextButton(
           style: TextButton.styleFrom(
-            padding: EdgeInsets.symmetric(
-              horizontal: 103,
-              vertical: 11,
-            ),
             backgroundColor: darkBlueColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),

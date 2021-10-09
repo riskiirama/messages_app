@@ -13,62 +13,52 @@ class AddNewMessageNext extends StatelessWidget {
               left: 20,
               right: 20,
             ),
-            child: Column(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    Image.asset(
-                      'assets/image_photo4.png',
-                      width: 68,
-                    ),
-                    SizedBox(
-                      width: 13,
-                    ),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Text(
-                                'Aurora Couture Admin',
-                                style: textBold.copyWith(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 17,
-                          ),
-                          Divider(
-                            thickness: 2,
-                          ),
-                          SizedBox(
-                            height: 17,
-                          ),
-                          Text(
-                            'A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Ac tortor dignissim convallis aenean. ',
-                            style: textBold.copyWith(
+                Image.asset(
+                  'assets/image_photo4.png',
+                  width: 68,
+                ),
+                SizedBox(
+                  width: 13,
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      TextField(
+                        decoration: InputDecoration.collapsed(
+                            hintStyle: textBold.copyWith(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
+                              color: primaryColor,
                             ),
-                            maxLines: 3,
-                            overflow: TextOverflow.ellipsis,
-                            textAlign: TextAlign.justify,
-                          ),
-                          SizedBox(
-                            height: 17,
-                          ),
-                          Divider(
-                            thickness: 2,
-                          ),
-                        ],
+                            hintText: 'Aurora Couture Admin'),
                       ),
-                    ),
-                  ],
-                )
+                      Divider(
+                        thickness: 2,
+                      ),
+                      SizedBox(
+                        height: 17,
+                      ),
+                      TextField(
+                        maxLines: 3,
+                        decoration: InputDecoration.collapsed(
+                            hintStyle: textBold.copyWith(
+                              fontSize: 12,
+                              fontWeight: FontWeight.bold,
+                              color: primaryColor,
+                            ),
+                            hintText:
+                                'A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Ac tortor dignissim convallis aenean. '),
+                      ),
+                      Divider(
+                        thickness: 2,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
@@ -201,8 +191,6 @@ class AddNewMessageNext extends StatelessWidget {
         title: Container(
           margin: EdgeInsets.only(
             top: 20,
-            left: 20,
-            right: 20,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

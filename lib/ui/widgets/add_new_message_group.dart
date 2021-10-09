@@ -48,9 +48,10 @@ class AddNewMessageGroup extends StatelessWidget {
           Container(
             margin: EdgeInsets.only(
               top: 21,
-              right: 127,
+              left: 22,
             ),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 // user 1
                 Container(
@@ -189,7 +190,7 @@ class AddNewMessageGroup extends StatelessWidget {
             margin: EdgeInsets.only(
               top: 21,
               left: 127,
-              right: 26,
+              right: 22,
             ),
             padding: EdgeInsets.only(
               top: 9,
@@ -257,8 +258,6 @@ class AddNewMessageGroup extends StatelessWidget {
           title: Container(
             margin: EdgeInsets.only(
               top: 20,
-              left: 20,
-              right: 20,
             ),
             child: Row(
               children: [
@@ -340,16 +339,8 @@ class AddNewMessageGroup extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
-                  width: 16,
-                ),
                 GestureDetector(
-                  onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return AddNewMessageGroup();
-                    }));
-                  },
+                  onTap: () {},
                   child: Icon(
                     Icons.search,
                     color: blueColor,

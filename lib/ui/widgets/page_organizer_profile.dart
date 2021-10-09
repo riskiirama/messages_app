@@ -21,12 +21,17 @@ class PageOrganizerProfile extends StatelessWidget {
             image: AssetImage('assets/event_card.png'),
           ),
         ),
-        child: Text(
-          'Go Back',
-          style: textBold.copyWith(
-            fontSize: 15,
-            fontWeight: FontWeight.bold,
-            color: backgroundWhite,
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Text(
+            'Go Back',
+            style: textBold.copyWith(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: backgroundWhite,
+            ),
           ),
         ),
       );
@@ -114,7 +119,7 @@ class PageOrganizerProfile extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Events',
+                  'Following',
                   style: textBold.copyWith(
                     fontSize: 11,
                     fontWeight: FontWeight.bold,
@@ -122,7 +127,7 @@ class PageOrganizerProfile extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Events',
+                  'Followers',
                   style: textBold.copyWith(
                     fontSize: 11,
                     fontWeight: FontWeight.bold,
@@ -1441,12 +1446,20 @@ class PageOrganizerProfile extends StatelessWidget {
                     color: primaryColor,
                   ),
                 ),
-                Text(
-                  'Write a Review',
-                  style: textBold.copyWith(
-                    fontSize: 13,
-                    fontWeight: FontWeight.bold,
-                    color: blueColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return WriteMessage();
+                    }));
+                  },
+                  child: Text(
+                    'Write a Review',
+                    style: textBold.copyWith(
+                      fontSize: 13,
+                      fontWeight: FontWeight.bold,
+                      color: blueColor,
+                    ),
                   ),
                 ),
               ],
@@ -1489,7 +1502,6 @@ class PageOrganizerProfile extends StatelessWidget {
               ],
             ),
 
-            // COMMENT REVIEW
             SizedBox(
               height: 30,
             ),
@@ -1507,6 +1519,7 @@ class PageOrganizerProfile extends StatelessWidget {
                       width: 10,
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text('Tokunbo Douglas'),
                         SizedBox(
@@ -1531,10 +1544,10 @@ class PageOrganizerProfile extends StatelessWidget {
                               ),
                             ),
                             SizedBox(
-                              width: 5,
+                              width: 170,
                             ),
                             Text(
-                              '(119 reviews)',
+                              'Jan 05, 2020',
                               style: textBold.copyWith(
                                 fontSize: 13,
                                 fontWeight: FontWeight.bold,
@@ -1547,10 +1560,85 @@ class PageOrganizerProfile extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 11,
+                ),
+                Text(
+                  'Smade Club is one of the best event organizers out there. Every event they’ve organized is 100% lit! No cap!Will always recommend.',
+                  style: textBold.copyWith(
+                    fontSize: 13,
+                    color: primaryColor,
+                  ),
+                ),
               ],
             ),
             SizedBox(
-              height: 100,
+              height: 30,
+            ),
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Image.asset(
+                      'assets/image_photo.png',
+                      width: 42,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Tokunbo Douglas'),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Row(
+                          children: [
+                            Icon(
+                              Icons.star,
+                              color: Color(0xffFE9870),
+                              size: 14,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              '4.8',
+                              style: textBold.copyWith(
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                                color: primaryColor,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 170,
+                            ),
+                            Text(
+                              'Jan 05, 2020',
+                              style: textBold.copyWith(
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xffA0A3BD),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 11,
+                ),
+                Text(
+                  'Smade Club is one of the best event organizers out there. Every event they’ve organized is 100% lit! No cap!Will always recommend.',
+                  style: textBold.copyWith(
+                    fontSize: 13,
+                    color: primaryColor,
+                  ),
+                ),
+              ],
             ),
           ],
         ),

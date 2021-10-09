@@ -1,4 +1,6 @@
+import 'package:alphabet_scroll_view/alphabet_scroll_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:messages/theme.dart';
 
 import 'package:timelines/timelines.dart';
@@ -21,5 +23,7 @@ part 'page_event.dart';
 part 'page_organizer.dart';
 part 'page_organizer_tile.dart';
 part 'page_organizer_profile.dart';
+part 'page_organizer_write_review.dart';
+part 'page_organizer_feedback.dart';
 part 'page_attending.dart';
 part 'page_attending_tile.dart';

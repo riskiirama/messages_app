@@ -37,7 +37,6 @@ class NotifToday extends StatelessWidget {
                 child: Text(
                   'has invited you to join Ibloov',
                   overflow: TextOverflow.ellipsis,
-                  maxLines: 2,
                   style: textBold.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.w400,

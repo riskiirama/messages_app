@@ -11,13 +11,20 @@ class MessagePage extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => MessageDetailPage()));
             },
-            child: Container(
-              margin: EdgeInsets.symmetric(vertical: 25),
-              child: ChatMessage(
-                isCeklis: false,
-                isJarak: true,
-                isNotif: true,
-              ),
+            child: Stack(
+              children: [
+                Divider(
+                  thickness: 2,
+                ),
+                Container(
+                  margin: EdgeInsets.symmetric(vertical: 25),
+                  child: ChatMessage(
+                    isCeklis: false,
+                    isJarak: false,
+                    isNotif: true,
+                  ),
+                ),
+              ],
             ),
           ),
           ListView(
@@ -182,6 +189,7 @@ class MessagePage extends StatelessWidget {
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
               ),
+              isScrollable: true,
               labelColor: primaryColor,
               indicatorColor: darkBlueColor,
               indicatorPadding: EdgeInsets.symmetric(

@@ -12,12 +12,17 @@ class MorePage extends StatelessWidget {
         color: backgroundWhite,
         child: Row(
           children: [
-            Text(
-              'GoBack',
-              style: textBold.copyWith(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-                color: Color(0xff858585),
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Text(
+                'GoBack',
+                style: textBold.copyWith(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xff858585),
+                ),
               ),
             ),
             SizedBox(
