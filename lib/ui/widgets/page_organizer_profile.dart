@@ -118,20 +118,38 @@ class PageOrganizerProfile extends StatelessWidget {
                     color: Color(0xffA0A3BD),
                   ),
                 ),
-                Text(
-                  'Following',
-                  style: sfbold.copyWith(
-                    fontSize: 11,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xffA0A3BD),
+                GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet<void>(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return FollowingPage();
+                        });
+                  },
+                  child: Text(
+                    'Following',
+                    style: sfbold.copyWith(
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xffA0A3BD),
+                    ),
                   ),
                 ),
-                Text(
-                  'Followers',
-                  style: sfbold.copyWith(
-                    fontSize: 11,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xffA0A3BD),
+                GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet<void>(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return FollowersPage();
+                        });
+                  },
+                  child: Text(
+                    'Followers',
+                    style: sfbold.copyWith(
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xffA0A3BD),
+                    ),
                   ),
                 ),
               ],

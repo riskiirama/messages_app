@@ -19,15 +19,15 @@ TextStyle sfmedium = TextStyle(
   fontFamily: 'SF_Pro_600',
 );
 
-TextStyle sfbold = TextStyle(
+TextStyle sfsemibold = TextStyle(
   fontFamily: 'SF_Pro_700',
 );
 
-TextStyle sfextrabold = TextStyle(
+TextStyle sfbold = TextStyle(
   fontFamily: 'SF_Pro_800',
 );
 
-TextStyle sfheavy = TextStyle(
+TextStyle sfextrabold = TextStyle(
   fontFamily: 'SF_Pro_900',
 );
 

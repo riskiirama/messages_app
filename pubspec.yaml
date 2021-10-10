@@ -34,6 +34,7 @@ dependencies:
   google_fonts: ^2.1.0
 
   timeline_list: ^0.0.6
+  top_snackbar_flutter: ^1.0.1
 
 dev_dependencies:
   flutter_test:

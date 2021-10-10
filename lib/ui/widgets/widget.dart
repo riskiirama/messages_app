@@ -38,3 +38,5 @@ part 'page_organizer_feedback.dart';
 part 'page_attending.dart';
 
 part 'notifications_toggle.dart';
+part 'following_page.dart';
+part 'followers_page.dart';
