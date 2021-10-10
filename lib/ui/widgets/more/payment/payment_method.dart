@@ -153,13 +153,60 @@ class PaymentMethod extends StatelessWidget {
                     ],
                   ),
                   Spacer(),
-                  Container(
-                    width: 16,
-                    height: 16,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
+                  GestureDetector(
+                    onTap: () {
+                      showModalBottomSheet<void>(
+                          context: context,
+                          builder: (BuildContext context) {
+                            return Container(
+                              margin: EdgeInsets.symmetric(
+                                  horizontal: 22, vertical: 40),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Add a Debit Card',
+                                    style: sfsemibold.copyWith(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: primaryColor,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  Text(
+                                    'AMake sure the debit card belongs to you.',
+                                    style: sfsemibold.copyWith(
+                                      fontSize: 15,
+                                      color: primaryColor,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 39,
+                                  ),
+                                  TextField(
+                                    decoration: InputDecoration(
+                                      icon: Icon(Icons.payments_outlined),
+                                      border: OutlineInputBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      labelText: 'Card Number',
+                                    ),
+                                  )
+                                ],
+                              ),
+                            );
+                          });
+                    },
+                    child: Container(
+                      width: 16,
+                      height: 16,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            'assets/icon_arrow.png',
+                          ),
                         ),
                       ),
                     ),
