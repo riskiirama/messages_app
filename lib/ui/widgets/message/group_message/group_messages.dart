@@ -31,7 +31,7 @@ class GroupMessage extends StatelessWidget {
                   children: [
                     Text(
                       'Kunle Coker',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                       ),
@@ -41,7 +41,7 @@ class GroupMessage extends StatelessWidget {
                     ),
                     Text(
                       '+234 810 124 0399: I need to be there to see it happen life & direct',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 13,
                       ),
                       maxLines: 2,
@@ -57,7 +57,7 @@ class GroupMessage extends StatelessWidget {
                 children: [
                   Text(
                     '15:10',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 12,
                     ),
                   ),
@@ -75,7 +75,7 @@ class GroupMessage extends StatelessWidget {
                           child: Center(
                             child: Text(
                               '2',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 10,
                                 color: backgroundWhite,
                               ),

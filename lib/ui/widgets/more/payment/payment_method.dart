@@ -17,7 +17,7 @@ class PaymentMethod extends StatelessWidget {
               },
               child: Text(
                 'GoBack',
-                style: textBold.copyWith(
+                style: sfbold.copyWith(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Color(0xff858585),
@@ -29,7 +29,7 @@ class PaymentMethod extends StatelessWidget {
             ),
             Text(
               'Payment method',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -46,7 +46,7 @@ class PaymentMethod extends StatelessWidget {
         ),
         child: Text(
           'Manage your debit cards.',
-          style: textSemiBold.copyWith(
+          style: sfbold.copyWith(
             color: grey,
           ),
         ),
@@ -79,14 +79,14 @@ class PaymentMethod extends StatelessWidget {
                     children: [
                       Text(
                         '**** **** 8220',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           color: primaryColor,
                         ),
                       ),
                       SizedBox(height: 5),
                       Text(
                         'Expires 10/2022',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           color: grey,
                           fontSize: 11,
                         ),
@@ -138,14 +138,14 @@ class PaymentMethod extends StatelessWidget {
                     children: [
                       Text(
                         'Add a new Card',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           color: primaryColor,
                         ),
                       ),
                       SizedBox(height: 5),
                       Text(
                         'We accept Mastercard, Visa and Verve',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           color: grey,
                           fontSize: 11,
                         ),

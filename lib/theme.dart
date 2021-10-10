@@ -11,12 +11,24 @@ Color greyColor = Color(0xffEFEFEF);
 Color darkGreyColor = Color(0xFF7A7878);
 Color grey = Color(0xff505050);
 
-TextStyle textBold = TextStyle(
+TextStyle sfreguler = TextStyle(
+  fontFamily: 'SF_Pro_400',
+);
+
+TextStyle sfmedium = TextStyle(
+  fontFamily: 'SF_Pro_600',
+);
+
+TextStyle sfbold = TextStyle(
   fontFamily: 'SF_Pro_700',
 );
 
-TextStyle textSemiBold = TextStyle(
-  fontFamily: 'SF_Pro_500',
+TextStyle sfextrabold = TextStyle(
+  fontFamily: 'SF_Pro_800',
+);
+
+TextStyle sfheavy = TextStyle(
+  fontFamily: 'SF_Pro_900',
 );
 
 double defaultWidth(BuildContext context) =>

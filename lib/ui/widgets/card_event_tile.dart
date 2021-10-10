@@ -47,13 +47,13 @@ class CardEventTile extends StatelessWidget {
                           children: [
                             Text(
                               '01',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(
                               'JAN',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 color: grey,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -93,7 +93,7 @@ class CardEventTile extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   '99+',
-                                  style: textBold.copyWith(
+                                  style: sfbold.copyWith(
                                     fontSize: 8,
                                     color: backgroundWhite,
                                   ),
@@ -119,7 +119,7 @@ class CardEventTile extends StatelessWidget {
                       ),
                       Text(
                         'Live Event',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           fontSize: 8,
                           color: backgroundWhite,
                           fontWeight: FontWeight.bold,
@@ -132,7 +132,7 @@ class CardEventTile extends StatelessWidget {
                   ),
                   Text(
                     'Marlian Fest',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 11,
                       color: backgroundWhite,
                       fontWeight: FontWeight.bold,
@@ -143,7 +143,7 @@ class CardEventTile extends StatelessWidget {
                   ),
                   Text(
                     'Victoria Island, Lagos',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 6,
                       color: backgroundWhite,
                     ),
@@ -156,7 +156,7 @@ class CardEventTile extends StatelessWidget {
                     children: [
                       Text(
                         '50',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           fontSize: 8,
                           color: backgroundWhite,
                           fontWeight: FontWeight.bold,
@@ -222,13 +222,13 @@ class CardEventTile extends StatelessWidget {
                           children: [
                             Text(
                               '01',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             Text(
                               'JAN',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 color: grey,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -268,7 +268,7 @@ class CardEventTile extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   '99+',
-                                  style: textBold.copyWith(
+                                  style: sfbold.copyWith(
                                     fontSize: 8,
                                     color: backgroundWhite,
                                   ),
@@ -294,7 +294,7 @@ class CardEventTile extends StatelessWidget {
                       ),
                       Text(
                         'Live Event',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           fontSize: 8,
                           color: backgroundWhite,
                           fontWeight: FontWeight.bold,
@@ -307,7 +307,7 @@ class CardEventTile extends StatelessWidget {
                   ),
                   Text(
                     'Marlian Fest',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 11,
                       color: backgroundWhite,
                       fontWeight: FontWeight.bold,
@@ -318,7 +318,7 @@ class CardEventTile extends StatelessWidget {
                   ),
                   Text(
                     'Victoria Island, Lagos',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 6,
                       color: backgroundWhite,
                     ),
@@ -331,7 +331,7 @@ class CardEventTile extends StatelessWidget {
                     children: [
                       Text(
                         '50',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           fontSize: 8,
                           color: backgroundWhite,
                           fontWeight: FontWeight.bold,

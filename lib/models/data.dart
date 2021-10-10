@@ -22,3 +22,22 @@ class Data {
     ),
   ];
 }
+
+class Data2 {
+  static const notifs = <Notif>[
+    Notif(
+      name: 'Inbox notifications',
+      desc: 'Get notified on new inbox messages',
+    ),
+  ];
+}
+
+class Notif {
+  final String name;
+  final String desc;
+
+  const Notif({
+    required this.name,
+    required this.desc,
+  });
+}

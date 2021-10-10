@@ -18,7 +18,7 @@ class AddNewMessageInfoGroup extends StatelessWidget {
               children: [
                 Text(
                   'Aurora Couture Admin',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -30,7 +30,7 @@ class AddNewMessageInfoGroup extends StatelessWidget {
                     Expanded(
                       child: Text(
                         'A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Ac tortor dignissim convallis aenean. Tristique senectus et netus et malesuada fames ... ',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           fontSize: 12,
                         ),
                         maxLines: 1,
@@ -39,7 +39,7 @@ class AddNewMessageInfoGroup extends StatelessWidget {
                     ),
                     Text(
                       'see more',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 12,
                         color: blueColor,
                         fontWeight: FontWeight.bold,
@@ -74,14 +74,14 @@ class AddNewMessageInfoGroup extends StatelessWidget {
                     Expanded(
                       child: Text(
                         'Media, Links and Docs',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
                     Text(
                       '22',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontWeight: FontWeight.bold,
                         color: grey,
                       ),
@@ -119,7 +119,7 @@ class AddNewMessageInfoGroup extends StatelessWidget {
                     Expanded(
                       child: Text(
                         'Chat Search',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -150,7 +150,7 @@ class AddNewMessageInfoGroup extends StatelessWidget {
                       children: [
                         Text(
                           '2 ',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             color: grey,
                             fontWeight: FontWeight.bold,
                           ),
@@ -158,7 +158,7 @@ class AddNewMessageInfoGroup extends StatelessWidget {
                         Expanded(
                           child: Text(
                             'PARTICIPANTS',
-                            style: textBold.copyWith(
+                            style: sfbold.copyWith(
                               color: grey,
                               fontWeight: FontWeight.bold,
                             ),
@@ -166,7 +166,7 @@ class AddNewMessageInfoGroup extends StatelessWidget {
                         ),
                         Text(
                           'Search',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             color: blueColor,
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
@@ -192,14 +192,14 @@ class AddNewMessageInfoGroup extends StatelessWidget {
                         Expanded(
                           child: Text(
                             'Kunle Badejo',
-                            style: textBold.copyWith(
+                            style: sfbold.copyWith(
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
                         Text(
                           '(You)',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             color: grey,
                             fontSize: 12,
                           ),
@@ -210,7 +210,7 @@ class AddNewMessageInfoGroup extends StatelessWidget {
                       alignment: Alignment.centerRight,
                       child: Text(
                         'Admin',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           color: grey,
                           fontWeight: FontWeight.bold,
                           fontSize: 12,
@@ -264,7 +264,7 @@ class AddNewMessageInfoGroup extends StatelessWidget {
                 Expanded(
                   child: Text(
                     'Aurora CoutureAurora Couture',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       color: Color(0xff4272ED),
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
@@ -278,7 +278,7 @@ class AddNewMessageInfoGroup extends StatelessWidget {
                 ),
                 Text(
                   'Group Info',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 14,
                     color: primaryColor,
                     fontWeight: FontWeight.bold,

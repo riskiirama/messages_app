@@ -27,7 +27,7 @@ class PageOrganizerProfile extends StatelessWidget {
           },
           child: Text(
             'Go Back',
-            style: textBold.copyWith(
+            style: sfbold.copyWith(
               fontSize: 15,
               fontWeight: FontWeight.bold,
               color: backgroundWhite,
@@ -45,7 +45,7 @@ class PageOrganizerProfile extends StatelessWidget {
           children: [
             Text(
               'Smade Club',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: primaryColor,
@@ -53,7 +53,7 @@ class PageOrganizerProfile extends StatelessWidget {
             ),
             Text(
               'Event Organizer',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 13,
                 color: primaryColor,
               ),
@@ -74,7 +74,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   '4.8',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 13,
                     fontWeight: FontWeight.bold,
                     color: primaryColor,
@@ -85,7 +85,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   '(119 reviews)',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 13,
                     fontWeight: FontWeight.bold,
                     color: Color(0xffA0A3BD),
@@ -112,7 +112,7 @@ class PageOrganizerProfile extends StatelessWidget {
               children: [
                 Text(
                   'Events',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 11,
                     fontWeight: FontWeight.bold,
                     color: Color(0xffA0A3BD),
@@ -120,7 +120,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   'Following',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 11,
                     fontWeight: FontWeight.bold,
                     color: Color(0xffA0A3BD),
@@ -128,7 +128,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   'Followers',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 11,
                     fontWeight: FontWeight.bold,
                     color: Color(0xffA0A3BD),
@@ -144,7 +144,7 @@ class PageOrganizerProfile extends StatelessWidget {
               children: [
                 Text(
                   '84',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                     color: primaryColor,
@@ -152,7 +152,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   '210',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                     color: primaryColor,
@@ -160,7 +160,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   '950',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                     color: primaryColor,
@@ -192,7 +192,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 child: Text(
                   'Follow',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 12,
                     color: backgroundWhite,
                     fontWeight: FontWeight.bold,
@@ -216,7 +216,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   'Message',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 12,
                     color: darkBlueColor,
                     fontWeight: FontWeight.bold,
@@ -268,7 +268,7 @@ class PageOrganizerProfile extends StatelessWidget {
             // ABOUT
             Text(
               'About',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 15,
                 fontWeight: FontWeight.bold,
                 color: primaryColor,
@@ -282,7 +282,7 @@ class PageOrganizerProfile extends StatelessWidget {
             // SUBTITLE
             Text(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Risus integer ornare id turpis commodo molestie sit convallis turpis. Gravida morbi fermentum ut diam arcu nunc tortor euismod. Odio urna interdum auctor id in aenean erat habitasse gravida.',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
                 color: Color(0xffA0A3BD),
@@ -300,7 +300,7 @@ class PageOrganizerProfile extends StatelessWidget {
               children: [
                 Text(
                   'Upcoming events',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: primaryColor,
@@ -308,7 +308,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   'See all',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: blueColor,
@@ -357,13 +357,13 @@ class PageOrganizerProfile extends StatelessWidget {
                                 children: [
                                   Text(
                                     '01',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   Text(
                                     'JAN',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       color: grey,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -403,7 +403,7 @@ class PageOrganizerProfile extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         '99+',
-                                        style: textBold.copyWith(
+                                        style: sfbold.copyWith(
                                           fontSize: 8,
                                           color: backgroundWhite,
                                         ),
@@ -429,7 +429,7 @@ class PageOrganizerProfile extends StatelessWidget {
                             ),
                             Text(
                               'Live Event',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -442,7 +442,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Marlian Fest',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 11,
                             color: backgroundWhite,
                             fontWeight: FontWeight.bold,
@@ -453,7 +453,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Victoria Island, Lagos',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 6,
                             color: backgroundWhite,
                           ),
@@ -466,7 +466,7 @@ class PageOrganizerProfile extends StatelessWidget {
                           children: [
                             Text(
                               '50',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -535,13 +535,13 @@ class PageOrganizerProfile extends StatelessWidget {
                                 children: [
                                   Text(
                                     '01',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   Text(
                                     'JAN',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       color: grey,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -581,7 +581,7 @@ class PageOrganizerProfile extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         '99+',
-                                        style: textBold.copyWith(
+                                        style: sfbold.copyWith(
                                           fontSize: 8,
                                           color: backgroundWhite,
                                         ),
@@ -607,7 +607,7 @@ class PageOrganizerProfile extends StatelessWidget {
                             ),
                             Text(
                               'Live Event',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -620,7 +620,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Marlian Fest',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 11,
                             color: backgroundWhite,
                             fontWeight: FontWeight.bold,
@@ -631,7 +631,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Victoria Island, Lagos',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 6,
                             color: backgroundWhite,
                           ),
@@ -644,7 +644,7 @@ class PageOrganizerProfile extends StatelessWidget {
                           children: [
                             Text(
                               '50',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -713,13 +713,13 @@ class PageOrganizerProfile extends StatelessWidget {
                                 children: [
                                   Text(
                                     '01',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   Text(
                                     'JAN',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       color: grey,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -759,7 +759,7 @@ class PageOrganizerProfile extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         '99+',
-                                        style: textBold.copyWith(
+                                        style: sfbold.copyWith(
                                           fontSize: 8,
                                           color: backgroundWhite,
                                         ),
@@ -785,7 +785,7 @@ class PageOrganizerProfile extends StatelessWidget {
                             ),
                             Text(
                               'Live Event',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -798,7 +798,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Marlian Fest',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 11,
                             color: backgroundWhite,
                             fontWeight: FontWeight.bold,
@@ -809,7 +809,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Victoria Island, Lagos',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 6,
                             color: backgroundWhite,
                           ),
@@ -822,7 +822,7 @@ class PageOrganizerProfile extends StatelessWidget {
                           children: [
                             Text(
                               '50',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -867,7 +867,7 @@ class PageOrganizerProfile extends StatelessWidget {
               children: [
                 Text(
                   'Past events',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: primaryColor,
@@ -875,7 +875,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   'See all',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: blueColor,
@@ -924,13 +924,13 @@ class PageOrganizerProfile extends StatelessWidget {
                                 children: [
                                   Text(
                                     '01',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   Text(
                                     'JAN',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       color: grey,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -970,7 +970,7 @@ class PageOrganizerProfile extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         '99+',
-                                        style: textBold.copyWith(
+                                        style: sfbold.copyWith(
                                           fontSize: 8,
                                           color: backgroundWhite,
                                         ),
@@ -996,7 +996,7 @@ class PageOrganizerProfile extends StatelessWidget {
                             ),
                             Text(
                               'Live Event',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -1009,7 +1009,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Marlian Fest',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 11,
                             color: backgroundWhite,
                             fontWeight: FontWeight.bold,
@@ -1020,7 +1020,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Victoria Island, Lagos',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 6,
                             color: backgroundWhite,
                           ),
@@ -1033,7 +1033,7 @@ class PageOrganizerProfile extends StatelessWidget {
                           children: [
                             Text(
                               '50',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -1102,13 +1102,13 @@ class PageOrganizerProfile extends StatelessWidget {
                                 children: [
                                   Text(
                                     '01',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   Text(
                                     'JAN',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       color: grey,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -1148,7 +1148,7 @@ class PageOrganizerProfile extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         '99+',
-                                        style: textBold.copyWith(
+                                        style: sfbold.copyWith(
                                           fontSize: 8,
                                           color: backgroundWhite,
                                         ),
@@ -1174,7 +1174,7 @@ class PageOrganizerProfile extends StatelessWidget {
                             ),
                             Text(
                               'Live Event',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -1187,7 +1187,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Marlian Fest',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 11,
                             color: backgroundWhite,
                             fontWeight: FontWeight.bold,
@@ -1198,7 +1198,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Victoria Island, Lagos',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 6,
                             color: backgroundWhite,
                           ),
@@ -1211,7 +1211,7 @@ class PageOrganizerProfile extends StatelessWidget {
                           children: [
                             Text(
                               '50',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -1280,13 +1280,13 @@ class PageOrganizerProfile extends StatelessWidget {
                                 children: [
                                   Text(
                                     '01',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   Text(
                                     'JAN',
-                                    style: textBold.copyWith(
+                                    style: sfbold.copyWith(
                                       color: grey,
                                       fontWeight: FontWeight.bold,
                                     ),
@@ -1326,7 +1326,7 @@ class PageOrganizerProfile extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         '99+',
-                                        style: textBold.copyWith(
+                                        style: sfbold.copyWith(
                                           fontSize: 8,
                                           color: backgroundWhite,
                                         ),
@@ -1352,7 +1352,7 @@ class PageOrganizerProfile extends StatelessWidget {
                             ),
                             Text(
                               'Live Event',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -1365,7 +1365,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Marlian Fest',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 11,
                             color: backgroundWhite,
                             fontWeight: FontWeight.bold,
@@ -1376,7 +1376,7 @@ class PageOrganizerProfile extends StatelessWidget {
                         ),
                         Text(
                           'Victoria Island, Lagos',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 6,
                             color: backgroundWhite,
                           ),
@@ -1389,7 +1389,7 @@ class PageOrganizerProfile extends StatelessWidget {
                           children: [
                             Text(
                               '50',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 8,
                                 color: backgroundWhite,
                                 fontWeight: FontWeight.bold,
@@ -1440,7 +1440,7 @@ class PageOrganizerProfile extends StatelessWidget {
               children: [
                 Text(
                   'Reviews',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                     color: primaryColor,
@@ -1455,7 +1455,7 @@ class PageOrganizerProfile extends StatelessWidget {
                   },
                   child: Text(
                     'Write a Review',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 13,
                       fontWeight: FontWeight.bold,
                       color: blueColor,
@@ -1482,7 +1482,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   '4.8',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 13,
                     fontWeight: FontWeight.bold,
                     color: primaryColor,
@@ -1493,7 +1493,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   '(119 reviews)',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 13,
                     fontWeight: FontWeight.bold,
                     color: Color(0xffA0A3BD),
@@ -1537,7 +1537,7 @@ class PageOrganizerProfile extends StatelessWidget {
                             ),
                             Text(
                               '4.8',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 13,
                                 fontWeight: FontWeight.bold,
                                 color: primaryColor,
@@ -1548,7 +1548,7 @@ class PageOrganizerProfile extends StatelessWidget {
                             ),
                             Text(
                               'Jan 05, 2020',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 13,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xffA0A3BD),
@@ -1565,7 +1565,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   'Smade Club is one of the best event organizers out there. Every event they’ve organized is 100% lit! No cap!Will always recommend.',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 13,
                     color: primaryColor,
                   ),
@@ -1605,7 +1605,7 @@ class PageOrganizerProfile extends StatelessWidget {
                             ),
                             Text(
                               '4.8',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 13,
                                 fontWeight: FontWeight.bold,
                                 color: primaryColor,
@@ -1616,7 +1616,7 @@ class PageOrganizerProfile extends StatelessWidget {
                             ),
                             Text(
                               'Jan 05, 2020',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 fontSize: 13,
                                 fontWeight: FontWeight.bold,
                                 color: Color(0xffA0A3BD),
@@ -1633,7 +1633,7 @@ class PageOrganizerProfile extends StatelessWidget {
                 ),
                 Text(
                   'Smade Club is one of the best event organizers out there. Every event they’ve organized is 100% lit! No cap!Will always recommend.',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 13,
                     color: primaryColor,
                   ),

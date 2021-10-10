@@ -58,7 +58,7 @@ class _MyAccountPageState extends State<MyAccountPage> {
             ),
             Text(
               'Opeyemi Taiwo',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
                 color: backgroundWhite,
@@ -67,7 +67,7 @@ class _MyAccountPageState extends State<MyAccountPage> {
             SizedBox(height: 10),
             Text(
               '@Opeepee',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
                 color: backgroundWhite,
@@ -77,7 +77,7 @@ class _MyAccountPageState extends State<MyAccountPage> {
             Text(
               'Est ultricies integer quis auctor elit sed\nvulputate mi. Tincidunt dui ut ornare lectus sit. ',
               textAlign: TextAlign.center,
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 12,
                 fontWeight: FontWeight.w400,
                 color: backgroundWhite,
@@ -95,7 +95,7 @@ class _MyAccountPageState extends State<MyAccountPage> {
                   children: [
                     Text(
                       'Follower',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
                         color: backgroundWhite,
@@ -104,7 +104,7 @@ class _MyAccountPageState extends State<MyAccountPage> {
                     SizedBox(height: 5),
                     Text(
                       '105',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
                         color: backgroundWhite,
@@ -119,7 +119,7 @@ class _MyAccountPageState extends State<MyAccountPage> {
                   children: [
                     Text(
                       'Following',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
                         color: backgroundWhite,
@@ -128,7 +128,7 @@ class _MyAccountPageState extends State<MyAccountPage> {
                     SizedBox(height: 5),
                     Text(
                       '89',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
                         color: backgroundWhite,
@@ -169,6 +169,8 @@ class _MyAccountPageState extends State<MyAccountPage> {
               tabBarProperties: TabBarProperties(
                 height: 100,
                 indicatorColor: Colors.transparent,
+                labelColor: darkBlueColor,
+                unselectedLabelColor: Color(0xffA0A3BD),
               ),
               tabs: [
                 Tab(
@@ -181,8 +183,8 @@ class _MyAccountPageState extends State<MyAccountPage> {
                       SizedBox(height: 4),
                       Text(
                         'Favourites',
-                        style: textBold.copyWith(
-                          color: primaryColor,
+                        style: sfbold.copyWith(
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
@@ -198,8 +200,8 @@ class _MyAccountPageState extends State<MyAccountPage> {
                       SizedBox(height: 4),
                       Text(
                         'My Events',
-                        style: textBold.copyWith(
-                          color: primaryColor,
+                        style: sfbold.copyWith(
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
@@ -212,18 +214,19 @@ class _MyAccountPageState extends State<MyAccountPage> {
                   child: ContainedTabBarView(
                     tabBarProperties: TabBarProperties(
                       indicatorColor: Colors.transparent,
+                      labelColor: darkBlueColor,
+                      unselectedLabelColor: Color(0xffA0A3BD),
                     ),
                     tabs: [
                       Container(
                         width: 170,
                         height: 35,
-                        color: darkBlueColor,
+                        color: Color(0xffEFEFEF),
                         child: Center(
                           child: Text(
                             'Events',
-                            style: textBold.copyWith(
+                            style: sfbold.copyWith(
                               fontSize: 13,
-                              color: backgroundWhite,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -236,9 +239,8 @@ class _MyAccountPageState extends State<MyAccountPage> {
                         child: Center(
                           child: Text(
                             'Organizers',
-                            style: textBold.copyWith(
+                            style: sfbold.copyWith(
                               fontSize: 13,
-                              color: grey,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -256,22 +258,27 @@ class _MyAccountPageState extends State<MyAccountPage> {
                   ),
                 ),
                 Container(
+                  padding: EdgeInsets.only(
+                    left: 16,
+                    right: 16,
+                  ),
                   color: Color(0xffA0A3BD),
                   child: ContainedTabBarView(
                     tabBarProperties: TabBarProperties(
                       indicatorColor: Colors.transparent,
+                      labelColor: darkBlueColor,
+                      unselectedLabelColor: Color(0xffA0A3BD),
                     ),
                     tabs: [
                       Container(
                         width: 115,
                         height: 35,
-                        color: darkBlueColor,
+                        color: Color(0xffEFEFEF),
                         child: Center(
                           child: Text(
                             'Attending',
-                            style: textBold.copyWith(
+                            style: sfbold.copyWith(
                               fontSize: 13,
-                              color: backgroundWhite,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -284,9 +291,8 @@ class _MyAccountPageState extends State<MyAccountPage> {
                         child: Center(
                           child: Text(
                             'Attended',
-                            style: textBold.copyWith(
+                            style: sfbold.copyWith(
                               fontSize: 13,
-                              color: grey,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -299,9 +305,8 @@ class _MyAccountPageState extends State<MyAccountPage> {
                         child: Center(
                           child: Text(
                             'Events I created',
-                            style: textBold.copyWith(
+                            style: sfbold.copyWith(
                               fontSize: 13,
-                              color: grey,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -309,40 +314,7 @@ class _MyAccountPageState extends State<MyAccountPage> {
                       ),
                     ],
                     views: [
-                      Stack(
-                        children: [
-                          Container(
-                            padding: EdgeInsets.only(
-                              left: 16,
-                              right: 16,
-                            ),
-                            width: double.infinity,
-                            height: 35,
-                            decoration: BoxDecoration(
-                              color: backgroundWhite,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.search,
-                                  color: grey,
-                                ),
-                                SizedBox(
-                                  width: 13,
-                                ),
-                                Expanded(
-                                  child: TextFormField(
-                                    decoration: InputDecoration.collapsed(
-                                        hintText: 'Search'),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          PageAttending(),
-                        ],
-                      ),
+                      PageAttending(),
                       Text('data'),
                       Text('data'),
                     ],

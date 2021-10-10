@@ -18,7 +18,7 @@ class ConnectedAccount extends StatelessWidget {
               },
               child: Text(
                 'GoBack',
-                style: textBold.copyWith(
+                style: sfbold.copyWith(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Color(0xff858585),
@@ -30,7 +30,7 @@ class ConnectedAccount extends StatelessWidget {
             ),
             Text(
               'Connected Accounts',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -45,7 +45,7 @@ class ConnectedAccount extends StatelessWidget {
         margin: EdgeInsets.only(top: 26),
         child: Text(
           'Connect your social media accounts to Ibloolv. You\ndon’t have to add them all.',
-          style: textBold.copyWith(
+          style: sfbold.copyWith(
             fontSize: 15,
             color: grey,
           ),
@@ -204,7 +204,7 @@ class ConnectedAccount extends StatelessWidget {
           onPressed: () {},
           child: Text(
             'Connect Accounts',
-            style: textBold.copyWith(
+            style: sfbold.copyWith(
               fontSize: 15,
               color: backgroundWhite,
               fontWeight: FontWeight.w600,

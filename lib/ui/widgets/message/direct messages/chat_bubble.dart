@@ -26,7 +26,7 @@ class ChatBubble extends StatelessWidget {
           child: Center(
             child: Text(
               text,
-              style: textBold,
+              style: sfbold,
             ),
           ),
         ),
@@ -38,7 +38,7 @@ class ChatBubble extends StatelessWidget {
             children: [
               Text(
                 '12:10',
-                style: textBold.copyWith(fontSize: 10),
+                style: sfbold.copyWith(fontSize: 10),
               ),
             ],
           ),

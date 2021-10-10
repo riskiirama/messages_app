@@ -29,7 +29,7 @@ class PageOrganizerTile extends StatelessWidget {
                   children: [
                     Text(
                       'Smade Club',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
@@ -39,7 +39,7 @@ class PageOrganizerTile extends StatelessWidget {
                     ),
                     Text(
                       'Victoria Island, Lagos',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -48,7 +48,7 @@ class PageOrganizerTile extends StatelessWidget {
                     ),
                     Text(
                       'Concerts, Parties, Live Events',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         color: grey,
                         fontWeight: FontWeight.w500,
                       ),

@@ -19,7 +19,7 @@ class _AllState extends State<All> {
             expandedTextColor: primaryColor,
             title: Text(
               'What is Ibloov?',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -33,7 +33,7 @@ class _AllState extends State<All> {
                   ),
                   child: Text(
                     'Ibloov is a social event management platform for people to create, search for, and attend events around the world.',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 12,
                       color: primaryColor,
                     ),

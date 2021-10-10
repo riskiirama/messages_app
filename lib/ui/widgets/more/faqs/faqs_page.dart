@@ -117,7 +117,7 @@ class FaqsPage extends StatelessWidget {
           child: Center(
             child: Text(
               'FAQs',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -130,7 +130,7 @@ class FaqsPage extends StatelessWidget {
           },
           child: Text(
             'Go Back',
-            style: textBold.copyWith(
+            style: sfbold.copyWith(
               fontSize: 18,
               fontWeight: FontWeight.bold,
               color: grey,

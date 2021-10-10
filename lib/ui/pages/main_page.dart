@@ -15,11 +15,11 @@ class _MainPageState extends State<MainPage> {
         notchMargin: 12,
         clipBehavior: Clip.antiAlias,
         child: BottomNavigationBar(
-          selectedLabelStyle: textSemiBold.copyWith(
+          selectedLabelStyle: sfbold.copyWith(
             fontSize: 9,
             fontWeight: FontWeight.w600,
           ),
-          unselectedLabelStyle: textSemiBold.copyWith(
+          unselectedLabelStyle: sfbold.copyWith(
             fontSize: 9,
             fontWeight: FontWeight.w600,
           ),

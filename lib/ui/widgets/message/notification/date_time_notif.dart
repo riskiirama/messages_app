@@ -10,7 +10,7 @@ class NotifDateTime extends StatelessWidget {
           margin: EdgeInsets.only(left: 18),
           child: Text(
             'Jul 10, 2021',
-            style: textBold.copyWith(
+            style: sfbold.copyWith(
               fontSize: 15,
               fontWeight: FontWeight.bold,
               color: Color(0xff505050),
@@ -30,7 +30,7 @@ class NotifDateTime extends StatelessWidget {
                 children: [
                   Text(
                     'Kunle Badejo ',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                       color: primaryColor,
@@ -40,7 +40,7 @@ class NotifDateTime extends StatelessWidget {
                     child: Text(
                       'has invited you to join Ibloov',
                       maxLines: 1,
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 15,
                         fontWeight: FontWeight.w400,
                         color: Color(0xff505050),
@@ -53,7 +53,7 @@ class NotifDateTime extends StatelessWidget {
                 'has invited you to join Ibloov',
                 overflow: TextOverflow.ellipsis,
                 maxLines: 1,
-                style: textBold.copyWith(
+                style: sfbold.copyWith(
                   fontSize: 15,
                   fontWeight: FontWeight.w400,
                   color: Color(0xff505050),

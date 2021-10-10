@@ -29,7 +29,7 @@ class AddNewMessageNext extends StatelessWidget {
                     children: [
                       TextField(
                         decoration: InputDecoration.collapsed(
-                            hintStyle: textBold.copyWith(
+                            hintStyle: sfbold.copyWith(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
                               color: primaryColor,
@@ -45,7 +45,7 @@ class AddNewMessageNext extends StatelessWidget {
                       TextField(
                         maxLines: 3,
                         decoration: InputDecoration.collapsed(
-                            hintStyle: textBold.copyWith(
+                            hintStyle: sfbold.copyWith(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
                               color: primaryColor,
@@ -74,7 +74,7 @@ class AddNewMessageNext extends StatelessWidget {
               children: [
                 Text(
                   'Participants:',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 12,
                   ),
                 ),
@@ -83,7 +83,7 @@ class AddNewMessageNext extends StatelessWidget {
                 ),
                 Text(
                   '5',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 12,
                   ),
                 ),
@@ -128,7 +128,7 @@ class AddNewMessageNext extends StatelessWidget {
                     ),
                     Text(
                       'Mensa Rob',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 11,
                         color: primaryColor,
                       ),
@@ -168,7 +168,7 @@ class AddNewMessageNext extends StatelessWidget {
                     ),
                     Text(
                       'Mensa Rob',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 11,
                         color: primaryColor,
                       ),
@@ -201,7 +201,7 @@ class AddNewMessageNext extends StatelessWidget {
                 },
                 child: Text(
                   'Go Back',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
                     color: darkBlueColor,
@@ -210,7 +210,7 @@ class AddNewMessageNext extends StatelessWidget {
               ),
               Text(
                 'New Group',
-                style: textBold.copyWith(
+                style: sfbold.copyWith(
                   fontWeight: FontWeight.bold,
                   fontSize: 15,
                   color: primaryColor,
@@ -224,7 +224,7 @@ class AddNewMessageNext extends StatelessWidget {
                 },
                 child: Text(
                   'Create',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
                     color: darkBlueColor,

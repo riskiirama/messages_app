@@ -35,7 +35,7 @@ class AddNewMessageGroup extends StatelessWidget {
                 ),
                 Text(
                   'Messages and calls are end-to-end encrypted. No one \noutside of this chat, can have access to your \nconversation. Tap to learn more.',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 9,
                   ),
                   textAlign: TextAlign.center,
@@ -75,7 +75,7 @@ class AddNewMessageGroup extends StatelessWidget {
                     children: [
                       Text(
                         'Badmus Eniola',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           color: darkGreyColor,
                           fontWeight: FontWeight.bold,
                         ),
@@ -87,7 +87,7 @@ class AddNewMessageGroup extends StatelessWidget {
                       ),
                       Text(
                         'Hello Everyone, It’s a pleasure to be here. super excited.',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           color: Color(0xff231101),
                         ),
                         textAlign: TextAlign.justify,
@@ -99,7 +99,7 @@ class AddNewMessageGroup extends StatelessWidget {
                   padding: EdgeInsets.only(left: 190, top: 8),
                   child: Text(
                     '12:10',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 10,
                     ),
                   ),
@@ -128,7 +128,7 @@ class AddNewMessageGroup extends StatelessWidget {
                     children: [
                       Text(
                         'Mensa Roberts',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           color: Color(0xff00BA88),
                         ),
                         maxLines: 1,
@@ -139,7 +139,7 @@ class AddNewMessageGroup extends StatelessWidget {
                       ),
                       Text(
                         'Hello Everyone, It’s a pleasure to be here. super excited.',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           color: Color(0xff231101),
                         ),
                         textAlign: TextAlign.justify,
@@ -166,7 +166,7 @@ class AddNewMessageGroup extends StatelessWidget {
                   ),
                   child: Text(
                     'It’s always a pleasure to be in a group with people of like-minds looking at building something great',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       color: Color(0xff231101),
                     ),
                     textAlign: TextAlign.justify,
@@ -176,7 +176,7 @@ class AddNewMessageGroup extends StatelessWidget {
                   padding: EdgeInsets.only(left: 190, top: 8),
                   child: Text(
                     '12:10',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 10,
                     ),
                   ),
@@ -212,7 +212,7 @@ class AddNewMessageGroup extends StatelessWidget {
               children: [
                 Text(
                   'You',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     color: backgroundWhite,
                     fontWeight: FontWeight.bold,
                   ),
@@ -224,7 +224,7 @@ class AddNewMessageGroup extends StatelessWidget {
                 ),
                 Text(
                   'Welcome guys, it’s a pleasure to have y’all here.',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     color: backgroundWhite,
                   ),
                   textAlign: TextAlign.justify,
@@ -238,7 +238,7 @@ class AddNewMessageGroup extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: Text(
                 '12:10',
-                style: textBold.copyWith(
+                style: sfbold.copyWith(
                   fontSize: 10,
                 ),
               ),
@@ -267,7 +267,7 @@ class AddNewMessageGroup extends StatelessWidget {
                   },
                   child: Text(
                     'Go Back',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
                       color: grey,
@@ -297,7 +297,7 @@ class AddNewMessageGroup extends StatelessWidget {
                         },
                         child: Text(
                           'Aurora Couture Admin',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontWeight: FontWeight.bold,
                             color: primaryColor,
                             fontSize: 14,
@@ -309,7 +309,7 @@ class AddNewMessageGroup extends StatelessWidget {
                           Expanded(
                             child: Text(
                               'Aurora Couture Admin',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 color: primaryColor,
                                 fontSize: 12,
                               ),
@@ -318,7 +318,7 @@ class AddNewMessageGroup extends StatelessWidget {
                           ),
                           Text(
                             ',',
-                            style: textBold.copyWith(
+                            style: sfbold.copyWith(
                               color: primaryColor,
                               fontSize: 12,
                             ),
@@ -327,7 +327,7 @@ class AddNewMessageGroup extends StatelessWidget {
                           Expanded(
                             child: Text(
                               'Aurora Couture Admin',
-                              style: textBold.copyWith(
+                              style: sfbold.copyWith(
                                 color: primaryColor,
                                 fontSize: 12,
                               ),

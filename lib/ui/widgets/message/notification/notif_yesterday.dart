@@ -10,7 +10,7 @@ class NotifYesterday extends StatelessWidget {
           margin: EdgeInsets.only(left: 18),
           child: Text(
             'Yesterday',
-            style: textBold.copyWith(
+            style: sfbold.copyWith(
               fontSize: 15,
               fontWeight: FontWeight.bold,
               color: Color(0xff505050),
@@ -29,7 +29,7 @@ class NotifYesterday extends StatelessWidget {
               children: [
                 Text(
                   'Kunle Badejo ',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: primaryColor,
@@ -39,7 +39,7 @@ class NotifYesterday extends StatelessWidget {
                   child: Text(
                     'has invited you to join Ibloov',
                     overflow: TextOverflow.ellipsis,
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 15,
                       fontWeight: FontWeight.w400,
                       color: Color(0xff505050),

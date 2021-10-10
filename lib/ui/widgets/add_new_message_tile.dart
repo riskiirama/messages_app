@@ -20,7 +20,7 @@ class AddNewMessageTile extends StatelessWidget {
             ),
             Text(
               'Opeolu Tijani',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontWeight: FontWeight.bold,
               ),
             ),

@@ -18,7 +18,7 @@ class MorePage extends StatelessWidget {
               },
               child: Text(
                 'GoBack',
-                style: textBold.copyWith(
+                style: sfbold.copyWith(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Color(0xff858585),
@@ -30,7 +30,7 @@ class MorePage extends StatelessWidget {
             ),
             Text(
               'Settings',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -47,7 +47,7 @@ class MorePage extends StatelessWidget {
           children: [
             Text(
               'ACCOUNT',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontWeight: FontWeight.bold,
                 color: darkGreyColor,
               ),
@@ -70,7 +70,7 @@ class MorePage extends StatelessWidget {
                   SizedBox(width: 30),
                   Text(
                     'Payment method',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                       color: primaryColor,
@@ -101,34 +101,41 @@ class MorePage extends StatelessWidget {
         margin: EdgeInsets.only(top: 20),
         child: Column(
           children: [
-            Row(
-              children: [
-                Image.asset(
-                  image,
-                  width: 24,
-                ),
-                SizedBox(width: 30),
-                Text(
-                  text,
-                  style: textBold.copyWith(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: primaryColor,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return NotificationPage();
+                }));
+              },
+              child: Row(
+                children: [
+                  Image.asset(
+                    image,
+                    width: 24,
                   ),
-                ),
-                Spacer(),
-                Container(
-                  width: 8,
-                  height: 12,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        'assets/icon_arrow.png',
-                      ),
+                  SizedBox(width: 30),
+                  Text(
+                    text,
+                    style: sfbold.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
                     ),
                   ),
-                )
-              ],
+                  Spacer(),
+                  Container(
+                    width: 8,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/icon_arrow.png',
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ],
         ),
@@ -143,7 +150,7 @@ class MorePage extends StatelessWidget {
           children: [
             Text(
               'PREFERENCES',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontWeight: FontWeight.bold,
                 color: darkGreyColor,
               ),
@@ -188,7 +195,7 @@ class MorePage extends StatelessWidget {
           children: [
             Text(
               'SECURITY',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontWeight: FontWeight.bold,
                 color: darkGreyColor,
               ),
@@ -203,7 +210,7 @@ class MorePage extends StatelessWidget {
                 SizedBox(width: 30),
                 Text(
                   'Reset Password',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: primaryColor,
@@ -242,7 +249,7 @@ class MorePage extends StatelessWidget {
                 SizedBox(width: 30),
                 Text(
                   text,
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: primaryColor,
@@ -275,7 +282,7 @@ class MorePage extends StatelessWidget {
           children: [
             Text(
               'ABOUT IBLOOV',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontWeight: FontWeight.bold,
                 color: darkGreyColor,
               ),
@@ -329,7 +336,7 @@ class MorePage extends StatelessWidget {
                 SizedBox(width: 30),
                 Text(
                   'Logout',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: Color(0XFFFF2A52),

@@ -1,5 +1,6 @@
 import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 
 import 'package:messages/theme.dart';
 
@@ -17,3 +18,4 @@ part 'message_page.dart';
 part 'more_page.dart';
 part 'my_account_page.dart';
 part 'search_page.dart';
+part '../widgets/notification_page.dart';

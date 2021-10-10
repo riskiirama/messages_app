@@ -17,7 +17,7 @@ class CardDetail extends StatelessWidget {
               },
               child: Text(
                 'GoBack',
-                style: textBold.copyWith(
+                style: sfbold.copyWith(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Color(0xff858585),
@@ -29,7 +29,7 @@ class CardDetail extends StatelessWidget {
             ),
             Text(
               'Card Details',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -52,14 +52,14 @@ class CardDetail extends StatelessWidget {
             SizedBox(height: 20),
             Text(
               '**** **** 8220',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 color: primaryColor,
               ),
             ),
             SizedBox(height: 5),
             Text(
               'Mastercard',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 color: grey,
                 fontSize: 11,
               ),
@@ -83,7 +83,7 @@ class CardDetail extends StatelessWidget {
               children: [
                 Text(
                   'Issuer Bank',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     color: grey,
@@ -91,7 +91,7 @@ class CardDetail extends StatelessWidget {
                 ),
                 Text(
                   'First Bank of Nigeria',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     color: grey,
@@ -122,7 +122,7 @@ class CardDetail extends StatelessWidget {
               children: [
                 Text(
                   'Added On',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     color: grey,
@@ -130,7 +130,7 @@ class CardDetail extends StatelessWidget {
                 ),
                 Text(
                   '4 Feburary 2020',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     color: grey,
@@ -161,7 +161,7 @@ class CardDetail extends StatelessWidget {
               children: [
                 Text(
                   'Expiry Date',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     color: grey,
@@ -169,7 +169,7 @@ class CardDetail extends StatelessWidget {
                 ),
                 Text(
                   '10/2022',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 14,
                     fontWeight: FontWeight.w500,
                     color: grey,
@@ -209,7 +209,7 @@ class CardDetail extends StatelessWidget {
           onPressed: () {},
           child: Text(
             'Delete Card',
-            style: textBold.copyWith(
+            style: sfbold.copyWith(
               fontSize: 15,
               color: Color(0xffFF2A52),
               fontWeight: FontWeight.w600,

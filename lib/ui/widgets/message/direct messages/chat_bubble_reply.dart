@@ -31,7 +31,7 @@ class ChatBubbleReply extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(text,
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         color: backgroundWhite,
                       )),
                 ),
@@ -43,7 +43,7 @@ class ChatBubbleReply extends StatelessWidget {
                 children: [
                   Text(
                     time,
-                    style: textBold.copyWith(fontSize: 10),
+                    style: sfbold.copyWith(fontSize: 10),
                   ),
                   SizedBox(
                     width: 5,
@@ -77,7 +77,7 @@ class ChatBubbleReply extends StatelessWidget {
                 child: Center(
                   child: Text(
                     text,
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       color: backgroundWhite,
                     ),
                   ),
@@ -90,7 +90,7 @@ class ChatBubbleReply extends StatelessWidget {
                 children: [
                   Text(
                     time,
-                    style: textBold.copyWith(fontSize: 10),
+                    style: sfbold.copyWith(fontSize: 10),
                   ),
                   SizedBox(
                     width: 5,

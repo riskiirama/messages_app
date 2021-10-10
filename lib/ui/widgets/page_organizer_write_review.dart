@@ -20,7 +20,7 @@ class WriteMessage extends StatelessWidget {
                 },
                 child: Text(
                   'Cancel',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 17,
                     color: blueColor,
                     fontWeight: FontWeight.bold,
@@ -29,7 +29,7 @@ class WriteMessage extends StatelessWidget {
               ),
               Text(
                 'Write a Review',
-                style: textBold.copyWith(
+                style: sfbold.copyWith(
                   fontSize: 17,
                   color: primaryColor,
                   fontWeight: FontWeight.bold,
@@ -43,7 +43,7 @@ class WriteMessage extends StatelessWidget {
                 },
                 child: Text(
                   'Send',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 17,
                     color: blueColor,
                     fontWeight: FontWeight.bold,
@@ -83,7 +83,7 @@ class WriteMessage extends StatelessWidget {
             ),
             Text(
               'Tap star to Rate',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 17,
                 color: Color(0xff505050),
               ),

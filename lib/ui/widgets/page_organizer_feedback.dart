@@ -18,7 +18,7 @@ class FeedbackSuccess extends StatelessWidget {
             ),
             Text(
               'Review sent!',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
                 color: primaryColor,
@@ -29,7 +29,7 @@ class FeedbackSuccess extends StatelessWidget {
             ),
             Text(
               'Thank you for sharing your review',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 15,
                 color: primaryColor,
               ),
@@ -53,7 +53,7 @@ class FeedbackSuccess extends StatelessWidget {
                 },
                 child: Text(
                   'Back',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
                     color: backgroundWhite,

@@ -17,7 +17,7 @@ class ReferFriend extends StatelessWidget {
               },
               child: Text(
                 'GoBack',
-                style: textBold.copyWith(
+                style: sfbold.copyWith(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
                   color: Color(0xff858585),
@@ -29,7 +29,7 @@ class ReferFriend extends StatelessWidget {
             ),
             Text(
               'Refer Friends',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -61,7 +61,7 @@ class ReferFriend extends StatelessWidget {
           children: [
             Text(
               'Get 3% discount on tickets',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                   color: darkBlueColor,
                   fontSize: 22,
                   fontWeight: FontWeight.bold),
@@ -72,7 +72,7 @@ class ReferFriend extends StatelessWidget {
             Text(
               'Receive discounts on tickets when you refer your\nfriends and they sign up and register for an event\nwith your referral link',
               textAlign: TextAlign.center,
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 color: primaryColor,
                 fontSize: 14,
                 fontWeight: FontWeight.w500,
@@ -112,7 +112,7 @@ class ReferFriend extends StatelessWidget {
                     child: TextFormField(
                       decoration: InputDecoration.collapsed(
                           hintText: 'https://:ibloov.com/jackyln',
-                          hintStyle: textBold.copyWith(
+                          hintStyle: sfbold.copyWith(
                             color: primaryColor,
                             fontWeight: FontWeight.bold,
                           )),
@@ -122,7 +122,7 @@ class ReferFriend extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       'Copy',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                           fontSize: 13,
                           color: darkBlueColor,
                           fontWeight: FontWeight.bold),
@@ -157,7 +157,7 @@ class ReferFriend extends StatelessWidget {
           onPressed: () {},
           child: Text(
             'Share Referral Link',
-            style: textBold.copyWith(
+            style: sfbold.copyWith(
               fontSize: 15,
               color: backgroundWhite,
               fontWeight: FontWeight.w600,

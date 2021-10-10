@@ -25,7 +25,7 @@ class MessageDetailPage extends StatelessWidget {
               Text(
                 'Messages and calls are end-to-end encrypted. No one\noutside of this chat, can have access to your\nconversation. Tap to learn more.',
                 textAlign: TextAlign.center,
-                style: textBold.copyWith(
+                style: sfbold.copyWith(
                   fontSize: 9,
                 ),
               ),
@@ -117,7 +117,7 @@ class MessageDetailPage extends StatelessWidget {
           child: Center(
             child: Text(
               'Today',
-              style: textBold.copyWith(
+              style: sfbold.copyWith(
                 fontSize: 12,
               ),
             ),
@@ -147,7 +147,7 @@ class MessageDetailPage extends StatelessWidget {
             child: Center(
               child: Text(
                 'Hello Kunle, are you going to\nthe Burna Boy Live Concert?',
-                style: textBold.copyWith(
+                style: sfbold.copyWith(
                   color: backgroundWhite,
                 ),
               ),
@@ -160,7 +160,7 @@ class MessageDetailPage extends StatelessWidget {
             children: [
               Text(
                 '12:32',
-                style: textBold.copyWith(fontSize: 10),
+                style: sfbold.copyWith(fontSize: 10),
               ),
               SizedBox(
                 width: 5,
@@ -204,7 +204,7 @@ class MessageDetailPage extends StatelessWidget {
               children: [
                 Text(
                   'Anthony Oguns',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 14,
                     color: primaryColor,
                     fontWeight: FontWeight.bold,
@@ -213,7 +213,7 @@ class MessageDetailPage extends StatelessWidget {
                 SizedBox(height: 2),
                 Text(
                   'Online',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 12,
                     color: primaryColor,
                   ),

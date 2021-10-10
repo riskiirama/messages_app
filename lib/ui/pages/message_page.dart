@@ -52,7 +52,7 @@ class MessagePage extends StatelessWidget {
                       onPressed: () {},
                       child: Text(
                         'Accept',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           fontSize: 13,
                           color: backgroundWhite,
                           fontWeight: FontWeight.bold,
@@ -79,7 +79,7 @@ class MessagePage extends StatelessWidget {
                       onPressed: () {},
                       child: Text(
                         'Decline',
-                        style: textBold.copyWith(
+                        style: sfbold.copyWith(
                           fontSize: 13,
                           color: grey,
                           fontWeight: FontWeight.bold,
@@ -120,7 +120,7 @@ class MessagePage extends StatelessWidget {
                       children: [
                         Text(
                           'Messages',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 34,
                             fontWeight: FontWeight.bold,
                           ),
@@ -178,7 +178,7 @@ class MessagePage extends StatelessWidget {
             backgroundColor: backgroundLinear,
             elevation: 0,
             bottom: TabBar(
-              labelStyle: textBold.copyWith(
+              labelStyle: sfbold.copyWith(
                 fontSize: 14,
                 fontWeight: FontWeight.bold,
               ),

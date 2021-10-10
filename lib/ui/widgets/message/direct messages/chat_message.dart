@@ -1,4 +1,4 @@
-part of 'widget.dart';
+part of '../../widget.dart';
 
 class Slide extends StatefulWidget {
   @override
@@ -71,7 +71,7 @@ class _SlideState extends State<Slide> {
                 Expanded(
                   child: Text(
                     item.username,
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                     ),
@@ -79,7 +79,7 @@ class _SlideState extends State<Slide> {
                 ),
                 Text(
                   item.time,
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontSize: 12,
                   ),
                 ),
@@ -91,7 +91,7 @@ class _SlideState extends State<Slide> {
                 Expanded(
                   child: Text(
                     item.message,
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 13,
                     ),
                   ),
@@ -105,7 +105,7 @@ class _SlideState extends State<Slide> {
                   child: Center(
                     child: Text(
                       '3',
-                      style: textBold.copyWith(
+                      style: sfbold.copyWith(
                         fontSize: 10,
                         fontWeight: FontWeight.bold,
                       ),

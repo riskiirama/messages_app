@@ -127,7 +127,7 @@ class _AddNewMessagePageState extends State<AddNewMessagePage> {
                 Expanded(
                   child: TextFormField(
                     decoration: InputDecoration.collapsed(
-                      hintStyle: textBold.copyWith(
+                      hintStyle: sfbold.copyWith(
                         fontSize: 12,
                         color: grey,
                       ),
@@ -156,7 +156,7 @@ class _AddNewMessagePageState extends State<AddNewMessagePage> {
                         ),
                         Text(
                           'Mensa Rob',
-                          style: textBold.copyWith(
+                          style: sfbold.copyWith(
                             fontSize: 11,
                             color: primaryColor,
                           ),
@@ -240,7 +240,7 @@ class _AddNewMessagePageState extends State<AddNewMessagePage> {
                 },
                 child: Text(
                   'Go Back',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
                     color: darkBlueColor,
@@ -251,7 +251,7 @@ class _AddNewMessagePageState extends State<AddNewMessagePage> {
                 children: [
                   Text(
                     'Add Participants',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
                       color: primaryColor,
@@ -259,7 +259,7 @@ class _AddNewMessagePageState extends State<AddNewMessagePage> {
                   ),
                   Text(
                     '4/30',
-                    style: textBold.copyWith(
+                    style: sfbold.copyWith(
                       fontSize: 12,
                       color: primaryColor,
                     ),
@@ -274,7 +274,7 @@ class _AddNewMessagePageState extends State<AddNewMessagePage> {
                 },
                 child: Text(
                   'Next',
-                  style: textBold.copyWith(
+                  style: sfbold.copyWith(
                     fontWeight: FontWeight.bold,
                     fontSize: 15,
                     color: darkBlueColor,
