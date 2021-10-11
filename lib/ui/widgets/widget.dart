@@ -1,4 +1,5 @@
 import 'package:alphabet_scroll_view/alphabet_scroll_view.dart';
+import 'package:contained_tab_bar_view/contained_tab_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -10,6 +11,7 @@ import 'package:messages/models/slide_widget.dart';
 import 'package:messages/models/utils.dart';
 
 import 'package:messages/theme.dart';
+import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:timeline_list/timeline.dart';
 import 'package:timeline_list/timeline_model.dart';
 
@@ -40,3 +42,4 @@ part 'page_attending.dart';
 part 'notifications_toggle.dart';
 part 'following_page.dart';
 part 'followers_page.dart';
+part 'more_page.dart';

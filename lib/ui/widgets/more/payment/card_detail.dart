@@ -11,28 +11,8 @@ class CardDetail extends StatelessWidget {
         color: backgroundWhite,
         child: Row(
           children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Text(
-                'GoBack',
-                style: sfbold.copyWith(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xff858585),
-                ),
-              ),
-            ),
             SizedBox(
               width: 70,
-            ),
-            Text(
-              'Card Details',
-              style: sfbold.copyWith(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
             ),
           ],
         ),
@@ -206,7 +186,62 @@ class CardDetail extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
           ),
-          onPressed: () {},
+          onPressed: () {
+            showModalBottomSheet<void>(
+                context: context,
+                builder: (BuildContext context) {
+                  return Container(
+                    margin: EdgeInsets.only(top: 31, right: 22, left: 22),
+                    height: 158,
+                    child: Column(
+                      children: [
+                        Text(
+                          'Delete Card?',
+                          style: sfbold.copyWith(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: primaryColor,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 41,
+                        ),
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/icon_trash.png',
+                              width: 40,
+                            ),
+                            SizedBox(
+                              width: 14,
+                            ),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                                showTopSnackBar(
+                                  context,
+                                  CustomSnackBar.error(
+                                    backgroundColor: Color(0xff17B899),
+                                    message:
+                                        "Your card has been removed successfully from your account.",
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                'Yes, delete Card',
+                                style: sfbold.copyWith(
+                                  fontSize: 15,
+                                  color: primaryColor,
+                                ),
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  );
+                });
+          },
           child: Text(
             'Delete Card',
             style: sfbold.copyWith(
@@ -220,6 +255,36 @@ class CardDetail extends StatelessWidget {
     }
 
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: backgroundWhite,
+        elevation: 0,
+        automaticallyImplyLeading: false,
+        centerTitle: true,
+        flexibleSpace: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Padding(
+            padding: EdgeInsets.only(top: 45, left: 20),
+            child: Text(
+              'GoBack',
+              style: sfbold.copyWith(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+                color: Color(0xff858585),
+              ),
+            ),
+          ),
+        ),
+        title: Text(
+          'Card Details',
+          style: sfbold.copyWith(
+            fontSize: 18,
+            color: primaryColor,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
       bottomNavigationBar: customBottomBar(),
       backgroundColor: backgroundWhite,
       body: SafeArea(

@@ -31,9 +31,17 @@ class _MyAccountPageState extends State<MyAccountPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Image.asset(
-                  'assets/icon_more.png',
-                  width: 42,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => MorePageTile()));
+                  },
+                  child: Image.asset(
+                    'assets/icon_more.png',
+                    width: 42,
+                  ),
                 )
               ],
             ),

@@ -1,6 +1,12 @@
 part of 'payment.dart';
 
-class PaymentMethod extends StatelessWidget {
+class PaymentMethod extends StatefulWidget {
+  @override
+  _PaymentMethodState createState() => _PaymentMethodState();
+}
+
+class _PaymentMethodState extends State<PaymentMethod> {
+  bool status = false;
   @override
   Widget build(BuildContext context) {
     Widget header() {
@@ -161,39 +167,217 @@ class PaymentMethod extends StatelessWidget {
                             return Container(
                               margin: EdgeInsets.symmetric(
                                   horizontal: 22, vertical: 40),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              child: Stack(
                                 children: [
-                                  Text(
-                                    'Add a Debit Card',
-                                    style: sfsemibold.copyWith(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      color: primaryColor,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 8,
-                                  ),
-                                  Text(
-                                    'AMake sure the debit card belongs to you.',
-                                    style: sfsemibold.copyWith(
-                                      fontSize: 15,
-                                      color: primaryColor,
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 39,
-                                  ),
-                                  TextField(
-                                    decoration: InputDecoration(
-                                      icon: Icon(Icons.payments_outlined),
-                                      border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Add a Debit Card',
+                                        style: sfsemibold.copyWith(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.bold,
+                                          color: primaryColor,
+                                        ),
                                       ),
-                                      labelText: 'Card Number',
+                                      SizedBox(
+                                        height: 8,
+                                      ),
+                                      Text(
+                                        'AMake sure the debit card belongs to you.',
+                                        style: sfsemibold.copyWith(
+                                          fontSize: 15,
+                                          color: primaryColor,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 39,
+                                      ),
+                                      Container(
+                                        padding: EdgeInsets.only(
+                                            left: 24, right: 15, top: 7),
+                                        width: double.infinity,
+                                        height: 40,
+                                        decoration: BoxDecoration(
+                                          border: Border.all(
+                                            color: darkBlueColor,
+                                          ),
+                                          borderRadius: BorderRadius.circular(
+                                            10,
+                                          ),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            Expanded(
+                                              child: TextFormField(
+                                                decoration:
+                                                    InputDecoration.collapsed(
+                                                  hintStyle: sfbold.copyWith(
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: primaryColor,
+                                                  ),
+                                                  hintText: '1059 9455 *** ***',
+                                                ),
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: 15,
+                                            ),
+                                            Image.asset(
+                                              'assets/icon_bank.png',
+                                              width: 24,
+                                            )
+                                          ],
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: 20,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Container(
+                                            padding: EdgeInsets.only(
+                                                left: 24, right: 15, top: 10),
+                                            width: 161,
+                                            height: 40,
+                                            decoration: BoxDecoration(
+                                              border: Border.all(
+                                                color: grey,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                10,
+                                              ),
+                                            ),
+                                            child: Expanded(
+                                              child: TextFormField(
+                                                decoration:
+                                                    InputDecoration.collapsed(
+                                                  hintStyle: sfbold.copyWith(
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: grey,
+                                                  ),
+                                                  hintText: 'Expiry Date',
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            padding: EdgeInsets.only(
+                                                left: 24, right: 15, top: 10),
+                                            width: 161,
+                                            height: 40,
+                                            decoration: BoxDecoration(
+                                              border: Border.all(
+                                                color: grey,
+                                              ),
+                                              borderRadius:
+                                                  BorderRadius.circular(
+                                                10,
+                                              ),
+                                            ),
+                                            child: Expanded(
+                                              child: TextFormField(
+                                                decoration:
+                                                    InputDecoration.collapsed(
+                                                  hintStyle: sfbold.copyWith(
+                                                    fontSize: 15,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: grey,
+                                                  ),
+                                                  hintText: 'CVV',
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 30,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            'Remember this card',
+                                            style: sfbold.copyWith(
+                                              fontSize: 14,
+                                              color: grey,
+                                            ),
+                                          ),
+                                          FlutterSwitch(
+                                            width: 40,
+                                            height: 20,
+                                            activeColor: darkBlueColor,
+                                            value: status,
+                                            borderRadius: 30.0,
+                                            onToggle: (val) {
+                                              setState(() {
+                                                status = val;
+                                              });
+                                            },
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 65,
+                                      ),
+                                      Container(
+                                        width: double.infinity,
+                                        height: 40,
+                                        child: TextButton(
+                                          onPressed: () {
+                                            Navigator.pop(context);
+                                            showTopSnackBar(
+                                              context,
+                                              CustomSnackBar.success(
+                                                backgroundColor:
+                                                    Color(0xff17B899),
+                                                message:
+                                                    "Your card has been added successfully to your account.",
+                                              ),
+                                            );
+                                          },
+                                          style: TextButton.styleFrom(
+                                              backgroundColor: darkBlueColor,
+                                              shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10))),
+                                          child: Text(
+                                            'Card Number',
+                                            style: sfreguler.copyWith(
+                                                fontSize: 15,
+                                                color: backgroundWhite,
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Container(
+                                    margin: EdgeInsets.only(top: 80, left: 15),
+                                    width: 74,
+                                    height: 16,
+                                    decoration: BoxDecoration(
+                                        color: backgroundWhite,
+                                        borderRadius: BorderRadius.circular(5)),
+                                    child: Center(
+                                      child: Text(
+                                        'Card Number',
+                                        style: sfreguler.copyWith(
+                                          fontSize: 13,
+                                          color: grey,
+                                        ),
+                                      ),
                                     ),
-                                  )
+                                  ),
                                 ],
                               ),
                             );
