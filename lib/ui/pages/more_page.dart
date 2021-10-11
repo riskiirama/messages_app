@@ -3,43 +3,6 @@ part of 'pages.dart';
 class MorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget header() {
-      return Container(
-        padding: EdgeInsets.only(left: 20),
-        margin: EdgeInsets.only(top: 14),
-        width: double.infinity,
-        height: 44,
-        color: backgroundWhite,
-        child: Row(
-          children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Text(
-                'GoBack',
-                style: sfbold.copyWith(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xff858585),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 100,
-            ),
-            Text(
-              'Settings',
-              style: sfbold.copyWith(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
     Widget account() {
       return Container(
         child: Column(
@@ -101,41 +64,34 @@ class MorePage extends StatelessWidget {
         margin: EdgeInsets.only(top: 20),
         child: Column(
           children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return NotificationPage();
-                }));
-              },
-              child: Row(
-                children: [
-                  Image.asset(
-                    image,
-                    width: 24,
+            Row(
+              children: [
+                Image.asset(
+                  image,
+                  width: 24,
+                ),
+                SizedBox(width: 30),
+                Text(
+                  text,
+                  style: sfbold.copyWith(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: primaryColor,
                   ),
-                  SizedBox(width: 30),
-                  Text(
-                    text,
-                    style: sfbold.copyWith(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: 8,
-                    height: 12,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
-                        ),
+                ),
+                Spacer(),
+                Container(
+                  width: 8,
+                  height: 12,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        'assets/icon_arrow.png',
                       ),
                     ),
-                  )
-                ],
-              ),
+                  ),
+                )
+              ],
             ),
           ],
         ),
@@ -176,9 +132,18 @@ class MorePage extends StatelessWidget {
               'assets/icon_privacy.png',
               'Privacy',
             ),
-            preferencesButton(
-              'assets/icon_notification.png',
-              'Notifications',
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => NotificationPage(),
+                    ));
+              },
+              child: preferencesButton(
+                'assets/icon_notification.png',
+                'Notifications',
+              ),
             ),
           ],
         ),
@@ -350,15 +315,46 @@ class MorePage extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      backgroundColor: backgroundLinear,
-      body: SafeArea(
-        child: ListView(
-          children: [
-            header(),
-            SizedBox(
-              height: 16,
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: backgroundLinear,
+        appBar: AppBar(
+          backgroundColor: backgroundLinear,
+          elevation: 0,
+          centerTitle: true,
+          title: Text(
+            'Settings',
+            style: sfbold.copyWith(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: primaryColor,
             ),
+          ),
+          flexibleSpace: Center(
+            child: Container(
+              alignment: Alignment.centerLeft,
+              padding: EdgeInsets.symmetric(horizontal: defaultMargin),
+              width: double.infinity,
+              height: 44,
+              color: backgroundWhite,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Text(
+                  'GoBack',
+                  style: sfbold.copyWith(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xff858585),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+        body: ListView(
+          children: [
             Divider(
               thickness: 1,
             ),

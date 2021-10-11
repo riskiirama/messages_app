@@ -22,6 +22,7 @@ environment:
 
 dependencies:
   alphabet_scroll_view: ^0.3.1
+  curved_navigation_bar: ^1.0.1
   contained_tab_bar_view: ^0.8.0
   cupertino_icons: ^1.0.2
   expansion_tile_card: ^2.0.0
@@ -64,25 +65,15 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: SF_Pro_400
+    - family: SF PRO DISPLAY
       fonts:
-        - asset: assets/fonts/sf_pro_display_regular.otf
+        - asset: assets/fonts/SFPRODISPLAYREGULAR.OTF
           weight: 400
-    - family: SF_Pro_600
-      fonts:
-        - asset: assets/fonts/sf_pro_display_regular.otf
+        - asset: assets/fonts/SFPRODISPLAYMEDIUM.OTF
           weight: 600
-    - family: SF_Pro_700
-      fonts:
-        - asset: assets/fonts/sf_pro_display_regular.otf
+        - asset: assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF
           weight: 700
-    - family: SF_Pro_800
-      fonts:
-        - asset: assets/fonts/sf_pro_display_regular.otf
+        - asset: assets/fonts/SFPRODISPLAYBOLD.OTF
           weight: 800
-    - family: SF_Pro_900
-      fonts:
-        - asset: assets/fonts/sf_pro_display_regular.otf
-          weight: 900
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

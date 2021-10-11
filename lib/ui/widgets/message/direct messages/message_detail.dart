@@ -9,7 +9,6 @@ class MessageDetailPage extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 35),
           margin: EdgeInsets.only(top: 14),
           width: 295,
-          height: 59,
           decoration: BoxDecoration(
             color: Color(0XFFE9E8E8),
             borderRadius: BorderRadius.circular(10),
@@ -22,11 +21,13 @@ class MessageDetailPage extends StatelessWidget {
                 width: 9,
               ),
               SizedBox(width: 12),
-              Text(
-                'Messages and calls are end-to-end encrypted. No one\noutside of this chat, can have access to your\nconversation. Tap to learn more.',
-                textAlign: TextAlign.center,
-                style: sfbold.copyWith(
-                  fontSize: 9,
+              Expanded(
+                child: Text(
+                  'Messages and calls are end-to-end encrypted. No oneoutside of this chat, can have access to your conversation. Tap to learn more.',
+                  textAlign: TextAlign.center,
+                  style: sfreguler.copyWith(
+                    fontSize: 9,
+                  ),
                 ),
               ),
             ],
@@ -178,6 +179,7 @@ class MessageDetailPage extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: chatInput(),
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: backgroundWhite,
         centerTitle: false,
         automaticallyImplyLeading: false,

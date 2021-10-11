@@ -3,46 +3,9 @@ part of 'terms.dart';
 class AboutTerms extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget header() {
-      return Container(
-        padding: EdgeInsets.only(left: 20),
-        margin: EdgeInsets.only(top: 14),
-        width: double.infinity,
-        height: 44,
-        color: backgroundWhite,
-        child: Row(
-          children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Text(
-                'GoBack',
-                style: sfbold.copyWith(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xff858585),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 60,
-            ),
-            Text(
-              'Terms & Conditions',
-              style: sfbold.copyWith(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
     Widget text() {
       return Container(
-        margin: EdgeInsets.only(top: 14, left: 22),
+        margin: EdgeInsets.only(top: 14),
         child: Text(
           'Terms Effective Date: January 10, 2019',
           style: sfbold.copyWith(
@@ -95,26 +58,47 @@ class AboutTerms extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      backgroundColor: backgroundWhite,
-      body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            header(),
-            text(),
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              padding: EdgeInsets.symmetric(horizontal: 22),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  desc(),
-                ],
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: backgroundWhite,
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          elevation: 0,
+          backgroundColor: backgroundWhite,
+          centerTitle: true,
+          title: Text(
+            'Terms & Conditions',
+            style: sfbold.copyWith(
+              fontSize: 18,
+              color: primaryColor,
+            ),
+          ),
+          flexibleSpace: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              alignment: Alignment.centerLeft,
+              margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+              child: Text(
+                'GoBack',
+                style: sfbold.copyWith(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xff858585),
+                ),
               ),
-            )
-          ],
+            ),
+          ),
+        ),
+        body: Container(
+          margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+          child: ListView(
+            children: [
+              text(),
+              desc(),
+            ],
+          ),
         ),
       ),
     );

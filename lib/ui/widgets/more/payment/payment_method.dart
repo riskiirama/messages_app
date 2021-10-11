@@ -9,42 +9,6 @@ class _PaymentMethodState extends State<PaymentMethod> {
   bool status = false;
   @override
   Widget build(BuildContext context) {
-    Widget header() {
-      return Container(
-        margin: EdgeInsets.only(top: 14),
-        width: double.infinity,
-        height: 44,
-        color: backgroundWhite,
-        child: Row(
-          children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Text(
-                'GoBack',
-                style: sfbold.copyWith(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xff858585),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 70,
-            ),
-            Text(
-              'Payment method',
-              style: sfbold.copyWith(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
     Widget text() {
       return Container(
         margin: EdgeInsets.only(
@@ -372,7 +336,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
                                       child: Text(
                                         'Card Number',
                                         style: sfreguler.copyWith(
-                                          fontSize: 13,
+                                          fontSize: 12,
                                           color: grey,
                                         ),
                                       ),
@@ -409,15 +373,45 @@ class _PaymentMethodState extends State<PaymentMethod> {
       );
     }
 
-    return Scaffold(
-      backgroundColor: backgroundWhite,
-      body: SafeArea(
-        child: Container(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: backgroundWhite,
+        appBar: AppBar(
+          centerTitle: true,
+          elevation: 0,
+          automaticallyImplyLeading: false,
+          backgroundColor: backgroundWhite,
+          flexibleSpace: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              alignment: Alignment.centerLeft,
+              margin: EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                'GoBack',
+                style: sfbold.copyWith(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xff858585),
+                ),
+              ),
+            ),
+          ),
+          title: Text(
+            'Payment method',
+            style: sfbold.copyWith(
+              fontSize: 18,
+              color: primaryColor,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        body: Container(
           margin: EdgeInsets.symmetric(horizontal: 22),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              header(),
               text(),
               cards(),
               newCards(),

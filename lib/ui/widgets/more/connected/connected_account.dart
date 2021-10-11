@@ -3,48 +3,11 @@ part of 'connected.dart';
 class ConnectedAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget header() {
-      return Container(
-        padding: EdgeInsets.only(left: 20),
-        margin: EdgeInsets.only(top: 14),
-        width: double.infinity,
-        height: 44,
-        color: backgroundWhite,
-        child: Row(
-          children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: Text(
-                'GoBack',
-                style: sfbold.copyWith(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xff858585),
-                ),
-              ),
-            ),
-            SizedBox(
-              width: 60,
-            ),
-            Text(
-              'Connected Accounts',
-              style: sfbold.copyWith(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-
     Widget text() {
       return Container(
         margin: EdgeInsets.only(top: 26),
         child: Text(
-          'Connect your social media accounts to Ibloolv. You\ndon’t have to add them all.',
+          'Connect your social media accounts to Ibloolv. You don’t have to add them all.',
           style: sfbold.copyWith(
             fontSize: 15,
             color: grey,
@@ -214,28 +177,53 @@ class ConnectedAccount extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      backgroundColor: backgroundWhite,
-      bottomNavigationBar: customBottomBar(),
-      body: SafeArea(
-        child: Column(
-          children: [
-            header(),
-            SingleChildScrollView(
-              scrollDirection: Axis.vertical,
-              padding: EdgeInsets.symmetric(horizontal: 22),
-              child: Column(
-                children: [
-                  text(),
-                  twitterInput(),
-                  facebookInput(),
-                  instagramInput(),
-                  youtubeInput(),
-                ],
+    return SafeArea(
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        backgroundColor: backgroundWhite,
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: backgroundWhite,
+          centerTitle: true,
+          automaticallyImplyLeading: false,
+          flexibleSpace: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              alignment: Alignment.centerLeft,
+              margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+              child: Text(
+                'GoBack',
+                style: sfbold.copyWith(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xff858585),
+                ),
               ),
-            )
-          ],
+            ),
+          ),
+          title: Text(
+            'Connected Accounts',
+            style: sfbold.copyWith(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: primaryColor,
+            ),
+          ),
+        ),
+        bottomNavigationBar: customBottomBar(),
+        body: Container(
+          margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+          child: ListView(
+            children: [
+              text(),
+              twitterInput(),
+              facebookInput(),
+              instagramInput(),
+              youtubeInput(),
+            ],
+          ),
         ),
       ),
     );

@@ -3,27 +3,10 @@ part of 'payment.dart';
 class CardDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget header() {
-      return Container(
-        margin: EdgeInsets.only(top: 14),
-        width: double.infinity,
-        height: 44,
-        color: backgroundWhite,
-        child: Row(
-          children: [
-            SizedBox(
-              width: 70,
-            ),
-          ],
-        ),
-      );
-    }
-
     Widget cards() {
       return Container(
         margin: EdgeInsets.only(top: 35),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Image.asset(
               'assets/image_visa.png',
@@ -32,14 +15,12 @@ class CardDetail extends StatelessWidget {
             SizedBox(height: 20),
             Text(
               '**** **** 8220',
-              style: sfbold.copyWith(
-                color: primaryColor,
-              ),
+              style: sfreguler,
             ),
             SizedBox(height: 5),
             Text(
               'Mastercard',
-              style: sfbold.copyWith(
+              style: sfreguler.copyWith(
                 color: grey,
                 fontSize: 11,
               ),
@@ -254,45 +235,46 @@ class CardDetail extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      appBar: AppBar(
+    return SafeArea(
+      child: Scaffold(
         backgroundColor: backgroundWhite,
-        elevation: 0,
-        automaticallyImplyLeading: false,
-        centerTitle: true,
-        flexibleSpace: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Padding(
-            padding: EdgeInsets.only(top: 45, left: 20),
-            child: Text(
-              'GoBack',
-              style: sfbold.copyWith(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-                color: Color(0xff858585),
+        appBar: AppBar(
+          backgroundColor: backgroundWhite,
+          elevation: 0,
+          automaticallyImplyLeading: false,
+          centerTitle: true,
+          flexibleSpace: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Container(
+              alignment: Alignment.centerLeft,
+              margin: EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                'GoBack',
+                style: sfbold.copyWith(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xff858585),
+                ),
               ),
             ),
           ),
-        ),
-        title: Text(
-          'Card Details',
-          style: sfbold.copyWith(
-            fontSize: 18,
-            color: primaryColor,
-            fontWeight: FontWeight.bold,
+          title: Text(
+            'Card Details',
+            style: sfbold.copyWith(
+              fontSize: 18,
+              color: primaryColor,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
-      ),
-      bottomNavigationBar: customBottomBar(),
-      backgroundColor: backgroundWhite,
-      body: SafeArea(
-        child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 22),
+        bottomNavigationBar: customBottomBar(),
+        body: Container(
+          alignment: Alignment.center,
+          margin: EdgeInsets.symmetric(horizontal: defaultMargin),
           child: Column(
             children: [
-              header(),
               cards(),
               issueBank(),
               addedOn(),

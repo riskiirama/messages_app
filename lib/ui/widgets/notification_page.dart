@@ -568,80 +568,80 @@ class _NotificationPageState extends State<NotificationPage> {
       );
     }
 
-    return Scaffold(
-      backgroundColor: backgroundWhite,
-      appBar: AppBar(
+    return SafeArea(
+      child: Scaffold(
         backgroundColor: backgroundWhite,
-        elevation: 0,
-        centerTitle: true,
-        automaticallyImplyLeading: false,
-        flexibleSpace: SafeArea(
-          child: Container(
-            margin: EdgeInsets.only(
-              top: 2,
-              left: 22,
-            ),
-            child: Align(
-              alignment: Alignment.centerLeft,
+        appBar: AppBar(
+          backgroundColor: backgroundWhite,
+          elevation: 0,
+          centerTitle: true,
+          automaticallyImplyLeading: false,
+          flexibleSpace: Container(
+            alignment: Alignment.centerLeft,
+            margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
               child: Text(
-                'Go Back',
+                'GoBack',
                 style: sfbold.copyWith(
                   fontSize: 15,
-                  fontWeight: FontWeight.bold,
                   color: grey,
                 ),
               ),
             ),
           ),
-        ),
-        title: Text(
-          'Notifications',
-          style: sfbold.copyWith(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: primaryColor,
+          title: Text(
+            'Notifications',
+            style: sfbold.copyWith(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: primaryColor,
+            ),
           ),
         ),
-      ),
-      body: Container(
-        margin: EdgeInsets.symmetric(
-          horizontal: 22,
-          vertical: 20,
+        body: Container(
+          margin: EdgeInsets.symmetric(
+            horizontal: 22,
+            vertical: 20,
+          ),
+          child: ListView(
+            children: [
+              coba(),
+            ],
+          ),
         ),
-        child: ListView(
-          children: [
-            coba(),
-          ],
-        ),
-      ),
-      bottomNavigationBar: BottomAppBar(
-        elevation: 0,
-        child: Container(
-          height: 70,
+        bottomNavigationBar: BottomAppBar(
+          elevation: 0,
           child: Container(
-            margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            width: double.infinity,
-            height: 50,
-            decoration: BoxDecoration(
-              color: darkBlueColor,
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: TextButton(
-              onPressed: () {
-                showTopSnackBar(
-                  context,
-                  CustomSnackBar.success(
-                    backgroundColor: Color(0xff17B899),
-                    message: "Your Notifications has been updated Successfully",
+            height: 70,
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              width: double.infinity,
+              height: 50,
+              decoration: BoxDecoration(
+                color: darkBlueColor,
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: TextButton(
+                onPressed: () {
+                  showTopSnackBar(
+                    context,
+                    CustomSnackBar.success(
+                      backgroundColor: Color(0xff17B899),
+                      message:
+                          "Your Notifications has been updated Successfully",
+                    ),
+                  );
+                },
+                child: Text(
+                  'Update Notifications',
+                  style: sfsemibold.copyWith(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: backgroundWhite,
                   ),
-                );
-              },
-              child: Text(
-                'Update Notifications',
-                style: sfsemibold.copyWith(
-                  fontSize: 15,
-                  fontWeight: FontWeight.bold,
-                  color: backgroundWhite,
                 ),
               ),
             ),

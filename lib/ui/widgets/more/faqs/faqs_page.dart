@@ -81,18 +81,10 @@ class FaqsPage extends StatelessWidget {
                 All(),
               ],
             ),
-            Container(
-              color: blueColor,
-            ),
-            Container(
-              color: blueColor,
-            ),
-            Container(
-              color: blueColor,
-            ),
-            Container(
-              color: blueColor,
-            ),
+            Container(),
+            Container(),
+            Container(),
+            Container(),
           ],
         ),
       );
@@ -107,38 +99,40 @@ class FaqsPage extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      backgroundColor: backgroundWhite,
-      appBar: AppBar(
+    return SafeArea(
+      child: Scaffold(
         backgroundColor: backgroundWhite,
-        automaticallyImplyLeading: false,
-        flexibleSpace: Container(
-          margin: EdgeInsets.only(top: 25),
-          child: Center(
-            child: Text(
-              'FAQs',
-              style: sfbold.copyWith(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
+        appBar: AppBar(
+          backgroundColor: backgroundWhite,
+          automaticallyImplyLeading: false,
+          centerTitle: true,
+          elevation: 0,
+          flexibleSpace: Container(
+            alignment: Alignment.centerLeft,
+            margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Text(
+                'GoBack',
+                style: sfbold.copyWith(
+                  fontSize: 15,
+                  color: grey,
+                ),
               ),
             ),
           ),
-        ),
-        title: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: Text(
-            'Go Back',
+          title: Text(
+            'FAQs',
             style: sfbold.copyWith(
               fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: grey,
+              color: primaryColor,
             ),
           ),
         ),
+        body: body(),
       ),
-      body: body(),
     );
   }
 }

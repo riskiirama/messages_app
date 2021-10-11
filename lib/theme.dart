@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-double defaultMargin = 30.0;
+double defaultMargin = 20.0;
 
 Color primaryColor = Color(0xff000000);
 Color backgroundLinear = Color(0xffD8E3FF);
@@ -12,23 +12,23 @@ Color darkGreyColor = Color(0xFF7A7878);
 Color grey = Color(0xff505050);
 
 TextStyle sfreguler = TextStyle(
-  fontFamily: 'SF_Pro_400',
+  fontFamily: "SF PRO DISPLAY",
+  fontWeight: FontWeight.w400,
 );
 
 TextStyle sfmedium = TextStyle(
-  fontFamily: 'SF_Pro_600',
+  fontFamily: "SF PRO DISPLAY",
+  fontWeight: FontWeight.w600,
 );
 
 TextStyle sfsemibold = TextStyle(
-  fontFamily: 'SF_Pro_700',
+  fontFamily: "SF PRO DISPLAY",
+  fontWeight: FontWeight.w700,
 );
 
 TextStyle sfbold = TextStyle(
-  fontFamily: 'SF_Pro_800',
-);
-
-TextStyle sfextrabold = TextStyle(
-  fontFamily: 'SF_Pro_900',
+  fontFamily: "SF PRO DISPLAY",
+  fontWeight: FontWeight.bold,
 );
 
 double defaultWidth(BuildContext context) =>

@@ -164,12 +164,19 @@ class _AddNewMessagePageState extends State<AddNewMessagePage> {
                       ],
                     ),
                     Container(
+                      width: 19,
+                      height: 19,
                       margin: EdgeInsets.only(
                         left: 35,
                       ),
+                      decoration: BoxDecoration(
+                        color: grey,
+                        shape: BoxShape.circle,
+                      ),
                       child: Icon(
                         Icons.close,
-                        size: 20,
+                        size: 15,
+                        color: backgroundWhite,
                       ),
                     ),
                   ],
@@ -219,73 +226,73 @@ class _AddNewMessagePageState extends State<AddNewMessagePage> {
       );
     }
 
-    return Scaffold(
-      backgroundColor: backgroundWhite,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
+    return SafeArea(
+      child: Scaffold(
         backgroundColor: backgroundWhite,
-        elevation: 0,
-        title: Container(
-          margin: EdgeInsets.only(
-            top: 20,
-            left: 20,
-            right: 20,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: Text(
-                  'Go Back',
-                  style: sfbold.copyWith(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                    color: darkBlueColor,
-                  ),
-                ),
-              ),
-              Column(
-                children: [
-                  Text(
-                    'Add Participants',
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: backgroundWhite,
+          elevation: 0,
+          flexibleSpace: Container(
+            margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(
+                    'Go Back',
                     style: sfbold.copyWith(
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
-                      color: primaryColor,
+                      color: darkBlueColor,
                     ),
-                  ),
-                  Text(
-                    '4/30',
-                    style: sfbold.copyWith(
-                      fontSize: 12,
-                      color: primaryColor,
-                    ),
-                  ),
-                ],
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return AddNewMessageNext();
-                  }));
-                },
-                child: Text(
-                  'Next',
-                  style: sfbold.copyWith(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                    color: darkBlueColor,
                   ),
                 ),
-              ),
-            ],
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Add Participants',
+                      style: sfbold.copyWith(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                        color: primaryColor,
+                      ),
+                    ),
+                    Text(
+                      '4/30',
+                      style: sfbold.copyWith(
+                        fontSize: 12,
+                        color: primaryColor,
+                      ),
+                    ),
+                  ],
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return AddNewMessageNext();
+                    }));
+                  },
+                  child: Text(
+                    'Next',
+                    style: sfbold.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: darkBlueColor,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
+        body: body(),
       ),
-      body: body(),
     );
   }
 }

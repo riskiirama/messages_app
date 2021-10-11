@@ -65,7 +65,7 @@ class AddNewMessageNext extends StatelessWidget {
 
           // participants
           Container(
-            padding: EdgeInsets.only(left: 35, right: 35),
+            padding: EdgeInsets.symmetric(horizontal: defaultMargin),
             margin: EdgeInsets.only(top: 20),
             width: double.infinity,
             height: 34,
@@ -182,17 +182,14 @@ class AddNewMessageNext extends StatelessWidget {
       );
     }
 
-    return Scaffold(
-      backgroundColor: backgroundWhite,
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Color(0xffEFEFEF),
-        elevation: 0,
-        title: Container(
-          margin: EdgeInsets.only(
-            top: 20,
-          ),
-          child: Row(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: backgroundWhite,
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          backgroundColor: Color(0xffEFEFEF),
+          elevation: 0,
+          title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
@@ -234,8 +231,8 @@ class AddNewMessageNext extends StatelessWidget {
             ],
           ),
         ),
+        body: body(),
       ),
-      body: body(),
     );
   }
 }
