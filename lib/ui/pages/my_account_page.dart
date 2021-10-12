@@ -31,8 +31,8 @@ class _MyAccountPageState extends State<MyAccountPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                GestureDetector(
-                  onTap: () {
+                InkWell(
+                  onLongPress: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -163,13 +163,14 @@ class _MyAccountPageState extends State<MyAccountPage> {
           ),
         ),
         child: Stack(
+          alignment: Alignment.topCenter,
           children: [
             Container(
-              margin: EdgeInsets.only(top: 15, left: 190),
+              margin: EdgeInsets.only(top: 15, bottom: 36),
               width: 40,
               height: 4,
               decoration: BoxDecoration(
-                color: Color(0xffC4C4C4),
+                color: grey,
                 borderRadius: BorderRadius.circular(5),
               ),
             ),
@@ -598,16 +599,14 @@ class _MyAccountPageState extends State<MyAccountPage> {
     }
 
     return Scaffold(
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Stack(
-          children: [
-            header(),
-            more(),
-            profile(),
-            content(),
-          ],
-        ),
+      body: Stack(
+        children: [
+          header(),
+          profile(),
+          SingleChildScrollView(
+              scrollDirection: Axis.vertical, child: content()),
+          more(),
+        ],
       ),
     );
   }

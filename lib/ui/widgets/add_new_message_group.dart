@@ -6,16 +6,13 @@ class AddNewMessageGroup extends StatelessWidget {
     Widget body() {
       return ListView(
         children: [
-          // attention message
+          //todo attention message
           Container(
+            alignment: Alignment.center,
             margin: EdgeInsets.only(
               top: 14,
               left: 26,
               right: 26,
-            ),
-            padding: EdgeInsets.only(
-              left: 35,
-              right: 35,
             ),
             width: double.infinity,
             height: 59,
@@ -25,6 +22,7 @@ class AddNewMessageGroup extends StatelessWidget {
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Icon(
                   Icons.lock,
@@ -44,7 +42,7 @@ class AddNewMessageGroup extends StatelessWidget {
             ),
           ),
 
-          // message group
+          // todo message group
           Container(
             margin: EdgeInsets.only(
               top: 21,
@@ -87,9 +85,7 @@ class AddNewMessageGroup extends StatelessWidget {
                       ),
                       Text(
                         'Hello Everyone, It’s a pleasure to be here. super excited.',
-                        style: sfbold.copyWith(
-                          color: Color(0xff231101),
-                        ),
+                        style: sfreguler.copyWith(color: primaryColor),
                         textAlign: TextAlign.justify,
                       ),
                     ],
@@ -139,9 +135,7 @@ class AddNewMessageGroup extends StatelessWidget {
                       ),
                       Text(
                         'Hello Everyone, It’s a pleasure to be here. super excited.',
-                        style: sfbold.copyWith(
-                          color: Color(0xff231101),
-                        ),
+                        style: sfreguler.copyWith(color: primaryColor),
                         textAlign: TextAlign.justify,
                       ),
                     ],
@@ -166,9 +160,7 @@ class AddNewMessageGroup extends StatelessWidget {
                   ),
                   child: Text(
                     'It’s always a pleasure to be in a group with people of like-minds looking at building something great',
-                    style: sfbold.copyWith(
-                      color: Color(0xff231101),
-                    ),
+                    style: sfreguler.copyWith(color: primaryColor),
                     textAlign: TextAlign.justify,
                   ),
                 ),
@@ -185,7 +177,7 @@ class AddNewMessageGroup extends StatelessWidget {
             ),
           ),
 
-          // admin
+          //todo admin
           Container(
             margin: EdgeInsets.only(
               top: 21,
@@ -224,7 +216,7 @@ class AddNewMessageGroup extends StatelessWidget {
                 ),
                 Text(
                   'Welcome guys, it’s a pleasure to have y’all here.',
-                  style: sfbold.copyWith(
+                  style: sfreguler.copyWith(
                     color: backgroundWhite,
                   ),
                   textAlign: TextAlign.justify,
