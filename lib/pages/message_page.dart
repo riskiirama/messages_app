@@ -397,7 +397,14 @@ class _MessagePageState extends State<MessagePage> {
             },
             child: directMessage(),
           ),
-          groupMessage(),
+          GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => AddNewMessageGroup()));
+              },
+              child: groupMessage()),
           notifications(),
         ],
       );
@@ -1736,8 +1743,60 @@ class AddNewMessageGroup extends StatelessWidget {
       );
     }
 
+    Widget chatInput() {
+      return Container(
+        padding: EdgeInsets.only(left: 15, right: 26),
+        height: 88,
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: greyColor,
+          ),
+          color: backgroundWhite,
+        ),
+        width: double.infinity,
+        child: Row(
+          children: [
+            Image.asset(
+              'assets/icon_file.png',
+              width: 30,
+            ),
+            SizedBox(width: 4),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: greyColor,
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                height: 45,
+                padding: EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 12,
+                ),
+                child: Center(
+                  child: TextFormField(
+                    decoration:
+                        InputDecoration.collapsed(hintText: 'Type a message'),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              width: 15,
+            ),
+            Image.asset(
+              'assets/icon_camera.png',
+              width: 24,
+            )
+          ],
+        ),
+      );
+    }
+
     return Scaffold(
       backgroundColor: backgroundWhite,
+      bottomNavigationBar: chatInput(),
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70),
         child: AppBar(
