@@ -494,15 +494,40 @@ class _MessagePageState extends State<MessagePage> {
               ),
               tabs: [
                 Tab(
-                  text: 'Direct Messages',
-                  iconMargin: EdgeInsets.only(left: 18, right: 18),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text('Direct Messages'),
+                    ],
+                  ),
                 ),
                 Tab(
-                  text: 'Group Messages',
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text('Group Messages'),
+                    ],
+                  ),
                 ),
                 Tab(
-                  text: 'Notifications',
-                )
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text('Notifications'),
+                      Image.asset(
+                        'assets/bulat.png',
+                        width: 10,
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),

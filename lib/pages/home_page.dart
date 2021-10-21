@@ -1729,197 +1729,291 @@ class AlertEvent extends StatelessWidget {
                     builder: (context) => Container(
                       margin:
                           EdgeInsets.symmetric(horizontal: 22, vertical: 15),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      child: ListView(
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          Column(
                             children: [
-                              Image.asset(
-                                'assets/logo.png',
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Image.asset(
+                                    'assets/logo.png',
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Container(
+                                      width: 30,
+                                      height: 30,
+                                      decoration: BoxDecoration(
+                                        color: primaryColor.withOpacity(0.1),
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: Icon(
+                                        Icons.close,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.pop(context);
-                                },
-                                child: Container(
-                                  width: 30,
-                                  height: 30,
-                                  decoration: BoxDecoration(
-                                    color: primaryColor.withOpacity(0.1),
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Icon(
-                                    Icons.close,
-                                  ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Divider(),
+                              SizedBox(
+                                height: 21,
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Row(
+                                  children: [
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Stack(
+                                          children: [
+                                            Image.asset(
+                                              'assets/image_photo2.png',
+                                              width: 60,
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                top: 42,
+                                                left: 43,
+                                              ),
+                                              child: Image.asset(
+                                                'assets/messenger.png',
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Text(
+                                          'Hugo \nCollins',
+                                          style: sfreguler.copyWith(
+                                            fontSize: 11,
+                                            color: primaryColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Stack(
+                                          children: [
+                                            Image.asset(
+                                              'assets/image_photo.png',
+                                              width: 60,
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                top: 42,
+                                                left: 43,
+                                              ),
+                                              child: Image.asset(
+                                                'assets/wa.png',
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Text(
+                                          'Hugo \nCollins',
+                                          style: sfreguler.copyWith(
+                                            fontSize: 11,
+                                            color: primaryColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Stack(
+                                          children: [
+                                            Image.asset(
+                                              'assets/image_photo3.png',
+                                              width: 60,
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                top: 42,
+                                                left: 43,
+                                              ),
+                                              child: Image.asset(
+                                                'assets/im.png',
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Text(
+                                          'Hugo \nCollins',
+                                          style: sfreguler.copyWith(
+                                            fontSize: 11,
+                                            color: primaryColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Stack(
+                                          children: [
+                                            Image.asset(
+                                              'assets/image_photo2.png',
+                                              width: 60,
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                top: 42,
+                                                left: 43,
+                                              ),
+                                              child: Image.asset(
+                                                'assets/messenger.png',
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Text(
+                                          'Hugo \nCollins',
+                                          style: sfreguler.copyWith(
+                                            fontSize: 11,
+                                            color: primaryColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Stack(
+                                          children: [
+                                            Image.asset(
+                                              'assets/image_photo2.png',
+                                              width: 60,
+                                            ),
+                                            Padding(
+                                              padding: EdgeInsets.only(
+                                                top: 42,
+                                                left: 43,
+                                              ),
+                                              child: Image.asset(
+                                                'assets/messenger.png',
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        Text(
+                                          'Hugo \nCollins',
+                                          style: sfreguler.copyWith(
+                                            fontSize: 11,
+                                            color: primaryColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 13,
+                              ),
+                              Divider(),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Row(
+                                  children: [
+                                    Image.asset(
+                                      'assets/message-l.png',
+                                      width: 60,
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Image.asset(
+                                      'assets/mail-l.png',
+                                      width: 60,
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Image.asset(
+                                      'assets/message-white.png',
+                                      width: 60,
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Image.asset(
+                                      'assets/wa-l.png',
+                                      width: 60,
+                                    ),
+                                    SizedBox(
+                                      width: 20,
+                                    ),
+                                    Image.asset(
+                                      'assets/twiter-l.png',
+                                      width: 60,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Container(
+                                padding: EdgeInsets.symmetric(horizontal: 16),
+                                width: double.infinity,
+                                height: 50,
+                                decoration: BoxDecoration(
+                                  color: backgroundWhite,
+                                  borderRadius: BorderRadius.circular(10),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: primaryColor,
+                                    ),
+                                  ],
+                                ),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'copy',
+                                      style: sfreguler.copyWith(
+                                        color: primaryColor,
+                                        fontSize: 17,
+                                      ),
+                                    ),
+                                    Image.asset(
+                                      'assets/copy.png',
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
-                          ),
-                          Divider(),
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            child: Row(
-                              children: [
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Stack(
-                                      children: [
-                                        Image.asset(
-                                          'assets/image_photo2.png',
-                                          width: 60,
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(
-                                            top: 42,
-                                            left: 43,
-                                          ),
-                                          child: Image.asset(
-                                            'assets/messenger.png',
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Text(
-                                      'Hugo \nCollins',
-                                      style: sfreguler.copyWith(
-                                        fontSize: 11,
-                                        color: primaryColor,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Stack(
-                                      children: [
-                                        Image.asset(
-                                          'assets/image_photo.png',
-                                          width: 60,
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(
-                                            top: 42,
-                                            left: 43,
-                                          ),
-                                          child: Image.asset(
-                                            'assets/wa.png',
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Text(
-                                      'Hugo \nCollins',
-                                      style: sfreguler.copyWith(
-                                        fontSize: 11,
-                                        color: primaryColor,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Stack(
-                                      children: [
-                                        Image.asset(
-                                          'assets/image_photo3.png',
-                                          width: 60,
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(
-                                            top: 42,
-                                            left: 43,
-                                          ),
-                                          child: Image.asset(
-                                            'assets/im.png',
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Text(
-                                      'Hugo \nCollins',
-                                      style: sfreguler.copyWith(
-                                        fontSize: 11,
-                                        color: primaryColor,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Stack(
-                                      children: [
-                                        Image.asset(
-                                          'assets/image_photo2.png',
-                                          width: 60,
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(
-                                            top: 42,
-                                            left: 43,
-                                          ),
-                                          child: Image.asset(
-                                            'assets/messenger.png',
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Text(
-                                      'Hugo \nCollins',
-                                      style: sfreguler.copyWith(
-                                        fontSize: 11,
-                                        color: primaryColor,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Stack(
-                                      children: [
-                                        Image.asset(
-                                          'assets/image_photo2.png',
-                                          width: 60,
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.only(
-                                            top: 42,
-                                            left: 43,
-                                          ),
-                                          child: Image.asset(
-                                            'assets/messenger.png',
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Text(
-                                      'Hugo \nCollins',
-                                      style: sfreguler.copyWith(
-                                        fontSize: 11,
-                                        color: primaryColor,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
                           ),
                         ],
                       ),
