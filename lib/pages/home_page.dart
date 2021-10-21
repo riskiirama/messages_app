@@ -236,7 +236,6 @@ class _HomePageState extends State<HomePage> {
         children: [
           //todo date time
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
                 child: Text(
@@ -247,11 +246,38 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Text(
-                'p',
-                style: sfreguler.copyWith(
-                  fontSize: 15,
-                  color: primaryColor,
+              Spacer(),
+              GestureDetector(
+                onTap: () {
+                  showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime.now(),
+                      lastDate: DateTime.now());
+                },
+                child: Text(
+                  // ignore: unnecessary_null_comparison
+                  'Tuesday, 21 Jul',
+                  style: sfreguler.copyWith(
+                    fontSize: 15,
+                    color: primaryColor,
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              GestureDetector(
+                onTap: () {
+                  showTimePicker(
+                      context: context, initialTime: TimeOfDay.now());
+                },
+                child: Text(
+                  '18:00',
+                  style: sfreguler.copyWith(
+                    fontSize: 15,
+                    color: primaryColor,
+                  ),
                 ),
               ),
             ],
@@ -260,7 +286,6 @@ class _HomePageState extends State<HomePage> {
             height: 20,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GestureDetector(
                 child: Text(
@@ -271,11 +296,38 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Text(
-                'p',
-                style: sfreguler.copyWith(
-                  fontSize: 15,
-                  color: primaryColor,
+              Spacer(),
+              GestureDetector(
+                onTap: () {
+                  showDatePicker(
+                      context: context,
+                      initialDate: DateTime.now(),
+                      firstDate: DateTime.now(),
+                      lastDate: DateTime.now());
+                },
+                child: Text(
+                  // ignore: unnecessary_null_comparison
+                  'Tuesday, 21 Jul',
+                  style: sfreguler.copyWith(
+                    fontSize: 15,
+                    color: primaryColor,
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              GestureDetector(
+                onTap: () {
+                  showTimePicker(
+                      context: context, initialTime: TimeOfDay.now());
+                },
+                child: Text(
+                  '18:00',
+                  style: sfreguler.copyWith(
+                    fontSize: 15,
+                    color: primaryColor,
+                  ),
                 ),
               ),
             ],
@@ -312,12 +364,60 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
+          SizedBox(
+            height: 30,
+          ),
         ],
       );
     }
 
     Widget sectionMaps() {
-      return Container();
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Location',
+            style: sfreguler.copyWith(
+              fontSize: 15,
+              color: primaryColor,
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 18),
+            width: double.infinity,
+            height: 50,
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: primaryColor.withOpacity(0.2),
+              ),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Row(
+              children: [
+                Image.asset(
+                  'assets/maps-icon.png',
+                ),
+                SizedBox(
+                  width: 12,
+                ),
+                GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    'Add location',
+                    style: sfreguler.copyWith(
+                      fontSize: 15,
+                      color: primaryColor.withOpacity(0.5),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ],
+      );
     }
 
     Widget sectionDesc() {
@@ -760,7 +860,7 @@ class _Step2State extends State<Step2> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Event Conditions',
+            'Hashtags',
             style: sfreguler.copyWith(
               fontSize: 15,
             ),
@@ -807,7 +907,143 @@ class _Step2State extends State<Step2> {
                   width: 58,
                   height: 40,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) => Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 22, vertical: 15),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: 52,
+                                height: 4,
+                                decoration: BoxDecoration(
+                                  color: grey,
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 33,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Hashtags',
+                                    style: sfbold.copyWith(
+                                      fontSize: 18,
+                                      color: grey,
+                                    ),
+                                  ),
+                                  GestureDetector(
+                                    onTap: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text(
+                                      'Done',
+                                      style: sfreguler.copyWith(
+                                        fontSize: 18,
+                                        color: blueColor,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 29,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '#GirlsNightOut',
+                                    style: sfreguler.copyWith(
+                                      fontSize: 15,
+                                      color: primaryColor,
+                                    ),
+                                  ),
+                                  Checkbox(
+                                    checkColor: Colors.white,
+                                    fillColor:
+                                        MaterialStateProperty.resolveWith(
+                                            getColor),
+                                    value: isChecked,
+                                    onChanged: (bool? value) {
+                                      setState(() {
+                                        isChecked = value!;
+                                      });
+                                    },
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    '#GirlsRunTheWorld',
+                                    style: sfreguler.copyWith(
+                                      fontSize: 15,
+                                      color: primaryColor,
+                                    ),
+                                  ),
+                                  Checkbox(
+                                    checkColor: Colors.white,
+                                    fillColor:
+                                        MaterialStateProperty.resolveWith(
+                                            getColor),
+                                    value: isChecked,
+                                    onChanged: (bool? value) {
+                                      setState(() {
+                                        isChecked = value!;
+                                      });
+                                    },
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Row(
+                                children: [
+                                  Container(
+                                    width: 32,
+                                    height: 32,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      border: Border.all(
+                                        color: darkBlueColor,
+                                        width: 3,
+                                      ),
+                                    ),
+                                    child: Icon(
+                                      Icons.add,
+                                      color: darkBlueColor,
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    width: 12,
+                                  ),
+                                  Text(
+                                    'Add New Hashtag',
+                                    style: sfsemibold.copyWith(
+                                      fontSize: 18,
+                                      color: darkBlueColor,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: primaryColor.withOpacity(0.2),
                     ),
@@ -1051,7 +1287,7 @@ class _Step2State extends State<Step2> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Step2()));
+                          MaterialPageRoute(builder: (context) => Step3()));
                     },
                     child: Icon(
                       Icons.navigate_next,
@@ -1104,6 +1340,637 @@ class _Step2State extends State<Step2> {
             publicEvent(),
             inviteFriends(),
           ],
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: Container(
+            height: 90,
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 22, vertical: 23),
+              width: 176,
+              height: 50,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: darkBlueColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Step3()));
+                },
+                child: Text(
+                  'Next Step',
+                  style: sfsemibold.copyWith(
+                    fontSize: 15,
+                    color: backgroundWhite,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class Step3 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: backgroundWhite,
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(120),
+          child: AppBar(
+            elevation: 0,
+            automaticallyImplyLeading: false,
+            backgroundColor: backgroundWhite,
+            title: Container(
+              alignment: Alignment.centerLeft,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Text(
+                      'Go Back',
+                      style: sfbold.copyWith(
+                        fontSize: 15,
+                        color: grey,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            flexibleSpace: Container(
+              margin: EdgeInsets.only(
+                  top: 65, left: defaultMargin, right: defaultMargin),
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/event.png',
+                    width: 32,
+                  ),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Expanded(
+                    child: Text(
+                      'Create Event',
+                      style: sfbold.copyWith(
+                        fontSize: 18,
+                        color: primaryColor,
+                      ),
+                    ),
+                  ),
+                  Text(
+                    'Step 3 of 3',
+                    style: sfsemibold.copyWith(
+                      fontSize: 15,
+                      color: grey,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        body: ListView(
+          padding:
+              EdgeInsets.symmetric(horizontal: defaultMargin, vertical: 24),
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Ticket Limit',
+                  style: sfreguler.copyWith(
+                    fontSize: 15,
+                    color: primaryColor,
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 16,
+                    horizontal: 23,
+                  ),
+                  width: double.infinity,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: primaryColor.withOpacity(0.2),
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: GestureDetector(
+                    onTap: () {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) => Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 22, vertical: 15),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Center(
+                                child: Container(
+                                  width: 52,
+                                  height: 4,
+                                  decoration: BoxDecoration(
+                                    color: primaryColor.withOpacity(0.2),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 26,
+                              ),
+                              Text(
+                                'Add New Ticket Type',
+                                style: sfbold.copyWith(
+                                  fontSize: 13,
+                                  color: darkBlueColor,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 43,
+                              ),
+                              Text(
+                                'Ticket Type Title',
+                                style: sfreguler.copyWith(
+                                  fontSize: 15,
+                                  color: primaryColor,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              TextField(
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  hintText: 'e.g Regular',
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                'Ticket Type  Price',
+                                style: sfreguler.copyWith(
+                                  fontSize: 15,
+                                  color: primaryColor,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              TextField(
+                                decoration: InputDecoration(
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  hintText: 'e.g \$10',
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Container(
+                                width: double.infinity,
+                                height: 50,
+                                child: TextButton(
+                                  style: TextButton.styleFrom(
+                                    backgroundColor: darkBlueColor,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Save Ticket Type',
+                                    style: sfsemibold.copyWith(
+                                      fontSize: 15,
+                                      color: backgroundWhite,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      'e.g  500',
+                      style: sfreguler.copyWith(
+                        fontSize: 15,
+                        color: primaryColor.withOpacity(0.5),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'Type  ‘0’ if there is no limit ',
+                  style: sfbold.copyWith(
+                    fontSize: 13,
+                    color: darkBlueColor,
+                  ),
+                ),
+                SizedBox(
+                  height: 41,
+                ),
+                Text(
+                  'Ticket Type',
+                  style: sfreguler.copyWith(
+                    fontSize: 15,
+                    color: primaryColor,
+                  ),
+                ),
+                SizedBox(
+                  height: 22,
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 119,
+                  decoration: BoxDecoration(
+                    color: blueColor.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'You currently have no ticket type.\nClick button below too add new type ',
+                      style: sfmedium.copyWith(
+                        fontSize: 13,
+                        color: grey,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Container(
+                    width: 176,
+                    height: 42,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: primaryColor.withOpacity(0.1),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'Add New Ticket type',
+                        style: sfsemibold.copyWith(
+                          fontSize: 15,
+                          color: grey,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+        bottomNavigationBar: BottomAppBar(
+          child: Container(
+            height: 90,
+            child: Container(
+              margin: EdgeInsets.symmetric(horizontal: 22, vertical: 23),
+              width: 176,
+              height: 50,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: darkBlueColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => AlertEvent()));
+                },
+                child: Text(
+                  'Finish Create Event',
+                  style: sfsemibold.copyWith(
+                    fontSize: 15,
+                    color: backgroundWhite,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class AlertEvent extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(
+        margin: EdgeInsets.symmetric(horizontal: 22),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/feedback.png',
+              ),
+              SizedBox(
+                height: 33,
+              ),
+              Text(
+                'Event Created \nSuccessfully!',
+                style: sfbold.copyWith(
+                  fontSize: 22,
+                  color: primaryColor,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(
+                height: 11,
+              ),
+              Text(
+                'Hurray! Your event has been created\n successfully, and your friends will be notified',
+                style: sfreguler.copyWith(
+                  fontSize: 15,
+                  color: primaryColor,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(
+                height: 175,
+              ),
+              GestureDetector(
+                onTap: () {
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (context) => Container(
+                      margin:
+                          EdgeInsets.symmetric(horizontal: 22, vertical: 15),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Image.asset(
+                                'assets/logo.png',
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Container(
+                                  width: 30,
+                                  height: 30,
+                                  decoration: BoxDecoration(
+                                    color: primaryColor.withOpacity(0.1),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  child: Icon(
+                                    Icons.close,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Divider(),
+                          SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Row(
+                              children: [
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Stack(
+                                      children: [
+                                        Image.asset(
+                                          'assets/image_photo2.png',
+                                          width: 60,
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                            top: 42,
+                                            left: 43,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/messenger.png',
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      'Hugo \nCollins',
+                                      style: sfreguler.copyWith(
+                                        fontSize: 11,
+                                        color: primaryColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Stack(
+                                      children: [
+                                        Image.asset(
+                                          'assets/image_photo.png',
+                                          width: 60,
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                            top: 42,
+                                            left: 43,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/wa.png',
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      'Hugo \nCollins',
+                                      style: sfreguler.copyWith(
+                                        fontSize: 11,
+                                        color: primaryColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Stack(
+                                      children: [
+                                        Image.asset(
+                                          'assets/image_photo3.png',
+                                          width: 60,
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                            top: 42,
+                                            left: 43,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/im.png',
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      'Hugo \nCollins',
+                                      style: sfreguler.copyWith(
+                                        fontSize: 11,
+                                        color: primaryColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Stack(
+                                      children: [
+                                        Image.asset(
+                                          'assets/image_photo2.png',
+                                          width: 60,
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                            top: 42,
+                                            left: 43,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/messenger.png',
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      'Hugo \nCollins',
+                                      style: sfreguler.copyWith(
+                                        fontSize: 11,
+                                        color: primaryColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Stack(
+                                      children: [
+                                        Image.asset(
+                                          'assets/image_photo2.png',
+                                          width: 60,
+                                        ),
+                                        Padding(
+                                          padding: EdgeInsets.only(
+                                            top: 42,
+                                            left: 43,
+                                          ),
+                                          child: Image.asset(
+                                            'assets/messenger.png',
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      'Hugo \nCollins',
+                                      style: sfreguler.copyWith(
+                                        fontSize: 11,
+                                        color: primaryColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    border: Border.all(color: darkBlueColor),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Share Event Link',
+                      style: sfsemibold.copyWith(
+                        fontSize: 15,
+                        color: darkBlueColor,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 21,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/');
+                },
+                child: Container(
+                  width: double.infinity,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    color: darkBlueColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Back to Home',
+                      style: sfsemibold.copyWith(
+                        fontSize: 15,
+                        color: backgroundWhite,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

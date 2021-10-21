@@ -9,7 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:image_picker/image_picker.dart';
+
 import 'package:messages/theme.dart';
+
 import 'package:messages/widgets/widget.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
