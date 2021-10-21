@@ -8,6 +8,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.1"
+  another_flushbar:
+    dependency: "direct main"
+    description:
+      name: another_flushbar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.10.24"
   async:
     dependency: transitive
     description:
@@ -371,20 +378,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.3.0"
-  timeline_list:
-    dependency: "direct main"
-    description:
-      name: timeline_list
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.6"
-  top_snackbar_flutter:
-    dependency: "direct main"
-    description:
-      name: top_snackbar_flutter
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.1"
   typed_data:
     dependency: transitive
     description:
