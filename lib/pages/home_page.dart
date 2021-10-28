@@ -252,8 +252,8 @@ class _HomePageState extends State<HomePage> {
                   showDatePicker(
                       context: context,
                       initialDate: DateTime.now(),
-                      firstDate: DateTime.now(),
-                      lastDate: DateTime.now());
+                      firstDate: DateTime(1930),
+                      lastDate: DateTime(2100));
                 },
                 child: Text(
                   // ignore: unnecessary_null_comparison
@@ -302,8 +302,8 @@ class _HomePageState extends State<HomePage> {
                   showDatePicker(
                       context: context,
                       initialDate: DateTime.now(),
-                      firstDate: DateTime.now(),
-                      lastDate: DateTime.now());
+                      firstDate: DateTime(1930),
+                      lastDate: DateTime(2100));
                 },
                 child: Text(
                   // ignore: unnecessary_null_comparison
@@ -497,6 +497,33 @@ class _HomePageState extends State<HomePage> {
       );
     }
 
+    Widget buttonNext() {
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        width: 176,
+        height: 50,
+        child: TextButton(
+          style: TextButton.styleFrom(
+            backgroundColor: darkBlueColor,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Step2()));
+          },
+          child: Text(
+            'Next Step',
+            style: sfsemibold.copyWith(
+              fontSize: 15,
+              color: backgroundWhite,
+            ),
+          ),
+        ),
+      );
+    }
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: backgroundWhite,
@@ -506,31 +533,6 @@ class _HomePageState extends State<HomePage> {
             elevation: 0,
             automaticallyImplyLeading: false,
             backgroundColor: backgroundWhite,
-            title: Container(
-              alignment: Alignment.centerLeft,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    'Go Back',
-                    style: sfbold.copyWith(
-                      fontSize: 15,
-                      color: grey,
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Step2()));
-                    },
-                    child: Icon(
-                      Icons.navigate_next,
-                      color: primaryColor,
-                    ),
-                  ),
-                ],
-              ),
-            ),
             flexibleSpace: Container(
               margin: EdgeInsets.only(
                   top: 65, left: defaultMargin, right: defaultMargin),
@@ -573,6 +575,7 @@ class _HomePageState extends State<HomePage> {
             sectionMaps(),
             sectionDesc(),
             sectionImage(),
+            buttonNext(),
           ],
         ),
       ),
@@ -1282,16 +1285,6 @@ class _Step2State extends State<Step2> {
                         fontSize: 15,
                         color: grey,
                       ),
-                    ),
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Step3()));
-                    },
-                    child: Icon(
-                      Icons.navigate_next,
-                      color: primaryColor,
                     ),
                   ),
                 ],

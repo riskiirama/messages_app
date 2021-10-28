@@ -23,12 +23,21 @@ class MorePage extends StatelessWidget {
                   width: 24,
                 ),
                 SizedBox(width: 30),
-                Text(
-                  'Payment method',
-                  style: sfbold.copyWith(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: primaryColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PaymentMethod(),
+                        ));
+                  },
+                  child: Text(
+                    'Payment method',
+                    style: sfbold.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
+                    ),
                   ),
                 ),
                 Spacer(),
@@ -59,7 +68,7 @@ class MorePage extends StatelessWidget {
       );
     }
 
-    Widget preferencesButton(String image, String text) {
+    Widget conncetedAccounts() {
       return Container(
         margin: EdgeInsets.only(top: 20),
         child: Column(
@@ -67,26 +76,191 @@ class MorePage extends StatelessWidget {
             Row(
               children: [
                 Image.asset(
-                  image,
+                  'assets/icon_account.png',
                   width: 24,
                 ),
                 SizedBox(width: 30),
-                Text(
-                  text,
-                  style: sfbold.copyWith(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: primaryColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ConnectedAccount(),
+                        ));
+                  },
+                  child: Text(
+                    'Connected Accounts',
+                    style: sfbold.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
+                    ),
                   ),
                 ),
                 Spacer(),
-                Container(
-                  width: 8,
-                  height: 12,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        'assets/icon_arrow.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ConnectedAccount(),
+                        ));
+                  },
+                  child: Container(
+                    width: 8,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/icon_arrow.png',
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget interests() {
+      return Container(
+        margin: EdgeInsets.only(top: 30),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Image.asset(
+                  'assets/icon_love.png',
+                  width: 24,
+                ),
+                SizedBox(width: 30),
+                GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    'Interests',
+                    style: sfbold.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
+                    ),
+                  ),
+                ),
+                Spacer(),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 8,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/icon_arrow.png',
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget privacy() {
+      return Container(
+        margin: EdgeInsets.only(top: 30),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Image.asset(
+                  'assets/icon_privacy.png',
+                  width: 24,
+                ),
+                SizedBox(width: 30),
+                GestureDetector(
+                  onTap: () {},
+                  child: Text(
+                    'Privacy',
+                    style: sfbold.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
+                    ),
+                  ),
+                ),
+                Spacer(),
+                GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    width: 8,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/icon_arrow.png',
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget notifications() {
+      return Container(
+        margin: EdgeInsets.only(top: 30),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Image.asset(
+                  'assets/icon_notification.png',
+                  width: 24,
+                ),
+                SizedBox(width: 30),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => NotificationPage(),
+                        ));
+                  },
+                  child: Text(
+                    'Notifications',
+                    style: sfbold.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
+                    ),
+                  ),
+                ),
+                Spacer(),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => NotificationPage(),
+                        ));
+                  },
+                  child: Container(
+                    width: 8,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/icon_arrow.png',
+                        ),
                       ),
                     ),
                   ),
@@ -111,40 +285,10 @@ class MorePage extends StatelessWidget {
                 color: darkGreyColor,
               ),
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ConnectedAccount(),
-                    ));
-              },
-              child: preferencesButton(
-                'assets/icon_account.png',
-                'Connected Accounts',
-              ),
-            ),
-            preferencesButton(
-              'assets/icon_love.png',
-              'Interests',
-            ),
-            preferencesButton(
-              'assets/icon_privacy.png',
-              'Privacy',
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => NotificationPage(),
-                    ));
-              },
-              child: preferencesButton(
-                'assets/icon_notification.png',
-                'Notifications',
-              ),
-            ),
+            conncetedAccounts(),
+            interests(),
+            privacy(),
+            notifications(),
           ],
         ),
       );
@@ -200,7 +344,7 @@ class MorePage extends StatelessWidget {
       );
     }
 
-    Widget aboutButton(String image, String text) {
+    Widget termsButton() {
       return Container(
         margin: EdgeInsets.only(top: 20),
         child: Column(
@@ -208,26 +352,158 @@ class MorePage extends StatelessWidget {
             Row(
               children: [
                 Image.asset(
-                  image,
+                  'assets/icon_info.png',
                   width: 24,
                 ),
                 SizedBox(width: 30),
-                Text(
-                  text,
-                  style: sfbold.copyWith(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: primaryColor,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AboutTerms(),
+                        ));
+                  },
+                  child: Text(
+                    'Terms and conditions',
+                    style: sfbold.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
+                    ),
                   ),
                 ),
                 Spacer(),
-                Container(
-                  width: 8,
-                  height: 12,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        'assets/icon_arrow.png',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => AboutTerms(),
+                        ));
+                  },
+                  child: Container(
+                    width: 8,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/icon_arrow.png',
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget faqsButton() {
+      return Container(
+        margin: EdgeInsets.only(top: 22),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Image.asset(
+                  'assets/icon_faqs.png',
+                  width: 24,
+                ),
+                SizedBox(width: 30),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FaqsPage(),
+                        ));
+                  },
+                  child: Text(
+                    'FAQs',
+                    style: sfbold.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
+                    ),
+                  ),
+                ),
+                Spacer(),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => FaqsPage(),
+                        ));
+                  },
+                  child: Container(
+                    width: 8,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/icon_arrow.png',
+                        ),
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    Widget referButton() {
+      return Container(
+        margin: EdgeInsets.only(top: 22),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Image.asset(
+                  'assets/icon_share.png',
+                  width: 24,
+                ),
+                SizedBox(width: 30),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ReferFriend(),
+                        ));
+                  },
+                  child: Text(
+                    'Refer a Friend',
+                    style: sfbold.copyWith(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
+                    ),
+                  ),
+                ),
+                Spacer(),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ReferFriend(),
+                        ));
+                  },
+                  child: Container(
+                    width: 8,
+                    height: 12,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/icon_arrow.png',
+                        ),
                       ),
                     ),
                   ),
@@ -252,45 +528,9 @@ class MorePage extends StatelessWidget {
                 color: darkGreyColor,
               ),
             ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AboutTerms(),
-                    ));
-              },
-              child: aboutButton(
-                'assets/icon_info.png',
-                'Terms and conditions',
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => FaqsPage(),
-                    ));
-              },
-              child: aboutButton(
-                'assets/icon_faqs.png',
-                'FAQs',
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ReferFriend(),
-                    ));
-              },
-              child: aboutButton(
-                'assets/icon_share.png',
-                'Refer a Friend',
-              ),
-            ),
+            termsButton(),
+            faqsButton(),
+            referButton(),
             SizedBox(height: 24),
             Row(
               children: [
@@ -319,6 +559,7 @@ class MorePage extends StatelessWidget {
       child: Scaffold(
         backgroundColor: backgroundLinear,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: backgroundLinear,
           elevation: 0,
           centerTitle: true,
@@ -338,9 +579,7 @@ class MorePage extends StatelessWidget {
               height: 44,
               color: backgroundWhite,
               child: GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
+                onTap: () {},
                 child: Text(
                   'GoBack',
                   style: sfbold.copyWith(
@@ -781,7 +1020,12 @@ class CardDetail extends StatelessWidget {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.pop(context);
+                                Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => PaymentMethod(),
+                                    ),
+                                    (route) => false);
                                 Flushbar(
                                   backgroundColor: Color(0xff17B899),
                                   flushbarPosition: FlushbarPosition.TOP,
@@ -1805,7 +2049,7 @@ class ConnectedAccount extends StatelessWidget {
             ),
             SizedBox(width: 13),
             Expanded(
-              child: TextFormField(
+              child: TextField(
                 style: sfbold.copyWith(
                   color: primaryColor,
                 ),
@@ -1974,7 +2218,6 @@ class ConnectedAccount extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
         backgroundColor: backgroundWhite,
         appBar: AppBar(
           elevation: 0,
@@ -2356,7 +2599,7 @@ class ReferFriend extends StatelessWidget {
 
     Widget gift() {
       return Container(
-        margin: EdgeInsets.only(top: 85),
+        margin: EdgeInsets.only(top: 60),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -2371,7 +2614,7 @@ class ReferFriend extends StatelessWidget {
 
     Widget textGift() {
       return Container(
-        margin: EdgeInsets.only(top: 69),
+        margin: EdgeInsets.only(top: 60),
         child: Column(
           children: [
             Text(
@@ -2400,7 +2643,7 @@ class ReferFriend extends StatelessWidget {
 
     Widget textReffer() {
       return Container(
-        margin: EdgeInsets.only(top: 62),
+        margin: EdgeInsets.only(top: 50),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -2414,7 +2657,7 @@ class ReferFriend extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 51,
-              margin: EdgeInsets.only(top: 16),
+              margin: EdgeInsets.only(top: 15),
               padding: EdgeInsets.only(
                 left: 22,
               ),
@@ -2454,9 +2697,7 @@ class ReferFriend extends StatelessWidget {
       return Container(
         height: 51,
         width: double.infinity,
-        margin: EdgeInsets.only(
-          top: 96,
-        ),
+        margin: EdgeInsets.only(top: 40),
         child: TextButton(
           style: TextButton.styleFrom(
             padding: EdgeInsets.symmetric(

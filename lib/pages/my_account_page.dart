@@ -763,7 +763,7 @@ class MorePageTile extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              width: 15,
+                              width: 10,
                             ),
                             Column(
                               children: [
@@ -789,7 +789,7 @@ class MorePageTile extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              width: 15,
+                              width: 10,
                             ),
                             Column(
                               children: [
@@ -815,7 +815,7 @@ class MorePageTile extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              width: 15,
+                              width: 10,
                             ),
                             Column(
                               children: [

@@ -12,7 +12,7 @@ class PageAttending extends StatelessWidget {
               width: double.infinity,
               child: Image.asset(
                 'assets/event_card.png',
-                width: 200,
+                height: 200,
               ),
             ),
             Container(
@@ -20,7 +20,7 @@ class PageAttending extends StatelessWidget {
               width: double.infinity,
               child: Image.asset(
                 'assets/event_card.png',
-                width: 200,
+                height: 200,
               ),
             ),
             Container(
@@ -28,7 +28,7 @@ class PageAttending extends StatelessWidget {
               width: double.infinity,
               child: Image.asset(
                 'assets/event_card.png',
-                width: 200,
+                height: 200,
               ),
             ),
             Container(
@@ -36,7 +36,7 @@ class PageAttending extends StatelessWidget {
               width: double.infinity,
               child: Image.asset(
                 'assets/event_card.png',
-                width: 200,
+                height: 200,
               ),
             ),
           ],

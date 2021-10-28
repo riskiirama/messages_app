@@ -18,6 +18,7 @@ class _MessagePageState extends State<MessagePage> {
         itemBuilder: (context, index) {
           final item = items[index];
           return Dismissible(
+            direction: DismissDirection.endToStart,
             key: Key(item),
             onDismissed: (direction) {
               setState(() {
@@ -117,6 +118,7 @@ class _MessagePageState extends State<MessagePage> {
         itemBuilder: (context, index) {
           final list = items2[index];
           return Dismissible(
+            direction: DismissDirection.endToStart,
             key: Key(list),
             onDismissed: (direction) {
               setState(() {
@@ -215,12 +217,21 @@ class _MessagePageState extends State<MessagePage> {
         children: [
           Container(
             margin: EdgeInsets.only(left: 18, bottom: 10),
-            child: Text(
-              'Today',
-              style: sfsemibold.copyWith(
-                fontSize: 13,
-                color: Color(0xff505050),
-              ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Today',
+                  style: sfsemibold.copyWith(
+                    fontSize: 13,
+                    color: Color(0xff505050),
+                  ),
+                ),
+                Image.asset(
+                  'assets/bulat.png',
+                  width: 6,
+                ),
+              ],
             ),
           ),
           ListTile(

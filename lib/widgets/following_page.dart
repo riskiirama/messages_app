@@ -1,6 +1,17 @@
 part of 'widget.dart';
 
-class FollowingPage extends StatelessWidget {
+class FollowingPage extends StatefulWidget {
+  @override
+  _FollowingPageState createState() => _FollowingPageState();
+}
+
+class _FollowingPageState extends State<FollowingPage> {
+  List<User> _users = [
+    User('Opeolu Tijani', 'assets/image_profile.png', false),
+    User('Opeolu Tijani', 'assets/image_profile.png', false),
+    User('Opeolu Tijani', 'assets/image_profile.png', false),
+  ];
+  bool isFollowed = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,100 +50,87 @@ class FollowingPage extends StatelessWidget {
         ),
       ),
       body: Container(
-        margin: EdgeInsets.symmetric(
-          horizontal: 22,
-          vertical: 20,
+        padding: EdgeInsets.only(
+          right: 20,
+          left: 20,
         ),
-        child: ListView(
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  'assets/image_profile.png',
-                  width: 38,
-                ),
-                SizedBox(
-                  width: 16,
-                ),
-                Expanded(
-                  child: Text(
-                    'Opeolu Tijani',
-                    style: sfmedium.copyWith(
-                      color: primaryColor,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 75,
-                  height: 35,
-                  child: TextButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                        backgroundColor: darkBlueColor,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10))),
-                    child: Text(
-                      'Following',
-                      style: sfmedium.copyWith(
-                        fontSize: 12,
-                        color: backgroundWhite,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 54, bottom: 15),
-              child: Divider(),
-            ),
-            Row(
-              children: [
-                Image.asset(
-                  'assets/image_profile.png',
-                  width: 38,
-                ),
-                SizedBox(
-                  width: 16,
-                ),
-                Expanded(
-                  child: Text(
-                    'Opeolu Tijani',
-                    style: sfmedium.copyWith(
-                      color: primaryColor,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Container(
-                  width: 75,
-                  height: 35,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: darkBlueColor),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Following',
-                      style: sfmedium.copyWith(
-                        fontSize: 12,
-                        color: darkBlueColor,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 54, bottom: 15),
-              child: Divider(),
-            ),
-          ],
+        color: Colors.white,
+        height: double.infinity,
+        width: double.infinity,
+        child: ListView.builder(
+          itemCount: _users.length,
+          itemBuilder: (context, index) {
+            return userComponent(user: _users[index]);
+          },
         ),
       ),
     );
   }
+
+  userComponent({required User user}) {
+    return Container(
+      padding: EdgeInsets.only(top: 10, bottom: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                  width: 38,
+                  height: 38,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(50),
+                    child: Image.asset(user.image),
+                  )),
+              SizedBox(width: 10),
+              Text(user.name,
+                  style: TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.w500)),
+            ],
+          ),
+          Container(
+              height: 35,
+              decoration: BoxDecoration(
+                border: Border.all(color: darkBlueColor),
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: MaterialButton(
+                elevation: 0,
+                color: user.isFollowedByMe ? darkBlueColor : backgroundWhite,
+                onPressed: () {
+                  setState(() {
+                    user.isFollowedByMe = !user.isFollowedByMe;
+                  });
+                },
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                child: Text(
+                  user.isFollowedByMe ? 'Follow' : 'Following',
+                  style: user.isFollowedByMe
+                      ? sfmedium.copyWith(
+                          fontSize: 12,
+                          color: backgroundWhite,
+                          fontWeight: FontWeight.bold,
+                        )
+                      : sfmedium.copyWith(
+                          fontSize: 12,
+                          color: blueColor,
+                          fontWeight: FontWeight.bold,
+                        ),
+                ),
+              ))
+        ],
+      ),
+    );
+  }
+}
+
+class User {
+  final String name;
+  final String image;
+  bool isFollowedByMe;
+
+  User(this.name, this.image, this.isFollowedByMe);
 }

@@ -18,7 +18,7 @@ class CardEventTile extends StatelessWidget {
                 left: 10,
                 right: 10,
               ),
-              width: 165,
+              width: 150,
               height: 131,
               decoration: BoxDecoration(
                 image: DecorationImage(
