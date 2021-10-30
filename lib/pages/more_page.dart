@@ -4,34 +4,34 @@ class MorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget account() {
-      return Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'ACCOUNT',
-              style: sfbold.copyWith(
-                fontWeight: FontWeight.bold,
-                color: darkGreyColor,
-              ),
-            ),
-            SizedBox(height: 20),
-            Row(
-              children: [
-                Image.asset(
-                  'assets/icon_payment.png',
-                  width: 24,
+      return GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PaymentMethod(),
+              ));
+        },
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'ACCOUNT',
+                style: sfbold.copyWith(
+                  fontWeight: FontWeight.bold,
+                  color: darkGreyColor,
                 ),
-                SizedBox(width: 30),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PaymentMethod(),
-                        ));
-                  },
-                  child: Text(
+              ),
+              SizedBox(height: 20),
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/icon_payment.png',
+                    width: 24,
+                  ),
+                  SizedBox(width: 30),
+                  Text(
                     'Payment method',
                     style: sfbold.copyWith(
                       fontSize: 15,
@@ -39,17 +39,8 @@ class MorePage extends StatelessWidget {
                       color: primaryColor,
                     ),
                   ),
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PaymentMethod(),
-                        ));
-                  },
-                  child: Container(
+                  Spacer(),
+                  Container(
                     width: 8,
                     height: 12,
                     decoration: BoxDecoration(
@@ -59,36 +50,36 @@ class MorePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       );
     }
 
     Widget conncetedAccounts() {
-      return Container(
-        margin: EdgeInsets.only(top: 20),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  'assets/icon_account.png',
-                  width: 24,
-                ),
-                SizedBox(width: 30),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ConnectedAccount(),
-                        ));
-                  },
-                  child: Text(
+      return GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ConnectedAccount(),
+              ));
+        },
+        child: Container(
+          margin: EdgeInsets.only(top: 20),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/icon_account.png',
+                    width: 24,
+                  ),
+                  SizedBox(width: 30),
+                  Text(
                     'Connected Accounts',
                     style: sfbold.copyWith(
                       fontSize: 15,
@@ -96,17 +87,8 @@ class MorePage extends StatelessWidget {
                       color: primaryColor,
                     ),
                   ),
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ConnectedAccount(),
-                        ));
-                  },
-                  child: Container(
+                  Spacer(),
+                  Container(
                     width: 8,
                     height: 12,
                     decoration: BoxDecoration(
@@ -116,30 +98,30 @@ class MorePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       );
     }
 
     Widget interests() {
-      return Container(
-        margin: EdgeInsets.only(top: 30),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  'assets/icon_love.png',
-                  width: 24,
-                ),
-                SizedBox(width: 30),
-                GestureDetector(
-                  onTap: () {},
-                  child: Text(
+      return GestureDetector(
+        onTap: () {},
+        child: Container(
+          margin: EdgeInsets.only(top: 30),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/icon_love.png',
+                    width: 24,
+                  ),
+                  SizedBox(width: 30),
+                  Text(
                     'Interests',
                     style: sfbold.copyWith(
                       fontSize: 15,
@@ -147,11 +129,8 @@ class MorePage extends StatelessWidget {
                       color: primaryColor,
                     ),
                   ),
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {},
-                  child: Container(
+                  Spacer(),
+                  Container(
                     width: 8,
                     height: 12,
                     decoration: BoxDecoration(
@@ -161,30 +140,30 @@ class MorePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       );
     }
 
     Widget privacy() {
-      return Container(
-        margin: EdgeInsets.only(top: 30),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  'assets/icon_privacy.png',
-                  width: 24,
-                ),
-                SizedBox(width: 30),
-                GestureDetector(
-                  onTap: () {},
-                  child: Text(
+      return GestureDetector(
+        onTap: () {},
+        child: Container(
+          margin: EdgeInsets.only(top: 30),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/icon_privacy.png',
+                    width: 24,
+                  ),
+                  SizedBox(width: 30),
+                  Text(
                     'Privacy',
                     style: sfbold.copyWith(
                       fontSize: 15,
@@ -192,11 +171,8 @@ class MorePage extends StatelessWidget {
                       color: primaryColor,
                     ),
                   ),
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {},
-                  child: Container(
+                  Spacer(),
+                  Container(
                     width: 8,
                     height: 12,
                     decoration: BoxDecoration(
@@ -206,36 +182,36 @@ class MorePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       );
     }
 
     Widget notifications() {
-      return Container(
-        margin: EdgeInsets.only(top: 30),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  'assets/icon_notification.png',
-                  width: 24,
-                ),
-                SizedBox(width: 30),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NotificationPage(),
-                        ));
-                  },
-                  child: Text(
+      return GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => NotificationPage(),
+              ));
+        },
+        child: Container(
+          margin: EdgeInsets.only(top: 30),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/icon_notification.png',
+                    width: 24,
+                  ),
+                  SizedBox(width: 30),
+                  Text(
                     'Notifications',
                     style: sfbold.copyWith(
                       fontSize: 15,
@@ -243,17 +219,8 @@ class MorePage extends StatelessWidget {
                       color: primaryColor,
                     ),
                   ),
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => NotificationPage(),
-                        ));
-                  },
-                  child: Container(
+                  Spacer(),
+                  Container(
                     width: 8,
                     height: 12,
                     decoration: BoxDecoration(
@@ -263,11 +230,11 @@ class MorePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       );
     }
@@ -345,26 +312,26 @@ class MorePage extends StatelessWidget {
     }
 
     Widget termsButton() {
-      return Container(
-        margin: EdgeInsets.only(top: 20),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  'assets/icon_info.png',
-                  width: 24,
-                ),
-                SizedBox(width: 30),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => AboutTerms(),
-                        ));
-                  },
-                  child: Text(
+      return GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AboutTerms(),
+              ));
+        },
+        child: Container(
+          margin: EdgeInsets.only(top: 20),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/icon_info.png',
+                    width: 24,
+                  ),
+                  SizedBox(width: 30),
+                  Text(
                     'Terms and conditions',
                     style: sfbold.copyWith(
                       fontSize: 15,
@@ -372,17 +339,8 @@ class MorePage extends StatelessWidget {
                       color: primaryColor,
                     ),
                   ),
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => AboutTerms(),
-                        ));
-                  },
-                  child: Container(
+                  Spacer(),
+                  Container(
                     width: 8,
                     height: 12,
                     decoration: BoxDecoration(
@@ -392,36 +350,36 @@ class MorePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       );
     }
 
     Widget faqsButton() {
-      return Container(
-        margin: EdgeInsets.only(top: 22),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  'assets/icon_faqs.png',
-                  width: 24,
-                ),
-                SizedBox(width: 30),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => FaqsPage(),
-                        ));
-                  },
-                  child: Text(
+      return GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => FaqsPage(),
+              ));
+        },
+        child: Container(
+          margin: EdgeInsets.only(top: 22),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/icon_faqs.png',
+                    width: 24,
+                  ),
+                  SizedBox(width: 30),
+                  Text(
                     'FAQs',
                     style: sfbold.copyWith(
                       fontSize: 15,
@@ -429,17 +387,8 @@ class MorePage extends StatelessWidget {
                       color: primaryColor,
                     ),
                   ),
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => FaqsPage(),
-                        ));
-                  },
-                  child: Container(
+                  Spacer(),
+                  Container(
                     width: 8,
                     height: 12,
                     decoration: BoxDecoration(
@@ -449,36 +398,36 @@ class MorePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       );
     }
 
     Widget referButton() {
-      return Container(
-        margin: EdgeInsets.only(top: 22),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  'assets/icon_share.png',
-                  width: 24,
-                ),
-                SizedBox(width: 30),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ReferFriend(),
-                        ));
-                  },
-                  child: Text(
+      return GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => ReferFriend(),
+              ));
+        },
+        child: Container(
+          margin: EdgeInsets.only(top: 22),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/icon_share.png',
+                    width: 24,
+                  ),
+                  SizedBox(width: 30),
+                  Text(
                     'Refer a Friend',
                     style: sfbold.copyWith(
                       fontSize: 15,
@@ -486,17 +435,8 @@ class MorePage extends StatelessWidget {
                       color: primaryColor,
                     ),
                   ),
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => ReferFriend(),
-                        ));
-                  },
-                  child: Container(
+                  Spacer(),
+                  Container(
                     width: 8,
                     height: 12,
                     decoration: BoxDecoration(
@@ -506,11 +446,11 @@ class MorePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                )
-              ],
-            ),
-          ],
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       );
     }
@@ -642,47 +582,47 @@ class _PaymentMethodState extends State<PaymentMethod> {
     }
 
     Widget cards() {
-      return Container(
-        margin: EdgeInsets.only(top: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Image.asset(
-                  'assets/image_visa.png',
-                  width: 62,
-                ),
-                SizedBox(width: 14),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '**** **** 8220',
-                      style: sfbold.copyWith(
-                        color: primaryColor,
+      return GestureDetector(
+        onTap: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => CardDetail(),
+              ));
+        },
+        child: Container(
+          margin: EdgeInsets.only(top: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Image.asset(
+                    'assets/image_visa.png',
+                    width: 62,
+                  ),
+                  SizedBox(width: 14),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '**** **** 8220',
+                        style: sfbold.copyWith(
+                          color: primaryColor,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 5),
-                    Text(
-                      'Expires 10/2022',
-                      style: sfbold.copyWith(
-                        color: grey,
-                        fontSize: 11,
+                      SizedBox(height: 5),
+                      Text(
+                        'Expires 10/2022',
+                        style: sfbold.copyWith(
+                          color: grey,
+                          fontSize: 11,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                Spacer(),
-                GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => CardDetail(),
-                        ));
-                  },
-                  child: Container(
+                    ],
+                  ),
+                  Spacer(),
+                  Container(
                     width: 16,
                     height: 16,
                     decoration: BoxDecoration(
@@ -693,22 +633,214 @@ class _PaymentMethodState extends State<PaymentMethod> {
                       ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 17,
-            ),
-            Divider(
-              thickness: 1,
-            ),
-          ],
+                ],
+              ),
+              SizedBox(
+                height: 17,
+              ),
+              Divider(
+                thickness: 1,
+              ),
+            ],
+          ),
         ),
       );
     }
 
     Widget newCards() {
       return GestureDetector(
+        onTap: () {
+          showModalBottomSheet<void>(
+            context: context,
+            builder: (BuildContext context) {
+              return Container(
+                margin: EdgeInsets.only(top: 31, right: 22, left: 22),
+                height: 600,
+                child: ListView(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Add a Debit Card?',
+                                style: sfbold.copyWith(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: primaryColor,
+                                ),
+                              ),
+                              SizedBox(
+                                height: 8,
+                              ),
+                              Text(
+                                'Make sure the debit card belongs to you.',
+                                style: sfreguler.copyWith(
+                                  fontSize: 15,
+                                  color: Color(0xff505050),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        GestureDetector(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: Icon(Icons.close_rounded)),
+                      ],
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(top: 30),
+                      child: TextField(
+                        style: sfbold.copyWith(
+                          color: primaryColor,
+                        ),
+                        decoration: InputDecoration(
+                          suffixIcon: Container(
+                            margin: EdgeInsets.only(
+                              top: 10,
+                              bottom: 10,
+                              left: 24,
+                              right: 18,
+                            ),
+                            child: Image.asset(
+                              'assets/icon_bank.png',
+                              width: 24,
+                            ),
+                          ),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          labelText: 'Card Number',
+                          labelStyle: sfreguler.copyWith(
+                            color: Color(0xffA0A3BD),
+                          ),
+                        ),
+                      ),
+                    ),
+                    // NOTE: EXPIRY DATE & CVV
+                    Row(
+                      children: [
+                        Container(
+                          height: 50,
+                          width: 150,
+                          margin: EdgeInsets.only(top: 20),
+                          child: TextField(
+                            style: sfbold.copyWith(
+                              color: primaryColor,
+                            ),
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              labelText: 'Expiry Date',
+                              labelStyle: sfreguler.copyWith(
+                                color: Color(0xffA0A3BD),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 9,
+                        ),
+                        Container(
+                          height: 50,
+                          width: 150,
+                          margin: EdgeInsets.only(top: 20),
+                          child: TextField(
+                            style: sfbold.copyWith(
+                              color: primaryColor,
+                            ),
+                            decoration: InputDecoration(
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                              labelText: 'CVV',
+                              labelStyle: sfreguler.copyWith(
+                                color: Color(0xffA0A3BD),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Remember this card',
+                          style: sfbold.copyWith(
+                            fontSize: 14,
+                            color: grey,
+                          ),
+                        ),
+                        FlutterSwitch(
+                          width: 40,
+                          height: 20,
+                          activeColor: darkBlueColor,
+                          value: true,
+                          borderRadius: 30.0,
+                          onToggle: (val) {
+                            setState(() {
+                              val = val;
+                            });
+                          },
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 65,
+                    ),
+                    Container(
+                      width: double.infinity,
+                      height: 40,
+                      child: TextButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                          Flushbar(
+                            backgroundColor: Color(0xff17B899),
+                            flushbarPosition: FlushbarPosition.TOP,
+                            mainButton: Icon(
+                              Icons.close,
+                              color: backgroundWhite,
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 22, vertical: 38),
+                            titleText: SizedBox(
+                              width: 25,
+                            ),
+                            message:
+                                "Your card has been added successfully to your account.",
+                            duration: Duration(seconds: 2),
+                          )..show(context);
+                        },
+                        style: TextButton.styleFrom(
+                            backgroundColor: darkBlueColor,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10))),
+                        child: Text(
+                          'Card Number',
+                          style: sfreguler.copyWith(
+                              fontSize: 15,
+                              color: backgroundWhite,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+          );
+        },
         child: Container(
           margin: EdgeInsets.only(top: 20),
           child: Column(
@@ -741,23 +873,17 @@ class _PaymentMethodState extends State<PaymentMethod> {
                     ],
                   ),
                   Spacer(),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => AddCard()));
-                    },
-                    child: Container(
-                      width: 16,
-                      height: 16,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(
-                            'assets/icon_arrow.png',
-                          ),
+                  Container(
+                    width: 16,
+                    height: 16,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/icon_arrow.png',
                         ),
                       ),
                     ),
-                  ),
+                  ), // NOTE: ADD A DEBIT CARD
                 ],
               ),
               SizedBox(
@@ -998,13 +1124,25 @@ class CardDetail extends StatelessWidget {
                     height: 158,
                     child: Column(
                       children: [
-                        Text(
-                          'Delete Card?',
-                          style: sfbold.copyWith(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: primaryColor,
-                          ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                'Delete Card?',
+                                style: sfbold.copyWith(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  color: primaryColor,
+                                ),
+                              ),
+                            ),
+                            GestureDetector(
+                                onTap: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Icon(Icons.close_rounded)),
+                          ],
                         ),
                         SizedBox(
                           height: 41,
@@ -1020,12 +1158,7 @@ class CardDetail extends StatelessWidget {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.pushAndRemoveUntil(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => PaymentMethod(),
-                                    ),
-                                    (route) => false);
+                                Navigator.pop(context);
                                 Flushbar(
                                   backgroundColor: Color(0xff17B899),
                                   flushbarPosition: FlushbarPosition.TOP,
@@ -1122,235 +1255,235 @@ class CardDetail extends StatelessWidget {
   }
 }
 
-class AddCard extends StatefulWidget {
-  @override
-  _AddCardState createState() => _AddCardState();
-}
+// class AddCard extends StatefulWidget {
+//   @override
+//   _AddCardState createState() => _AddCardState();
+// }
 
-class _AddCardState extends State<AddCard> {
-  bool status = false;
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        children: [
-          Container(
-            margin: EdgeInsets.symmetric(horizontal: 22, vertical: 40),
-            child: Stack(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Add a Debit Card',
-                      style: sfsemibold.copyWith(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: primaryColor,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'AMake sure the debit card belongs to you.',
-                      style: sfsemibold.copyWith(
-                        fontSize: 15,
-                        color: primaryColor,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 39,
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(left: 24, right: 15, top: 7),
-                      width: double.infinity,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: darkBlueColor,
-                        ),
-                        borderRadius: BorderRadius.circular(
-                          10,
-                        ),
-                      ),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: TextFormField(
-                              decoration: InputDecoration.collapsed(
-                                hintStyle: sfbold.copyWith(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  color: primaryColor,
-                                ),
-                                hintText: '1059 9455 *** ***',
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Image.asset(
-                            'assets/icon_bank.png',
-                            width: 24,
-                          )
-                        ],
-                      ),
-                    ),
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding:
-                              EdgeInsets.only(left: 24, right: 15, top: 10),
-                          width: 161,
-                          height: 40,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: grey,
-                            ),
-                            borderRadius: BorderRadius.circular(
-                              10,
-                            ),
-                          ),
-                          child: Expanded(
-                            child: TextFormField(
-                              decoration: InputDecoration.collapsed(
-                                hintStyle: sfbold.copyWith(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  color: grey,
-                                ),
-                                hintText: 'Expiry Date',
-                              ),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          padding:
-                              EdgeInsets.only(left: 24, right: 15, top: 10),
-                          width: 161,
-                          height: 40,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: grey,
-                            ),
-                            borderRadius: BorderRadius.circular(
-                              10,
-                            ),
-                          ),
-                          child: Expanded(
-                            child: TextFormField(
-                              decoration: InputDecoration.collapsed(
-                                hintStyle: sfbold.copyWith(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.bold,
-                                  color: grey,
-                                ),
-                                hintText: 'CVV',
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Remember this card',
-                          style: sfbold.copyWith(
-                            fontSize: 14,
-                            color: grey,
-                          ),
-                        ),
-                        FlutterSwitch(
-                          width: 40,
-                          height: 20,
-                          activeColor: darkBlueColor,
-                          value: status,
-                          borderRadius: 30.0,
-                          onToggle: (val) {
-                            setState(() {
-                              status = val;
-                            });
-                          },
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 65,
-                    ),
-                    Container(
-                      width: double.infinity,
-                      height: 40,
-                      child: TextButton(
-                        onPressed: () {
-                          Navigator.pop(context);
-                          Flushbar(
-                            backgroundColor: Color(0xff17B899),
-                            flushbarPosition: FlushbarPosition.TOP,
-                            mainButton: Icon(
-                              Icons.close,
-                              color: backgroundWhite,
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 22, vertical: 38),
-                            titleText: SizedBox(
-                              width: 25,
-                            ),
-                            message:
-                                "Your card has been added successfully to your account.",
-                            duration: Duration(seconds: 1),
-                          )..show(context);
-                        },
-                        style: TextButton.styleFrom(
-                            backgroundColor: darkBlueColor,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10))),
-                        child: Text(
-                          'Card Number',
-                          style: sfreguler.copyWith(
-                              fontSize: 15,
-                              color: backgroundWhite,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 80, left: 15),
-                  width: 74,
-                  height: 16,
-                  decoration: BoxDecoration(
-                      color: backgroundWhite,
-                      borderRadius: BorderRadius.circular(5)),
-                  child: Center(
-                    child: Text(
-                      'Card Number',
-                      style: sfreguler.copyWith(
-                        fontSize: 12,
-                        color: grey,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
+// class _AddCardState extends State<AddCard> {
+//   bool status = false;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: ListView(
+//         children: [
+//           Container(
+//             margin: EdgeInsets.symmetric(horizontal: 22, vertical: 40),
+//             child: Stack(
+//               children: [
+//                 Column(
+//                   crossAxisAlignment: CrossAxisAlignment.start,
+//                   children: [
+//                     Text(
+//                       'Add a Debit Card',
+//                       style: sfsemibold.copyWith(
+//                         fontSize: 18,
+//                         fontWeight: FontWeight.bold,
+//                         color: primaryColor,
+//                       ),
+//                     ),
+//                     SizedBox(
+//                       height: 8,
+//                     ),
+//                     Text(
+//                       'AMake sure the debit card belongs to you.',
+//                       style: sfsemibold.copyWith(
+//                         fontSize: 15,
+//                         color: primaryColor,
+//                       ),
+//                     ),
+//                     SizedBox(
+//                       height: 39,
+//                     ),
+//                     Container(
+//                       padding: EdgeInsets.only(left: 24, right: 15, top: 7),
+//                       width: double.infinity,
+//                       height: 40,
+//                       decoration: BoxDecoration(
+//                         border: Border.all(
+//                           color: darkBlueColor,
+//                         ),
+//                         borderRadius: BorderRadius.circular(
+//                           10,
+//                         ),
+//                       ),
+//                       child: Row(
+//                         children: [
+//                           Expanded(
+//                             child: TextFormField(
+//                               decoration: InputDecoration.collapsed(
+//                                 hintStyle: sfbold.copyWith(
+//                                   fontSize: 15,
+//                                   fontWeight: FontWeight.bold,
+//                                   color: primaryColor,
+//                                 ),
+//                                 hintText: '1059 9455 *** ***',
+//                               ),
+//                             ),
+//                           ),
+//                           SizedBox(
+//                             width: 15,
+//                           ),
+//                           Image.asset(
+//                             'assets/icon_bank.png',
+//                             width: 24,
+//                           )
+//                         ],
+//                       ),
+//                     ),
+//                     SizedBox(
+//                       height: 20,
+//                     ),
+//                     Row(
+//                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                       children: [
+//                         Container(
+//                           padding:
+//                               EdgeInsets.only(left: 24, right: 15, top: 10),
+//                           width: 161,
+//                           height: 40,
+//                           decoration: BoxDecoration(
+//                             border: Border.all(
+//                               color: grey,
+//                             ),
+//                             borderRadius: BorderRadius.circular(
+//                               10,
+//                             ),
+//                           ),
+//                           child: Expanded(
+//                             child: TextFormField(
+//                               decoration: InputDecoration.collapsed(
+//                                 hintStyle: sfbold.copyWith(
+//                                   fontSize: 15,
+//                                   fontWeight: FontWeight.bold,
+//                                   color: grey,
+//                                 ),
+//                                 hintText: 'Expiry Date',
+//                               ),
+//                             ),
+//                           ),
+//                         ),
+//                         Container(
+//                           padding:
+//                               EdgeInsets.only(left: 24, right: 15, top: 10),
+//                           width: 161,
+//                           height: 40,
+//                           decoration: BoxDecoration(
+//                             border: Border.all(
+//                               color: grey,
+//                             ),
+//                             borderRadius: BorderRadius.circular(
+//                               10,
+//                             ),
+//                           ),
+//                           child: Expanded(
+//                             child: TextFormField(
+//                               decoration: InputDecoration.collapsed(
+//                                 hintStyle: sfbold.copyWith(
+//                                   fontSize: 15,
+//                                   fontWeight: FontWeight.bold,
+//                                   color: grey,
+//                                 ),
+//                                 hintText: 'CVV',
+//                               ),
+//                             ),
+//                           ),
+//                         ),
+//                       ],
+//                     ),
+//                     SizedBox(
+//                       height: 30,
+//                     ),
+//                     Row(
+//                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                       children: [
+//                         Text(
+//                           'Remember this card',
+//                           style: sfbold.copyWith(
+//                             fontSize: 14,
+//                             color: grey,
+//                           ),
+//                         ),
+//                         FlutterSwitch(
+//                           width: 40,
+//                           height: 20,
+//                           activeColor: darkBlueColor,
+//                           value: status,
+//                           borderRadius: 30.0,
+//                           onToggle: (val) {
+//                             setState(() {
+//                               status = val;
+//                             });
+//                           },
+//                         ),
+//                       ],
+//                     ),
+//                     SizedBox(
+//                       height: 65,
+//                     ),
+//                     Container(
+//                       width: double.infinity,
+//                       height: 40,
+//                       child: TextButton(
+//                         onPressed: () {
+//                           Navigator.pop(context);
+//                           Flushbar(
+//                             backgroundColor: Color(0xff17B899),
+//                             flushbarPosition: FlushbarPosition.TOP,
+//                             mainButton: Icon(
+//                               Icons.close,
+//                               color: backgroundWhite,
+//                             ),
+//                             padding: EdgeInsets.symmetric(
+//                                 horizontal: 22, vertical: 38),
+//                             titleText: SizedBox(
+//                               width: 25,
+//                             ),
+//                             message:
+//                                 "Your card has been added successfully to your account.",
+//                             duration: Duration(seconds: 1),
+//                           )..show(context);
+//                         },
+//                         style: TextButton.styleFrom(
+//                             backgroundColor: darkBlueColor,
+//                             shape: RoundedRectangleBorder(
+//                                 borderRadius: BorderRadius.circular(10))),
+//                         child: Text(
+//                           'Card Number',
+//                           style: sfreguler.copyWith(
+//                               fontSize: 15,
+//                               color: backgroundWhite,
+//                               fontWeight: FontWeight.bold),
+//                         ),
+//                       ),
+//                     ),
+//                   ],
+//                 ),
+//                 Container(
+//                   margin: EdgeInsets.only(top: 80, left: 15),
+//                   width: 74,
+//                   height: 16,
+//                   decoration: BoxDecoration(
+//                       color: backgroundWhite,
+//                       borderRadius: BorderRadius.circular(5)),
+//                   child: Center(
+//                     child: Text(
+//                       'Card Number',
+//                       style: sfreguler.copyWith(
+//                         fontSize: 12,
+//                         color: grey,
+//                       ),
+//                     ),
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
 
 class NotificationPage extends StatefulWidget {
   @override
@@ -1991,7 +2124,7 @@ class _NotificationPageState extends State<NotificationPage> {
                       width: 25,
                     ),
                     message: "Your Notifications has been updated Successfully",
-                    duration: Duration(seconds: 1),
+                    duration: Duration(seconds: 2),
                   )..show(context);
                 },
                 child: Text(
@@ -2030,159 +2163,127 @@ class ConnectedAccount extends StatelessWidget {
     Widget twitterInput() {
       return Container(
         margin: EdgeInsets.only(top: 26),
-        padding: EdgeInsets.only(
-          top: 13,
-          bottom: 13,
-          left: 24,
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(
-            color: Color(0xffC5C5C5),
+        child: TextField(
+          style: sfbold.copyWith(
+            color: primaryColor,
           ),
-        ),
-        child: Row(
-          children: [
-            Image.asset(
-              'assets/icon_twitter.png',
-              width: 24,
-            ),
-            SizedBox(width: 13),
-            Expanded(
-              child: TextField(
-                style: sfbold.copyWith(
-                  color: primaryColor,
-                ),
-                decoration: InputDecoration.collapsed(
-                  hintText: 'Twitter',
-                  hintStyle: sfreguler.copyWith(
-                    fontSize: 15,
-                    color: Color(0xffA0A3BD),
-                  ),
-                ),
+          decoration: InputDecoration(
+            prefixIcon: Container(
+              margin: EdgeInsets.only(
+                top: 10,
+                bottom: 10,
+                left: 24,
+                right: 18,
+              ),
+              child: Image.asset(
+                'assets/icon_twitter.png',
+                width: 24,
               ),
             ),
-          ],
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            labelText: 'Twitter',
+            labelStyle: sfbold.copyWith(
+              color: Color(0xffA0A3BD),
+            ),
+          ),
         ),
       );
     }
 
     Widget facebookInput() {
       return Container(
-        margin: EdgeInsets.only(top: 20),
-        padding: EdgeInsets.only(
-          top: 13,
-          bottom: 13,
-          left: 24,
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(
-            color: Color(0xffC5C5C5),
+        margin: EdgeInsets.only(top: 26),
+        child: TextField(
+          style: sfbold.copyWith(
+            color: primaryColor,
           ),
-        ),
-        child: Row(
-          children: [
-            Image.asset(
-              'assets/icon_facebook.png',
-              width: 24,
-            ),
-            SizedBox(width: 13),
-            Expanded(
-              child: TextFormField(
-                style: sfbold.copyWith(
-                  color: primaryColor,
-                ),
-                decoration: InputDecoration.collapsed(
-                  hintText: 'Facebook',
-                  hintStyle: sfreguler.copyWith(
-                    fontSize: 15,
-                    color: Color(0xffA0A3BD),
-                  ),
-                ),
+          decoration: InputDecoration(
+            prefixIcon: Container(
+              margin: EdgeInsets.only(
+                top: 10,
+                bottom: 10,
+                left: 24,
+                right: 18,
+              ),
+              child: Image.asset(
+                'assets/icon_facebook.png',
+                width: 24,
               ),
             ),
-          ],
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            labelText: 'Facebook',
+            labelStyle: sfbold.copyWith(
+              color: Color(0xffA0A3BD),
+            ),
+          ),
         ),
       );
     }
 
     Widget instagramInput() {
       return Container(
-        margin: EdgeInsets.only(top: 20),
-        padding: EdgeInsets.only(
-          top: 13,
-          bottom: 13,
-          left: 24,
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(
-            color: Color(0xffC5C5C5),
+        margin: EdgeInsets.only(top: 26),
+        child: TextField(
+          style: sfbold.copyWith(
+            color: primaryColor,
           ),
-        ),
-        child: Row(
-          children: [
-            Image.asset(
-              'assets/icon_instagram.png',
-              width: 24,
-            ),
-            SizedBox(width: 13),
-            Expanded(
-              child: TextFormField(
-                style: sfbold.copyWith(
-                  color: primaryColor,
-                ),
-                decoration: InputDecoration.collapsed(
-                  hintText: 'Instagram',
-                  hintStyle: sfreguler.copyWith(
-                    fontSize: 15,
-                    color: Color(0xffA0A3BD),
-                  ),
-                ),
+          decoration: InputDecoration(
+            prefixIcon: Container(
+              margin: EdgeInsets.only(
+                top: 10,
+                bottom: 10,
+                left: 24,
+                right: 18,
+              ),
+              child: Image.asset(
+                'assets/icon_instagram.png',
+                width: 24,
               ),
             ),
-          ],
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            labelText: 'Instagram',
+            labelStyle: sfbold.copyWith(
+              color: Color(0xffA0A3BD),
+            ),
+          ),
         ),
       );
     }
 
     Widget youtubeInput() {
       return Container(
-        margin: EdgeInsets.only(top: 20),
-        padding: EdgeInsets.only(
-          top: 13,
-          bottom: 13,
-          left: 24,
-        ),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(
-            color: Color(0xffC5C5C5),
+        margin: EdgeInsets.only(top: 26),
+        child: TextField(
+          style: sfbold.copyWith(
+            color: primaryColor,
           ),
-        ),
-        child: Row(
-          children: [
-            Image.asset(
-              'assets/icon_youtube.png',
-              width: 24,
-            ),
-            SizedBox(width: 13),
-            Expanded(
-              child: TextFormField(
-                style: sfbold.copyWith(
-                  color: primaryColor,
-                ),
-                decoration: InputDecoration.collapsed(
-                  hintText: 'Youtube',
-                  hintStyle: sfreguler.copyWith(
-                    fontSize: 15,
-                    color: Color(0xffA0A3BD),
-                  ),
-                ),
+          decoration: InputDecoration(
+            prefixIcon: Container(
+              margin: EdgeInsets.only(
+                top: 10,
+                bottom: 10,
+                left: 24,
+                right: 18,
+              ),
+              child: Image.asset(
+                'assets/icon_youtube.png',
+                width: 24,
               ),
             ),
-          ],
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            labelText: 'Youtube',
+            labelStyle: sfbold.copyWith(
+              color: Color(0xffA0A3BD),
+            ),
+          ),
         ),
       );
     }
