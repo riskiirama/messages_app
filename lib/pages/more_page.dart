@@ -4,237 +4,212 @@ class MorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget account() {
-      return GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => PaymentMethod(),
-              ));
-        },
-        child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'ACCOUNT',
-                style: sfbold.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: darkGreyColor,
-                ),
+      return Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'ACCOUNT',
+              style: sfbold.copyWith(
+                fontWeight: FontWeight.bold,
+                color: darkGreyColor,
               ),
-              SizedBox(height: 20),
-              Row(
+            ),
+            SizedBox(height: 20),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PaymentMethod(),
+                    ));
+              },
+              child: Row(
                 children: [
                   Image.asset(
                     'assets/icon_payment.png',
                     width: 24,
                   ),
                   SizedBox(width: 30),
-                  Text(
-                    'Payment method',
-                    style: sfbold.copyWith(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: 8,
-                    height: 12,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
-                        ),
+                  Expanded(
+                    child: Text(
+                      'Payment method',
+                      style: sfbold.copyWith(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: primaryColor,
                       ),
                     ),
-                  )
+                  ),
+                  Image.asset(
+                    'assets/icon_arrow.png',
+                    width: 8,
+                    height: 12,
+                  ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
     }
 
     Widget conncetedAccounts() {
-      return GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => ConnectedAccount(),
-              ));
-        },
-        child: Container(
-          margin: EdgeInsets.only(top: 20),
-          child: Column(
-            children: [
-              Row(
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ConnectedAccount(),
+                    ));
+              },
+              child: Row(
                 children: [
                   Image.asset(
                     'assets/icon_account.png',
                     width: 24,
                   ),
                   SizedBox(width: 30),
-                  Text(
-                    'Connected Accounts',
-                    style: sfbold.copyWith(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: 8,
-                    height: 12,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
-                        ),
+                  Expanded(
+                    child: Text(
+                      'Connected Accounts',
+                      style: sfbold.copyWith(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: primaryColor,
                       ),
                     ),
-                  )
+                  ),
+                  Image.asset(
+                    'assets/icon_arrow.png',
+                    width: 8,
+                    height: 12,
+                  ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
     }
 
     Widget interests() {
-      return GestureDetector(
-        onTap: () {},
-        child: Container(
-          margin: EdgeInsets.only(top: 30),
-          child: Column(
-            children: [
-              Row(
+      return Container(
+        margin: EdgeInsets.only(top: 30),
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {},
+              child: Row(
                 children: [
                   Image.asset(
                     'assets/icon_love.png',
                     width: 24,
                   ),
                   SizedBox(width: 30),
-                  Text(
-                    'Interests',
-                    style: sfbold.copyWith(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: 8,
-                    height: 12,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
-                        ),
+                  Expanded(
+                    child: Text(
+                      'Interests',
+                      style: sfbold.copyWith(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: primaryColor,
                       ),
                     ),
-                  )
+                  ),
+                  Image.asset(
+                    'assets/icon_arrow.png',
+                    width: 8,
+                    height: 12,
+                  ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
     }
 
     Widget privacy() {
-      return GestureDetector(
-        onTap: () {},
-        child: Container(
-          margin: EdgeInsets.only(top: 30),
-          child: Column(
-            children: [
-              Row(
+      return Container(
+        margin: EdgeInsets.only(top: 30),
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {},
+              child: Row(
                 children: [
                   Image.asset(
                     'assets/icon_privacy.png',
                     width: 24,
                   ),
                   SizedBox(width: 30),
-                  Text(
-                    'Privacy',
-                    style: sfbold.copyWith(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: 8,
-                    height: 12,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
-                        ),
+                  Expanded(
+                    child: Text(
+                      'Privacy',
+                      style: sfbold.copyWith(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: primaryColor,
                       ),
                     ),
-                  )
+                  ),
+                  Image.asset(
+                    'assets/icon_arrow.png',
+                    width: 8,
+                    height: 12,
+                  ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
     }
 
     Widget notifications() {
-      return GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => NotificationPage(),
-              ));
-        },
-        child: Container(
-          margin: EdgeInsets.only(top: 30),
-          child: Column(
-            children: [
-              Row(
+      return Container(
+        margin: EdgeInsets.only(top: 30),
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => NotificationPage(),
+                    ));
+              },
+              child: Row(
                 children: [
                   Image.asset(
                     'assets/icon_notification.png',
                     width: 24,
                   ),
                   SizedBox(width: 30),
-                  Text(
-                    'Notifications',
-                    style: sfbold.copyWith(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: 8,
-                    height: 12,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
-                        ),
+                  Expanded(
+                    child: Text(
+                      'Notifications',
+                      style: sfbold.copyWith(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: primaryColor,
                       ),
                     ),
-                  )
+                  ),
+                  Image.asset(
+                    'assets/icon_arrow.png',
+                    width: 8,
+                    height: 12,
+                  ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
     }
@@ -277,34 +252,31 @@ class MorePage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            Row(
-              children: [
-                Image.asset(
-                  'assets/icon_reset.png',
-                  width: 24,
-                ),
-                SizedBox(width: 30),
-                Text(
-                  'Reset Password',
-                  style: sfbold.copyWith(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: primaryColor,
+            GestureDetector(
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/icon_reset.png',
+                    width: 24,
                   ),
-                ),
-                Spacer(),
-                Container(
-                  width: 8,
-                  height: 12,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        'assets/icon_arrow.png',
+                  SizedBox(width: 30),
+                  Expanded(
+                    child: Text(
+                      'Reset Password',
+                      style: sfbold.copyWith(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: primaryColor,
                       ),
                     ),
                   ),
-                )
-              ],
+                  Image.asset(
+                    'assets/icon_arrow.png',
+                    width: 8,
+                    height: 12,
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -312,145 +284,130 @@ class MorePage extends StatelessWidget {
     }
 
     Widget termsButton() {
-      return GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => AboutTerms(),
-              ));
-        },
-        child: Container(
-          margin: EdgeInsets.only(top: 20),
-          child: Column(
-            children: [
-              Row(
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AboutTerms(),
+                    ));
+              },
+              child: Row(
                 children: [
                   Image.asset(
                     'assets/icon_info.png',
                     width: 24,
                   ),
                   SizedBox(width: 30),
-                  Text(
-                    'Terms and conditions',
-                    style: sfbold.copyWith(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: 8,
-                    height: 12,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
-                        ),
+                  Expanded(
+                    child: Text(
+                      'Terms and conditions',
+                      style: sfbold.copyWith(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: primaryColor,
                       ),
                     ),
-                  )
+                  ),
+                  Image.asset(
+                    'assets/icon_arrow.png',
+                    width: 8,
+                    height: 12,
+                  ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
     }
 
     Widget faqsButton() {
-      return GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => FaqsPage(),
-              ));
-        },
-        child: Container(
-          margin: EdgeInsets.only(top: 22),
-          child: Column(
-            children: [
-              Row(
+      return Container(
+        margin: EdgeInsets.only(top: 22),
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FaqsPage(),
+                    ));
+              },
+              child: Row(
                 children: [
                   Image.asset(
                     'assets/icon_faqs.png',
                     width: 24,
                   ),
                   SizedBox(width: 30),
-                  Text(
-                    'FAQs',
-                    style: sfbold.copyWith(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: 8,
-                    height: 12,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
-                        ),
+                  Expanded(
+                    child: Text(
+                      'FAQs',
+                      style: sfbold.copyWith(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: primaryColor,
                       ),
                     ),
-                  )
+                  ),
+                  Image.asset(
+                    'assets/icon_arrow.png',
+                    width: 8,
+                    height: 12,
+                  ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
     }
 
     Widget referButton() {
-      return GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => ReferFriend(),
-              ));
-        },
-        child: Container(
-          margin: EdgeInsets.only(top: 22),
-          child: Column(
-            children: [
-              Row(
+      return Container(
+        margin: EdgeInsets.only(top: 22),
+        child: Column(
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ReferFriend(),
+                    ));
+              },
+              child: Row(
                 children: [
                   Image.asset(
                     'assets/icon_share.png',
                     width: 24,
                   ),
                   SizedBox(width: 30),
-                  Text(
-                    'Refer a Friend',
-                    style: sfbold.copyWith(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor,
-                    ),
-                  ),
-                  Spacer(),
-                  Container(
-                    width: 8,
-                    height: 12,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
-                        ),
+                  Expanded(
+                    child: Text(
+                      'Refer a Friend',
+                      style: sfbold.copyWith(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: primaryColor,
                       ),
                     ),
-                  )
+                  ),
+                  Image.asset(
+                    'assets/icon_arrow.png',
+                    width: 8,
+                    height: 12,
+                  ),
                 ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
     }
@@ -571,6 +528,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
       return Container(
         margin: EdgeInsets.only(
           top: 11,
+          left: 22,
         ),
         child: Text(
           'Manage your debit cards.',
@@ -582,67 +540,52 @@ class _PaymentMethodState extends State<PaymentMethod> {
     }
 
     Widget cards() {
-      return GestureDetector(
-        onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => CardDetail(),
-              ));
-        },
-        child: Container(
-          margin: EdgeInsets.only(top: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Image.asset(
-                    'assets/image_visa.png',
-                    width: 62,
+      return Container(
+        margin: EdgeInsets.only(top: 20),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CardDetail(),
                   ),
-                  SizedBox(width: 14),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '**** **** 8220',
-                        style: sfbold.copyWith(
-                          color: primaryColor,
-                        ),
-                      ),
-                      SizedBox(height: 5),
-                      Text(
-                        'Expires 10/2022',
-                        style: sfbold.copyWith(
-                          color: grey,
-                          fontSize: 11,
-                        ),
-                      ),
-                    ],
+                );
+              },
+              child: ListTile(
+                leading: Image.asset(
+                  'assets/image_visa.png',
+                  width: 62,
+                ),
+                title: Text(
+                  '**** **** 8220',
+                  style: sfbold.copyWith(
+                    color: primaryColor,
                   ),
-                  Spacer(),
-                  Container(
-                    width: 16,
-                    height: 16,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
-                        ),
-                      ),
-                    ),
+                ),
+                subtitle: Text(
+                  'Expires 10/2022',
+                  style: sfbold.copyWith(
+                    color: grey,
+                    fontSize: 11,
                   ),
-                ],
+                ),
+                trailing: Image.asset(
+                  'assets/icon_arrow.png',
+                  width: 8,
+                  height: 12,
+                ),
               ),
-              SizedBox(
-                height: 17,
-              ),
-              Divider(
-                thickness: 1,
-              ),
-            ],
-          ),
+            ),
+            SizedBox(
+              height: 17,
+            ),
+            Divider(
+              thickness: 1,
+            ),
+          ],
         ),
       );
     }
@@ -651,11 +594,18 @@ class _PaymentMethodState extends State<PaymentMethod> {
       return GestureDetector(
         onTap: () {
           showModalBottomSheet<void>(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(
+                top: Radius.circular(10),
+              ),
+            ),
             context: context,
             builder: (BuildContext context) {
               return Container(
-                margin: EdgeInsets.only(top: 31, right: 22, left: 22),
-                height: 600,
+                padding: EdgeInsets.only(
+                    bottom: MediaQuery.of(context).viewInsets.bottom),
+                margin: EdgeInsets.only(top: 20, right: 22, left: 22),
+                height: 700,
                 child: ListView(
                   children: [
                     Row(
@@ -695,7 +645,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
                       ],
                     ),
                     Container(
-                      margin: EdgeInsets.only(top: 30),
+                      margin: EdgeInsets.only(top: 20),
                       child: TextField(
                         style: sfbold.copyWith(
                           color: primaryColor,
@@ -725,6 +675,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
                     ),
                     // NOTE: EXPIRY DATE & CVV
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
                           height: 50,
@@ -753,6 +704,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
                           width: 150,
                           margin: EdgeInsets.only(top: 20),
                           child: TextField(
+                            obscureText: true,
                             style: sfbold.copyWith(
                               color: primaryColor,
                             ),
@@ -770,7 +722,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
                       ],
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -797,11 +749,11 @@ class _PaymentMethodState extends State<PaymentMethod> {
                       ],
                     ),
                     SizedBox(
-                      height: 65,
+                      height: 40,
                     ),
                     Container(
                       width: double.infinity,
-                      height: 40,
+                      height: 50,
                       child: TextButton(
                         onPressed: () {
                           Navigator.pop(context);
@@ -846,45 +798,29 @@ class _PaymentMethodState extends State<PaymentMethod> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  Image.asset(
-                    'assets/image_new_card.png',
-                    width: 62,
+              ListTile(
+                leading: Image.asset(
+                  'assets/image_new_card.png',
+                  width: 62,
+                ),
+                title: Text(
+                  'Add a new Card',
+                  style: sfbold.copyWith(
+                    color: primaryColor,
                   ),
-                  SizedBox(width: 14),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Add a new Card',
-                        style: sfbold.copyWith(
-                          color: primaryColor,
-                        ),
-                      ),
-                      SizedBox(height: 5),
-                      Text(
-                        'We accept Mastercard, Visa and Verve',
-                        style: sfbold.copyWith(
-                          color: grey,
-                          fontSize: 11,
-                        ),
-                      ),
-                    ],
+                ),
+                subtitle: Text(
+                  'We accept Mastercard, Visa and Verve',
+                  style: sfbold.copyWith(
+                    color: grey,
+                    fontSize: 11,
                   ),
-                  Spacer(),
-                  Container(
-                    width: 16,
-                    height: 16,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          'assets/icon_arrow.png',
-                        ),
-                      ),
-                    ),
-                  ), // NOTE: ADD A DEBIT CARD
-                ],
+                ),
+                trailing: Image.asset(
+                  'assets/icon_arrow.png',
+                  width: 8,
+                  height: 12,
+                ),
               ),
               SizedBox(
                 height: 17,
@@ -932,16 +868,13 @@ class _PaymentMethodState extends State<PaymentMethod> {
             ),
           ),
         ),
-        body: Container(
-          margin: EdgeInsets.symmetric(horizontal: 22),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              text(),
-              cards(),
-              newCards(),
-            ],
-          ),
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            text(),
+            cards(),
+            newCards(),
+          ],
         ),
       ),
     );
@@ -2124,7 +2057,7 @@ class _NotificationPageState extends State<NotificationPage> {
                       width: 25,
                     ),
                     message: "Your Notifications has been updated Successfully",
-                    duration: Duration(seconds: 2),
+                    duration: Duration(seconds: 3),
                   )..show(context);
                 },
                 child: Text(

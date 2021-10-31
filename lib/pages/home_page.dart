@@ -404,7 +404,151 @@ class _HomePageState extends State<HomePage> {
                   width: 12,
                 ),
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) => Container(
+                        margin:
+                            EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                        child: Column(
+                          children: [
+                            Container(
+                              height: 40,
+                              child: Row(
+                                children: [
+                                  GestureDetector(
+                                      onTap: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child:
+                                          Icon(Icons.arrow_back_ios, size: 14)),
+                                  SizedBox(
+                                    width: 14,
+                                  ),
+                                  Expanded(
+                                    child: TextField(
+                                      decoration: InputDecoration(
+                                        border: OutlineInputBorder(),
+                                      ),
+                                    ),
+                                  ),
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text(
+                                      'Done',
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              height: 20,
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                  //   showModalBottomSheet<void>(
+                  //     shape: RoundedRectangleBorder(
+                  //       borderRadius: BorderRadius.vertical(
+                  //         top: Radius.circular(10),
+                  //       ),
+                  //     ),
+                  //     context: context,
+                  //     builder: (BuildContext context) {
+                  //       return Container(
+                  //         padding: EdgeInsets.only(
+                  //             bottom: MediaQuery.of(context).viewInsets.bottom),
+                  //         margin: EdgeInsets.only(top: 20, right: 22, left: 22),
+                  //         height: 700,
+                  //         child: ListView(
+                  //           children: [
+                  //             Row(
+                  //               mainAxisAlignment: MainAxisAlignment.start,
+                  //               crossAxisAlignment: CrossAxisAlignment.start,
+                  //               children: [
+                  //                 Expanded(
+                  //                   child: Column(
+                  //                     crossAxisAlignment:
+                  //                         CrossAxisAlignment.start,
+                  //                     children: [
+                  //                       Text(
+                  //                         'Add Location',
+                  //                         style: sfbold.copyWith(
+                  //                           fontSize: 16,
+                  //                           fontWeight: FontWeight.bold,
+                  //                           color: primaryColor,
+                  //                         ),
+                  //                       ),
+                  //                       SizedBox(
+                  //                         height: 8,
+                  //                       ),
+                  //                       // Text(
+                  //                       //   'Make sure the debit card belongs to you.',
+                  //                       //   style: sfreguler.copyWith(
+                  //                       //     fontSize: 15,
+                  //                       //     color: Color(0xff505050),
+                  //                       //   ),
+                  //                       // ),
+                  //                     ],
+                  //                   ),
+                  //                 ),
+                  //                 GestureDetector(
+                  //                     onTap: () {
+                  //                       Navigator.pop(context);
+                  //                     },
+                  //                     child: Icon(Icons.close_rounded)),
+                  //               ],
+                  //             ),
+                  //             SizedBox(
+                  //               height: 240,
+                  //             ),
+                  //             Container(
+                  //               width: double.infinity,
+                  //               height: 50,
+                  //               child: TextButton(
+                  //                 onPressed: () {
+                  //                   Navigator.pop(context);
+                  //                   // Flushbar(
+                  //                   //   backgroundColor: Color(0xff17B899),
+                  //                   //   flushbarPosition: FlushbarPosition.TOP,
+                  //                   //   mainButton: Icon(
+                  //                   //     Icons.close,
+                  //                   //     color: backgroundWhite,
+                  //                   //   ),
+                  //                   //   padding: EdgeInsets.symmetric(
+                  //                   //       horizontal: 22, vertical: 38),
+                  //                   //   titleText: SizedBox(
+                  //                   //     width: 25,
+                  //                   //   ),
+                  //                   //   message:
+                  //                   //       "Your card has been added successfully to your account.",
+                  //                   //   duration: Duration(seconds: 2),
+                  //                   // )..show(context);
+                  //                 },
+                  //                 style: TextButton.styleFrom(
+                  //                     backgroundColor: darkBlueColor,
+                  //                     shape: RoundedRectangleBorder(
+                  //                         borderRadius:
+                  //                             BorderRadius.circular(10))),
+                  //                 child: Text(
+                  //                   'Done',
+                  //                   style: sfreguler.copyWith(
+                  //                       fontSize: 15,
+                  //                       color: backgroundWhite,
+                  //                       fontWeight: FontWeight.bold),
+                  //                 ),
+                  //               ),
+                  //             ),
+                  //           ],
+                  //         ),
+                  //       );
+                  //     },
+                  //   );
+                  // },
                   child: Text(
                     'Add location',
                     style: sfreguler.copyWith(
@@ -589,10 +733,12 @@ class Step2 extends StatefulWidget {
 }
 
 class _Step2State extends State<Step2> {
-  double _currentSliderValue = 0;
   bool put = false;
   bool allow = false;
   bool isChecked = false;
+
+  RangeValues values = RangeValues(1, 100);
+  RangeLabels labels = RangeLabels('1', '100');
 
   @override
   Widget build(BuildContext context) {
@@ -837,17 +983,20 @@ class _Step2State extends State<Step2> {
               color: primaryColor,
             ),
           ),
-          Slider(
-            inactiveColor: primaryColor.withOpacity(0.2),
+          RangeSlider(
             activeColor: darkBlueColor,
-            value: _currentSliderValue,
-            min: 0,
+            min: 1,
             max: 100,
-            divisions: 100,
-            label: _currentSliderValue.round().toString(),
-            onChanged: (double value) {
+            values: values,
+            labels: labels,
+            onChanged: (value) {
+              print('START : ${value.start}, END: ${value.end}');
               setState(() {
-                _currentSliderValue = value;
+                values = value;
+                labels = RangeLabels(
+                  value.start.toString(),
+                  value.end.toString(),
+                );
               });
             },
           ),
@@ -1183,7 +1332,7 @@ class _Step2State extends State<Step2> {
                 Expanded(
                   child: TextFormField(
                     decoration: InputDecoration.collapsed(
-                      hintText: 'Add hashtages',
+                      hintText: 'Search Friends',
                     ),
                   ),
                 ),
@@ -1197,7 +1346,62 @@ class _Step2State extends State<Step2> {
                   width: 58,
                   height: 40,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      showModalBottomSheet(
+                        context: context,
+                        builder: (context) => Container(
+                          margin: EdgeInsets.symmetric(
+                              horizontal: 10, vertical: 20),
+                          child: Column(
+                            children: [
+                              Container(
+                                height: 40,
+                                child: Row(
+                                  children: [
+                                    GestureDetector(
+                                        onTap: () {
+                                          Navigator.pop(context);
+                                        },
+                                        child: Icon(Icons.arrow_back_ios,
+                                            size: 14)),
+                                    SizedBox(
+                                      width: 14,
+                                    ),
+                                    Expanded(
+                                      child: TextField(
+                                        decoration: InputDecoration(
+                                          border: OutlineInputBorder(),
+                                        ),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Text(
+                                        'Done',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              ListTile(
+                                leading: Image.asset(
+                                  'assets/image_photo2.png',
+                                ),
+                                title: Text('Linda Uchendu'),
+                              ),
+                              const SizedBox(
+                                height: 20,
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
                     style: TextButton.styleFrom(
                       backgroundColor: primaryColor.withOpacity(0.2),
                     ),
@@ -1464,105 +1668,7 @@ class Step3 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: GestureDetector(
-                    onTap: () {
-                      showModalBottomSheet(
-                        context: context,
-                        builder: (context) => Container(
-                          margin: EdgeInsets.symmetric(
-                              horizontal: 22, vertical: 15),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Center(
-                                child: Container(
-                                  width: 52,
-                                  height: 4,
-                                  decoration: BoxDecoration(
-                                    color: primaryColor.withOpacity(0.2),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 26,
-                              ),
-                              Text(
-                                'Add New Ticket Type',
-                                style: sfbold.copyWith(
-                                  fontSize: 13,
-                                  color: darkBlueColor,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 43,
-                              ),
-                              Text(
-                                'Ticket Type Title',
-                                style: sfreguler.copyWith(
-                                  fontSize: 15,
-                                  color: primaryColor,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              TextField(
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  hintText: 'e.g Regular',
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Text(
-                                'Ticket Type  Price',
-                                style: sfreguler.copyWith(
-                                  fontSize: 15,
-                                  color: primaryColor,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              TextField(
-                                decoration: InputDecoration(
-                                  border: OutlineInputBorder(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  hintText: 'e.g \$10',
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Container(
-                                width: double.infinity,
-                                height: 50,
-                                child: TextButton(
-                                  style: TextButton.styleFrom(
-                                    backgroundColor: darkBlueColor,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                    ),
-                                  ),
-                                  onPressed: () {},
-                                  child: Text(
-                                    'Save Ticket Type',
-                                    style: sfsemibold.copyWith(
-                                      fontSize: 15,
-                                      color: backgroundWhite,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      );
-                    },
+                    onTap: () {},
                     child: Text(
                       'e.g  500',
                       style: sfreguler.copyWith(
@@ -1628,7 +1734,110 @@ class Step3 extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        showModalBottomSheet(
+                          context: context,
+                          builder: (context) => Container(
+                            padding: EdgeInsets.only(
+                                bottom:
+                                    MediaQuery.of(context).viewInsets.bottom),
+                            margin: EdgeInsets.symmetric(
+                                horizontal: 22, vertical: 15),
+                            child: ListView(
+                              children: [
+                                Center(
+                                  child: Container(
+                                    width: 52,
+                                    height: 4,
+                                    decoration: BoxDecoration(
+                                      color: primaryColor.withOpacity(0.2),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 26,
+                                ),
+                                Text(
+                                  'Add New Ticket Type',
+                                  style: sfbold.copyWith(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold,
+                                    color: darkBlueColor,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 43,
+                                ),
+                                Text(
+                                  'Ticket Type Title',
+                                  style: sfreguler.copyWith(
+                                    fontSize: 15,
+                                    color: primaryColor,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    hintText: 'e.g Regular',
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Text(
+                                  'Ticket Type  Price',
+                                  style: sfreguler.copyWith(
+                                    fontSize: 15,
+                                    color: primaryColor,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                TextField(
+                                  decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                    hintText: 'e.g \$10',
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                Container(
+                                  width: double.infinity,
+                                  height: 50,
+                                  child: TextButton(
+                                    style: TextButton.styleFrom(
+                                      backgroundColor: darkBlueColor,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                    ),
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text(
+                                      'Save Ticket Type',
+                                      style: sfsemibold.copyWith(
+                                        fontSize: 15,
+                                        color: backgroundWhite,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      },
                       child: Text(
                         'Add New Ticket type',
                         style: sfsemibold.copyWith(
