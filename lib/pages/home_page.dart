@@ -737,8 +737,8 @@ class _Step2State extends State<Step2> {
   bool allow = false;
   bool isChecked = false;
 
-  RangeValues values = RangeValues(1, 100);
-  RangeLabels labels = RangeLabels('1', '100');
+  RangeValues values = RangeValues(0, 100);
+  RangeLabels labels = RangeLabels('0', '100');
 
   @override
   Widget build(BuildContext context) {
@@ -984,21 +984,19 @@ class _Step2State extends State<Step2> {
             ),
           ),
           RangeSlider(
+            divisions: 100,
             activeColor: darkBlueColor,
-            min: 1,
+            min: 0,
             max: 100,
             values: values,
-            labels: RangeLabels(
-              '1'.toString(),
-              '100'.toString(),
-            ),
+            labels: labels,
             onChanged: (value) {
               print('START : ${value.start}, END: ${value.end}');
               setState(() {
                 values = value;
                 labels = RangeLabels(
-                  value.start.toString(),
-                  value.end.toString(),
+                  value.start.toInt().toString(),
+                  value.end.toInt().toString(),
                 );
               });
             },
