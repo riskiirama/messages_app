@@ -988,7 +988,10 @@ class _Step2State extends State<Step2> {
             min: 1,
             max: 100,
             values: values,
-            labels: labels,
+            labels: RangeLabels(
+              '1'.toString(),
+              '100'.toString(),
+            ),
             onChanged: (value) {
               print('START : ${value.start}, END: ${value.end}');
               setState(() {
@@ -1702,21 +1705,55 @@ class Step3 extends StatelessWidget {
                   height: 22,
                 ),
                 Container(
+                  padding: EdgeInsets.only(left: 22, right: 13, top: 11),
                   width: double.infinity,
                   height: 119,
                   decoration: BoxDecoration(
                     color: blueColor.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Center(
-                    child: Text(
-                      'You currently have no ticket type.\nClick button below too add new type ',
-                      style: sfmedium.copyWith(
-                        fontSize: 13,
-                        color: grey,
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Regular',
+                            style: sfbold.copyWith(
+                              fontSize: 15,
+                              color: Color(0xffA0A3BD),
+                            ),
+                          ),
+                          Text(
+                            '\$10',
+                            style: sfreguler.copyWith(
+                              fontSize: 15,
+                              color: Color(0xff000000),
+                            ),
+                          ),
+                        ],
                       ),
-                      textAlign: TextAlign.center,
-                    ),
+                      SizedBox(height: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Regular',
+                            style: sfbold.copyWith(
+                              fontSize: 15,
+                              color: Color(0xffA0A3BD),
+                            ),
+                          ),
+                          Text(
+                            '\$50',
+                            style: sfreguler.copyWith(
+                              fontSize: 15,
+                              color: Color(0xff000000),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(

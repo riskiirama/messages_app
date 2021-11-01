@@ -522,6 +522,8 @@ class PaymentMethod extends StatefulWidget {
 }
 
 class _PaymentMethodState extends State<PaymentMethod> {
+  bool status = false;
+  bool isON = false;
   @override
   Widget build(BuildContext context) {
     Widget text() {
@@ -593,7 +595,7 @@ class _PaymentMethodState extends State<PaymentMethod> {
     Widget newCards() {
       return GestureDetector(
         onTap: () {
-          showModalBottomSheet<void>(
+          showModalBottomSheet(
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(
                 top: Radius.circular(10),
@@ -738,18 +740,18 @@ class _PaymentMethodState extends State<PaymentMethod> {
                           width: 40,
                           height: 20,
                           activeColor: darkBlueColor,
-                          value: true,
+                          value: isON,
                           borderRadius: 30.0,
                           onToggle: (val) {
                             setState(() {
-                              val = val;
+                              isON = !isON;
                             });
                           },
                         ),
                       ],
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 56,
                     ),
                     Container(
                       width: double.infinity,
