@@ -983,23 +983,37 @@ class _Step2State extends State<Step2> {
               color: primaryColor,
             ),
           ),
-          RangeSlider(
-            divisions: 100,
-            activeColor: darkBlueColor,
-            min: 0,
-            max: 100,
-            values: values,
-            labels: labels,
-            onChanged: (value) {
-              print('START : ${value.start}, END: ${value.end}');
-              setState(() {
-                values = value;
-                labels = RangeLabels(
-                  value.start.toInt().toString(),
-                  value.end.toInt().toString(),
-                );
-              });
-            },
+          SliderTheme(
+            data: SliderTheme.of(context).copyWith(
+              trackShape: RectangularSliderTrackShape(),
+              trackHeight: 2.0,
+              thumbShape: RoundSliderThumbShape(enabledThumbRadius: 9.0),
+              overlayShape: RoundSliderOverlayShape(overlayRadius: 18.0),
+              valueIndicatorShape: RoundSliderOverlayShape(),
+              valueIndicatorColor: Color(0xffF5F5F5),
+              valueIndicatorTextStyle:
+                  TextStyle(color: Color(0xffFFFFFF), fontSize: 14.0),
+              rangeThumbShape: RoundRangeSliderThumbShape(),
+              rangeValueIndicatorShape: PaddleRangeSliderValueIndicatorShape(),
+            ),
+            child: RangeSlider(
+              divisions: 100,
+              activeColor: darkBlueColor,
+              min: 0,
+              max: 100,
+              values: values,
+              labels: labels,
+              onChanged: (value) {
+                print('START : ${value.start}, END: ${value.end}');
+                setState(() {
+                  values = value;
+                  labels = RangeLabels(
+                    value.start.toInt().toString(),
+                    value.end.toInt().toString(),
+                  );
+                });
+              },
+            ),
           ),
           SizedBox(
             height: 12,

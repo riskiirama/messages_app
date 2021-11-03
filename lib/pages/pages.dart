@@ -16,6 +16,7 @@ import 'package:messages/theme.dart';
 
 import 'package:messages/widgets/widget.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 part 'home_page.dart';
 
