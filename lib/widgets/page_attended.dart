@@ -11,7 +11,7 @@ class PageAttended extends StatelessWidget {
               margin: EdgeInsets.only(left: 30),
               width: double.infinity,
               child: Image.asset(
-                'assets/event_card.png',
+                'assets/card.png',
                 height: 200,
               ),
             ),
@@ -19,7 +19,7 @@ class PageAttended extends StatelessWidget {
               margin: EdgeInsets.only(left: 30),
               width: double.infinity,
               child: Image.asset(
-                'assets/event_card.png',
+                'assets/card.png',
                 height: 200,
               ),
             ),
@@ -27,7 +27,7 @@ class PageAttended extends StatelessWidget {
               margin: EdgeInsets.only(left: 30),
               width: double.infinity,
               child: Image.asset(
-                'assets/event_card.png',
+                'assets/card.png',
                 height: 200,
               ),
             ),
@@ -35,7 +35,7 @@ class PageAttended extends StatelessWidget {
               margin: EdgeInsets.only(left: 30),
               width: double.infinity,
               child: Image.asset(
-                'assets/event_card.png',
+                'assets/card.png',
                 height: 200,
               ),
             ),

@@ -362,7 +362,7 @@ class _MyAccountPageState extends State<MyAccountPage> {
           more(),
           SlidingUpPanel(
             controller: sliderController,
-            parallaxEnabled: false,
+            parallaxEnabled: true,
             parallaxOffset: .5,
             panelBuilder: (sc) => content(),
             borderRadius: BorderRadius.only(
