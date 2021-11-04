@@ -758,7 +758,10 @@ class _PaymentMethodState extends State<PaymentMethod> {
                       height: 50,
                       child: TextButton(
                         onPressed: () {
-                          Navigator.pop(context);
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => MorePage()));
                           Flushbar(
                             backgroundColor: Color(0xff17B899),
                             flushbarPosition: FlushbarPosition.TOP,
@@ -1093,7 +1096,11 @@ class CardDetail extends StatelessWidget {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Navigator.pop(context);
+                                Navigator.pushAndRemoveUntil(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => MorePage()),
+                                    (route) => false);
                                 Flushbar(
                                   backgroundColor: Color(0xff17B899),
                                   flushbarPosition: FlushbarPosition.TOP,
