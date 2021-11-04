@@ -15,3 +15,6 @@ part 'page_attending.dart';
 
 part 'following_page.dart';
 part 'followers_page.dart';
+part 'page_attended.dart';
+part 'dm_organizer.dart';
+part 'event_created.dart';

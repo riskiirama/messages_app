@@ -168,20 +168,38 @@ class PageOrganizerProfile extends StatelessWidget {
                     color: primaryColor,
                   ),
                 ),
-                Text(
-                  '210',
-                  style: sfbold.copyWith(
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                    color: primaryColor,
+                GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet<void>(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return FollowingPage();
+                        });
+                  },
+                  child: Text(
+                    '210',
+                    style: sfbold.copyWith(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
+                    ),
                   ),
                 ),
-                Text(
-                  '950',
-                  style: sfbold.copyWith(
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                    color: primaryColor,
+                GestureDetector(
+                  onTap: () {
+                    showModalBottomSheet<void>(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return FollowersPage();
+                        });
+                  },
+                  child: Text(
+                    '950',
+                    style: sfbold.copyWith(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                      color: primaryColor,
+                    ),
                   ),
                 ),
               ],
@@ -231,7 +249,10 @@ class PageOrganizerProfile extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => DmOrganizer()));
+                },
                 child: Text(
                   'Message',
                   style: sfbold.copyWith(
