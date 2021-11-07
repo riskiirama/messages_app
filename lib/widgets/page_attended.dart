@@ -5,7 +5,7 @@ class PageAttended extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        Timeline(
+        Timelinee(
           children: <Widget>[
             Container(
               margin: EdgeInsets.only(left: 30),
@@ -72,7 +72,7 @@ class Timelinee extends StatelessWidget {
     this.isLeftAligned = true,
     this.itemGap = 40.0,
     this.gutterSpacing = 1.0,
-    this.padding = const EdgeInsets.all(2),
+    this.padding = const EdgeInsets.all(1),
     this.controller,
     this.lineColor = Colors.blue,
     this.physics,
