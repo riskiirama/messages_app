@@ -5,57 +5,108 @@ class PageAttended extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: [
-        Timelinee(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(left: 30),
-              width: double.infinity,
-              child: Image.asset(
-                'assets/card.png',
-                height: 200,
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 30),
-              width: double.infinity,
-              child: Image.asset(
-                'assets/card.png',
-                height: 200,
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 30),
-              width: double.infinity,
-              child: Image.asset(
-                'assets/card.png',
-                height: 200,
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(left: 30),
-              width: double.infinity,
-              child: Image.asset(
-                'assets/card.png',
-                height: 200,
-              ),
+        Stack(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  children: [
+                    Image.asset(
+                      'assets/dec.png',
+                      width: 35,
+                    ),
+                    Container(
+                      height: 120,
+                      width: 2,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+                SizedBox(width: 30),
+                Expanded(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'assets/card.png',
+                      fit: BoxFit.cover,
+                      width: 268,
+                      height: 131,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
-          indicators: <Widget>[
-            Image.asset(
-              'assets/dec.png',
-              width: 35,
+        ),
+        Stack(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  children: [
+                    Image.asset(
+                      'assets/dec.png',
+                      width: 35,
+                    ),
+                    Container(
+                      height: 120,
+                      width: 2,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+                SizedBox(width: 30),
+                Expanded(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'assets/card.png',
+                      fit: BoxFit.cover,
+                      width: 268,
+                      height: 131,
+                    ),
+                  ),
+                ),
+              ],
             ),
-            Image.asset(
-              'assets/dec.png',
-              width: 35,
-            ),
-            Image.asset(
-              'assets/dec.png',
-              width: 35,
-            ),
-            Image.asset(
-              'assets/dec.png',
-              width: 35,
+          ],
+        ),
+        Stack(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  children: [
+                    Image.asset(
+                      'assets/dec.png',
+                      width: 35,
+                    ),
+                    Container(
+                      height: 100,
+                      width: 2,
+                      color: Colors.white,
+                    ),
+                  ],
+                ),
+                SizedBox(width: 30),
+                Expanded(
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.asset(
+                      'assets/card.png',
+                      fit: BoxFit.cover,
+                      width: 268,
+                      height: 131,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
